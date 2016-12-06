@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ChangePassActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ChangeStudentActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

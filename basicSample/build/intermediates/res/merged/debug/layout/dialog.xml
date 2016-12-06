@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--     <TextView -->
+<!--         android:id="@+id/dtv1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="Группа:"  -->
+<!--         android:enabled="false" -->
+<!--         /> -->
+
+<!--     <EditText -->
+<!--         android:id="@+id/det1" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:inputType="number" -->
+<!--         android:ems="10"  -->
+<!--         android:enabled="false" -->
+<!--         > -->
+
+<!--         <requestFocus /> -->
+<!--     </EditText> -->
+
+<!--     <TextView -->
+<!--         android:id="@+id/dtv2" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="Неделя:" /> -->
+
+    <Spinner
+        android:id="@+id/spinner11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+<!--     <TextView -->
+<!--         android:id="@+id/dtv3" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="Подгруппа:"  -->
+<!--         android:enabled="false" -->
+<!--         /> -->
+
+<!--     <Spinner -->
+<!--         android:id="@+id/spinner2" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content"  -->
+<!--         android:clickable="false" -->
+        />
+
+    <Button
+        android:id="@+id/db1"
+        android:background="@drawable/hbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Ok" />
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_file.png",
+        "source": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_file.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_provider.png",
+        "source": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_provider.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_chooser.png",
+        "source": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_chooser.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_folder.png",
+        "source": "D:\\Workspace\\BasicSample\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_folder.png"
+    }
+]

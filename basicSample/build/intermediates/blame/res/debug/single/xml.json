@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\xml\\device_filter.xml"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\xml\\mimetypes.xml",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\xml\\mimetypes.xml"
+    }
+]

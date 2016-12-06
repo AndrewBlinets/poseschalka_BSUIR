@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.urban.basicsample.ScanActivity" >
+
+    <TextView
+        android:id="@+id/stv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/stv2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/stv3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="55"
+        android:src="@drawable/finger1" />
+
+    <TextView
+        android:id="@+id/EnrollmentTextView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/s_exit"
+        android:background="@drawable/hbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_weight="10"
+        android:text="Завершить" />
+
+</LinearLayout>

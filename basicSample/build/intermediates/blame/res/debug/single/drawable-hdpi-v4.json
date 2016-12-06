@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_chooser.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-hdpi-v4\\ic_chooser.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher_dp.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\ic_launcher_dp.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\header.jpg",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\header.jpg"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_file.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-hdpi-v4\\ic_file.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\drawer_shadow.9.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\drawer_shadow.9.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_folder.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-hdpi-v4\\ic_folder.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bsuir1.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\bsuir1.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_provider.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-hdpi-v4\\ic_provider.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_drawer.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\finger1.png",
+        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-hdpi\\finger1.png"
+    }
+]
