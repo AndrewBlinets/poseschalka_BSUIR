@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton_focussed.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton_focussed.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton_focussed.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton_focussed.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton_pressed.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton_pressed.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton_normal.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton_normal.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton_normal.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton_normal.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable\\hbutton_pressed.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\drawable\\hbutton_pressed.xml"
     }
 ]

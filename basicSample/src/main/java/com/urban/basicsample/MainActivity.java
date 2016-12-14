@@ -42,7 +42,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 	private CharSequence mTitle;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {//активити админа
 		super.onCreate(savedInstanceState);
 		if (getIntent().getBooleanExtra("finish", false))
 			finish();

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\values-ca\\values-ca.xml",
+        "outputFile": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
+                    "file": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 170
                 },
                 "from": {
-                    "file": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
+                    "file": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 250
                 },
                 "from": {
-                    "file": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
+                    "file": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 336
                 },
                 "from": {
-                    "file": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
+                    "file": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-ca\\values-ca.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

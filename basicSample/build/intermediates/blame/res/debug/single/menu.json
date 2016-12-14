@@ -1,34 +1,34 @@
 [
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_att_list.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\student_att_list.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\change_pass.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\change_pass.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_list.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\student_list.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\scan.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\scan.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list_details.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\list_details.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_list.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\student_list.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\change_pass.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\change_pass.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list_details.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\list_details.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\global.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\global.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\list.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\list.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\scan.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\scan.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_att_list.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\student_att_list.xml"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\menu\\main.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\global.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\menu\\global.xml"
     }
 ]

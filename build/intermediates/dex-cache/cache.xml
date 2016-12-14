@@ -1,3 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="73ee3b00bbcff866e6ce5d02baee771e639ebab2">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\instant-run_dcb0ee9ee2f3f13718217cdb3801ac6f7e599a60.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\BasicSample\basicSample\libs\androidtfm.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9757bac7089f0d5089b9873ef4cc1608fb1a9488">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\androidtfm_ea335d08d0c7e2149a8d82d7f72a067c1e907e33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\BasicSample\basicSample\libs\androidtfm.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9757bac7089f0d5089b9873ef4cc1608fb1a9488">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\androidtfm_ea335d08d0c7e2149a8d82d7f72a067c1e907e33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\BasicSample\basicSample\libs\poi-3.12-20150511.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8be19a6a1fa08e934a497929f360111a4d2e5115">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\poi-3.12-20150511_c61073e96da10bf289c80a0071460c82c1ab8caf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\support-v4-19.1.0_913f247cd967826839560ba783e6a968db3cb5d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="75562d435732e6eb46e47683382349096dc769e3">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4621513ef85dfabf6466c28e1422645959f02ca6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\BasicSample\basicSample\libs\poi-3.12-20150511.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8be19a6a1fa08e934a497929f360111a4d2e5115">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\poi-3.12-20150511_c61073e96da10bf289c80a0071460c82c1ab8caf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\support-v4-19.1.0_913f247cd967826839560ba783e6a968db3cb5d3.jar" />
+    </item>
+
+</items>

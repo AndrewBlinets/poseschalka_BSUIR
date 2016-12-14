@@ -1,38 +1,22 @@
 [
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_folder.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_folder.png"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_drawer.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-mdpi\\ic_drawer.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_provider.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_provider.png"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\icon.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-mdpi\\icon.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_chooser.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_chooser.png"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_file.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_file.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\header.jpg",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\drawable-mdpi\\header.jpg"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_chooser.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_chooser.png"
-    },
-    {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\header.jpg",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-mdpi\\header.jpg"
-    },
-    {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_provider.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_provider.png"
-    },
-    {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_folder.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_folder.png"
-    },
-    {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\drawer_shadow.9.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\src\\main\\res\\drawable-mdpi\\drawer_shadow.9.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_file.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_file.png"
     }
 ]

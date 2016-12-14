@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_chooser.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_chooser.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_file.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_file.png"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_folder.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_folder.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_folder.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_folder.png"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_provider.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_provider.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_provider.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_provider.png"
     },
     {
-        "merged": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_file.png",
-        "source": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_file.png"
+        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_chooser.png",
+        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\drawable-xxhdpi-v4\\ic_chooser.png"
     }
 ]

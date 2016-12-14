@@ -1,9 +1,12 @@
 package com.urban.basicsample.parser;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
@@ -32,9 +35,9 @@ public class Parser {
 
 	public static final String TAG = "DEBUG";
 
-	private static final String SCHEDULE_URL = "http://www.bsuir.by/schedule/rest/schedule/%s";
-	private static final String GROUP_ID_URL = "http://www.bsuir.by/schedule/rest/studentGroup";
-	
+	private static final String SCHEDULE_URL = "https://www.bsuir.by/schedule/rest/schedule/%s";
+	private static final String GROUP_ID_URL = "https://www.bsuir.by/schedule/rest/studentGroup";
+
 	private Handler handler;
 	private Context mContext;
 	private Thread thread = null;
@@ -80,7 +83,7 @@ public class Parser {
 	
 	private String getGroupId(String group) {
 		Document document = loadXmlDocumentFromUrl(GROUP_ID_URL);
-		
+
 		Element root = document.getDocumentElement();
 		NodeList rows = root.getElementsByTagName("studentGroup");
 		
@@ -101,9 +104,11 @@ public class Parser {
 			is = url.openStream();
 			DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			document = db.parse(is);
-		} catch (SAXException e) {
+		}
+		catch (SAXException e) {
 			Log.i(TAG, "retrieved xml is broken", e);
-		} catch (MalformedURLException e) {
+		}
+		catch (MalformedURLException e) {
 			Log.i(TAG, "bad url", e);
 		} catch (IOException e) {
 			Log.i(TAG, "exception occurred during the reading data from bsuir's service", e);

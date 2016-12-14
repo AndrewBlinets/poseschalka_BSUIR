@@ -30,7 +30,9 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	private CharSequence mTitle;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState)
+	// стартовое активити
+	{
 		super.onCreate(savedInstanceState);
 		if (getIntent().getBooleanExtra("finish", false))
 			finish();

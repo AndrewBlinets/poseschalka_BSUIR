@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\values-v19\\values-v19.xml",
+        "outputFile": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 93
                 },
                 "from": {
-                    "file": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 135
                 },
                 "from": {
-                    "file": "D:\\Workspace\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
