@@ -10,236 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="170f341f-3e54-495d-9a20-7ab23beda22a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/androidTest/debug/com/ipaulpro/afilechooser/test/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ianhanniballake/localstorage/LocalStorageProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileChooserActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileChooserActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileListAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileListFragment$Callbacks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileLoader$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/FileLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/utils/FileUtils$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/utils/FileUtils$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/utils/FileUtils$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/debug/com/ipaulpro/afilechooser/utils/FileUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/androidTest/debug/com/urban/basicsample/test/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/pre-dexed/debug/BasicSample-aFileChooser-unspecified_a5d38306c798fac951e681ac78085e0ddd340d4a.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/pre-dexed/debug/androidtfm_e1524959b2466c857d24b1078f2d00d4138d6231.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/pre-dexed/debug/debug_78f7eaa0f6a3aba5cd55b9312da4cb3c162e396e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/pre-dexed/debug/poi-3.12-20150511_655ecd2abbe5dd28f7e4c89f042e89e63422797e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/pre-dexed/debug/support-v4-19.1.0_7541db917baa506c0dd564574dda219c7099e134.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/bsuir1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/drawer_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/finger1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_drawer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher_dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/drawer_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_drawer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug-unaligned.apk" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/release/com/ianhanniballake/localstorage/LocalStorageProvider.class" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/release/com/ianhanniballake/localstorage/LocalStorageProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/release/com/ipaulpro/afilechooser/utils/FileUtils.class" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/classes/release/com/ipaulpro/afilechooser/utils/FileUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-debug.aar" afterPath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-release.aar" afterPath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Parser$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Parser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Parser.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/util/DbUtils.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/util/DbUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/jars/classes.jar" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/jars/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" afterPath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_19_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_19_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" afterPath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/generated/source/buildConfig/androidTest/debug/com/ipaulpro/afilechooser/test/BuildConfig.java" afterPath="$PROJECT_DIR$/aFileChooser/build/generated/source/buildConfig/androidTest/debug/com/ipaulpro/afilechooser/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/generated/source/buildConfig/debug/com/ipaulpro/afilechooser/BuildConfig.java" afterPath="$PROJECT_DIR$/aFileChooser/build/generated/source/buildConfig/debug/com/ipaulpro/afilechooser/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/generated/source/buildConfig/release/com/ipaulpro/afilechooser/BuildConfig.java" afterPath="$PROJECT_DIR$/aFileChooser/build/generated/source/buildConfig/release/com/ipaulpro/afilechooser/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/generated/source/r/androidTest/debug/com/ipaulpro/afilechooser/R.java" afterPath="$PROJECT_DIR$/aFileChooser/build/generated/source/r/androidTest/debug/com/ipaulpro/afilechooser/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ga.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ga.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v19.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v19.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/layout.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/xml.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ca/values-ca.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ca/values-ca.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-de/values-de.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-es/values-es.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ga/values-ga.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ga/values-ga.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-it/values-it.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ko/values-ko.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ko/values-ko.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-pl/values-pl.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-pl/values-pl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-pt-rBR/values-pt-rBR.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-pt-rBR/values-pt-rBR.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-v19/values-v19.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values-v19/values-v19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ca/values-ca.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ca/values-ca.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-de/values-de.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-es/values-es.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ga/values-ga.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ga/values-ga.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-it/values-it.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ko/values-ko.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ko/values-ko.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-pl/values-pl.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-pl/values-pl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-pt-rBR/values-pt-rBR.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-pt-rBR/values-pt-rBR.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-v19/values-v19.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-v19/values-v19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values/values.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeReleaseAssets/merger.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeReleaseAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/packageDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/packageReleaseResources/merger.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/incremental/packageReleaseResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ca/values-ca.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ca/values-ca.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-de/values-de.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-es/values-es.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ga/values-ga.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ga/values-ga.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-it/values-it.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ko/values-ko.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ko/values-ko.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-pl/values-pl.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-pl/values-pl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-pt-rBR/values-pt-rBR.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-pt-rBR/values-pt-rBR.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-v19/values-v19.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-v19/values-v19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values/values.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/basicSample.iml" afterPath="$PROJECT_DIR$/basicSample/basicSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/generated/source/buildConfig/androidTest/debug/com/urban/basicsample/test/BuildConfig.java" afterPath="$PROJECT_DIR$/basicSample/build/generated/source/buildConfig/androidTest/debug/com/urban/basicsample/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/generated/source/buildConfig/debug/com/urban/basicsample/BuildConfig.java" afterPath="$PROJECT_DIR$/basicSample/build/generated/source/buildConfig/debug/com/urban/basicsample/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/generated/source/r/debug/com/ipaulpro/afilechooser/R.java" afterPath="$PROJECT_DIR$/basicSample/build/generated/source/r/debug/com/ipaulpro/afilechooser/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ga.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ga.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v14.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v19.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v19.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-w820dp-v13.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-w820dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/AndroidManifest.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ca/values-ca.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ca/values-ca.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-de/values-de.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-es/values-es.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ga/values-ga.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ga/values-ga.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-it/values-it.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ko/values-ko.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ko/values-ko.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-pl/values-pl.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-pl/values-pl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-pt-rBR/values-pt-rBR.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-pt-rBR/values-pt-rBR.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-v19/values-v19.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values-v19/values-v19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values/values.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/exploded-aar/BasicSample/aFileChooser/unspecified/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ca/values-ca.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ca/values-ca.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-de/values-de.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-es/values-es.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ga/values-ga.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ga/values-ga.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-it/values-it.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ko/values-ko.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ko/values-ko.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-pl/values-pl.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-pl/values-pl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-pt-rBR/values-pt-rBR.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-pt-rBR/values-pt-rBR.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-v14/values-v14.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-v14/values-v14.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-v19/values-v19.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-v19/values-v19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/basicSample/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="BasicSample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -293,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2907">
-              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+            <state relative-caret-position="91">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -318,18 +90,38 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
+            <state relative-caret-position="331">
               <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/NavigationDrawerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="142">
               <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalStorageProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aFileChooser/src/main/java/com/ianhanniballake/localstorage/LocalStorageProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-527">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aFileChooser/src/main/java/com/ipaulpro/afilechooser/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -3090,6 +2882,148 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aFileChooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aFileChooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aFileChooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="afilechooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aFileChooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="afilechooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aFileChooser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="localstorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -3536,6 +3470,21 @@
       <option name="presentableId" value="Default" />
       <updated>1458593622264</updated>
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1481745125604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481745125604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1">
+      <created>1481746202044</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481746202044</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3549,7 +3498,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3560,7 +3509,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4649,34 +4598,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/res/menu/main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/adapter/DetailsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#784#785#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#863#864#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#949#950#0" expanded="false" />
-            <element signature="e#971#972#0" expanded="false" />
-            <element signature="e#1970#1971#0" expanded="false" />
-            <element signature="e#2009#2010#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/adapter/LessonAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -4972,14 +4893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/SDK/sources/android-19/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -5046,16 +4959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -5077,6 +4980,40 @@
         <state relative-caret-position="1088">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aFileChooser/src/main/java/com/ianhanniballake/localstorage/LocalStorageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aFileChooser/src/main/java/com/ipaulpro/afilechooser/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

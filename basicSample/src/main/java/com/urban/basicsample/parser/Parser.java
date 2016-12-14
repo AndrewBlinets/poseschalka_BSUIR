@@ -35,8 +35,8 @@ public class Parser {
 
 	public static final String TAG = "DEBUG";
 
-	private static final String SCHEDULE_URL =  "https://www.bsuir.by/schedule/rest/schedule/%s";
-	private static final String GROUP_ID_URL =  "https://www.bsuir.by/schedule/rest/studentGroup";
+	private static final String SCHEDULE_URL = "https://www.bsuir.by/schedule/rest/schedule/%s";
+	private static final String GROUP_ID_URL = "https://www.bsuir.by/schedule/rest/studentGroup";
 
 	private Handler handler;
 	private Context mContext;
