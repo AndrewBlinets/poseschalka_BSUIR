@@ -7,11 +7,14 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,7 +31,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
-import android.text.TextUtils;
+
 import android.util.Log;
 
 public class Parser {
@@ -41,9 +44,10 @@ public class Parser {
 	private Handler handler;
 	private Context mContext;
 	private Thread thread = null;
-	
+
 	public Parser(Context context) {
 		mContext = context;
+
 	}
 
 	public void loadScheduleForGroup(final String group) {
@@ -63,7 +67,7 @@ public class Parser {
 		if (groupId == null) {
 			return false;
 		}
-		
+
 		String url = String.format(SCHEDULE_URL, groupId);
 		Document document = loadXmlDocumentFromUrl(url);
 
@@ -72,7 +76,7 @@ public class Parser {
 			if (scheduleValues != null) {
 				return true;
 			}
-			
+
 		} else {
 			// TODO
 		}
@@ -80,13 +84,13 @@ public class Parser {
 		thread = null;
 		return false;
 	}
-	
+
 	private String getGroupId(String group) {
 		Document document = loadXmlDocumentFromUrl(GROUP_ID_URL);
 
 		Element root = document.getDocumentElement();
 		NodeList rows = root.getElementsByTagName("studentGroup");
-		
+
 		for (int i = 0; i < rows.getLength(); i++) {
 			Element elem = (Element) rows.item(i);
 			if (elem.getElementsByTagName("name").item(0).getTextContent().equals(group)) {
@@ -95,7 +99,7 @@ public class Parser {
 		}
 		return null;
 	}
-	
+
 	private Document loadXmlDocumentFromUrl(String stringUrl) {
 		Document document = null;
 		InputStream is = null;
@@ -141,7 +145,7 @@ public class Parser {
 
 			for (int j = 0; j < list.getLength(); j++) {
 				schedule = new Schedule();
-				
+
 				Element elem = (Element) list.item(j);
 
 				schedule.setDay(day);
@@ -157,13 +161,46 @@ public class Parser {
 					schedule.addWeekNumber(week.getTextContent());
 				}
 
-				insertScheduleIntoDatabase(schedule);
 
-				/*
-				 * Log.d(TAG, schedule.getDay()); Log.d(TAG, schedule.getLessonTime()); Log.d(TAG,
-				 * schedule.getStudentGroup()); Log.d(TAG, schedule.getSubject()); Log.d(TAG, schedule.getWeekNumber());
-				 * Log.d(TAG, schedule.getNumSubgroup()+"");
-				 */
+				String[] str = schedule.getLessonTime().split("-");
+
+				List<Integer> list_inspection = new ArrayList<>();
+				for(int k =0; k < 2; k++) {
+					String[] mas = str[k].split(":");
+					list_inspection.add(Integer.parseInt(mas[0]));
+				}
+
+				if(list_inspection.get(1) - list_inspection.get(0) > 2 )
+				{
+					SimpleDateFormat format = new SimpleDateFormat();
+					format.applyPattern("HH:mm");
+					Date Time_start = new Date();
+					Date Time_finish = new Date();
+					try {
+						Time_start = format.parse(str[0]);
+						Time_finish = format.parse(str[1]);
+					} catch (ParseException e) {
+						e.printStackTrace();
+					}
+					schedule.setLessonTime(str[0] + "-" + format.format(new Date(Time_start.getTime() + 5700000)));
+
+					insertScheduleIntoDatabase(schedule);
+					schedule.setLessonTime(format.format(new Date(Time_finish.getTime() - 5700000)) + "-" + str[1]);
+					insertScheduleIntoDatabase(schedule);
+
+				}
+				else
+				{
+					insertScheduleIntoDatabase(schedule);
+				}
+
+
+
+
+				 /* Log.d(TAG, schedule.getDay()); Log.d(TAG, schedule.getLessonTime()); Log.d(TAG,
+				  schedule.getStudentGroup()); Log.d(TAG, schedule.getSubject()); Log.d(TAG, schedule.getWeekNumber());
+				  Log.d(TAG, schedule.getNumSubgroup()+"");*/
+
 			}
 
 		}
@@ -173,19 +210,21 @@ public class Parser {
 
 	private boolean insertScheduleIntoDatabase(Schedule schedule) {
 
-	    StringTokenizer stk = new StringTokenizer(schedule.getLessonTime(),"-");	    
+	    StringTokenizer stk = new StringTokenizer(schedule.getLessonTime(),"-");
 	    String []ar = new String[stk.countTokens()];
 	    for(int i = 0; i<ar.length; i++)
 	    {
 	    	ar[i] = stk.nextToken();
 	    }
-		
+
+
+
 	    DBHelper helper = new DBHelper(mContext);
 		SQLiteDatabase database = helper.getWritableDatabase();
-		
+
 		try {
 			database.beginTransaction();
-			
+
 			ContentValues cv = new ContentValues();
 			cv.put("LessonTimeStart", ar[0]);
 			cv.put("LessonTimeEnd", ar[1]);
@@ -198,9 +237,9 @@ public class Parser {
 			database.insert("Schedule", null, cv);
 
 			database.setTransactionSuccessful();
-			
-			
-			
+
+
+
 
 			return true;
 		} catch (Exception e) {

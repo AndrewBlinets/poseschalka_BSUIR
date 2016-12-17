@@ -7,8 +7,17 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="73ee3b00bbcff866e6ce5d02baee771e639ebab2">
+        sha1="d8d9ac5d13eef92d854c611da8a84d3aed4282f3">
         <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\instant-run_dcb0ee9ee2f3f13718217cdb3801ac6f7e599a60.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrew\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-android\1.7.7\f1c194a0753f5005eb57d69bccc7091460edd15a\slf4j-android-1.7.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f1c194a0753f5005eb57d69bccc7091460edd15a">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\slf4j-android-1.7.7_c8fbbd6c663bd99a98fb51653050cae588585bc8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -52,8 +61,17 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="75562d435732e6eb46e47683382349096dc769e3">
+        sha1="048be408584d7fb701082de6f5429c13605857dc">
         <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4621513ef85dfabf6466c28e1422645959f02ca6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrew\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.7\2b8019b6249bb05d81d3a3094e468753e2b21311\slf4j-api-1.7.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2b8019b6249bb05d81d3a3094e468753e2b21311">
+        <dex dex="F:\My_project\Android\BSUIR\BasicSample\basicSample\build\intermediates\pre-dexed\debug\slf4j-api-1.7.7_9c32fe32d79ea93caaf900376dac49f649314741.jar" />
     </item>
     <item
         is-multidex="false"
