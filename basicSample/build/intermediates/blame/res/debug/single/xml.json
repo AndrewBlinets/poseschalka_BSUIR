@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\xml\\mimetypes.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\exploded-aar\\BasicSample\\aFileChooser\\unspecified\\res\\xml\\mimetypes.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\xml\\device_filter.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\basicSample\\src\\main\\res\\xml\\device_filter.xml"
+        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\xml\\mimetypes.xml",
+        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\xml\\mimetypes.xml"
     }
 ]

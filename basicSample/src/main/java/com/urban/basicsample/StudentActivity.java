@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.InputType;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,14 +26,18 @@ public class StudentActivity extends Activity implements OnClickListener {
 	private final int SCAN_DIALOG = 1;
 	private final int LIST_DIALOG = 2;
 
+	private static final String Tag = "MyLog";
+MyFileClass file = new MyFileClass();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		file.writeFile( "StudentActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_student);
 	}
 
 	@Override
 	public void onClick(View v) {
+		file.writeFile( "StudentActivity   onClick");
 		switch (v.getId()) {
 		case R.id.scan_button:
 			showDialog(SCAN_DIALOG);
@@ -45,6 +50,7 @@ public class StudentActivity extends Activity implements OnClickListener {
 	
 	@Override
 	protected Dialog onCreateDialog(int id) {
+		file.writeFile( "StudentActivity   onCreateDialog");
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 		switch (id) {

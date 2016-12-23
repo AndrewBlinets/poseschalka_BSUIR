@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -21,9 +22,12 @@ public class ListDetails extends Activity {
 	private long id;
 	private ArrayList<Attendance> listAtt;
 	private DetailsAdapter dAdapter;
-	
+
+	private static final String Tag = "MyLog";
+MyFileClass file = new MyFileClass();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		file.writeFile( "ListDetails   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list_details);
 		Intent startIntent = getIntent();
@@ -39,6 +43,7 @@ public class ListDetails extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		file.writeFile( "ListDetails   onCreateOptionsMenu");
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.list_details, menu);
 		return true;
@@ -46,6 +51,7 @@ public class ListDetails extends Activity {
 
 	
 	private void getData() {
+		file.writeFile( "ListDetails   getData");
 		DBHelper dbHeper = new DBHelper(this);
 		SQLiteDatabase db = dbHeper.getReadableDatabase();
 

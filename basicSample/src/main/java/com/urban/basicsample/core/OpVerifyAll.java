@@ -8,15 +8,18 @@ import com.digitalpersona.android.ptapi.callback.PtIdleCallback;
 import com.digitalpersona.android.ptapi.resultarg.IntegerArg;
 import com.digitalpersona.android.ptapi.struct.PtFingerListItem;
 import com.digitalpersona.android.ptapi.struct.PtGuiSampleImage;
+import com.urban.basicsample.MyFileClass;
 
 public abstract class OpVerifyAll extends Thread
 {
     
     private PtConnectionI mConn;
+    MyFileClass file = new MyFileClass();
 
     public OpVerifyAll(PtConnectionI conn)
     {
         super("VerifyAllThread");
+        file.writeFile(" OpVerifyAll      OpVerifyAll");
         mConn = conn;
     }
     
@@ -25,8 +28,8 @@ public abstract class OpVerifyAll extends Thread
      */
     @Override
     public void run()
-    {       
-
+    {
+        file.writeFile(" OpVerifyAll      run");
     	try 
         {
             // List fingers stored in device
@@ -88,7 +91,7 @@ public abstract class OpVerifyAll extends Thread
     @SuppressWarnings("unused")
     private int verify() throws PtException
     {
-
+        file.writeFile(" OpVerifyAll     verify");
     	PtGuiStateCallback guiCallback = new PtGuiStateCallback() {
 			public byte guiStateCallbackInvoke(int guiState, int message,  byte progress,
 	                PtGuiSampleImage sampleBuffer, byte[] data) throws PtException 
@@ -130,7 +133,7 @@ public abstract class OpVerifyAll extends Thread
     
     private int sleepThenVerify() throws PtException
     {
-
+        file.writeFile(" OpVerifyAll     sleepThenVerify");
     	IntegerArg wakeupCause = new IntegerArg();
     	IntegerArg GuiMessage = new IntegerArg();
     	

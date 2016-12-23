@@ -5,14 +5,18 @@ import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.text.InputType;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,9 +45,12 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 	private NavigationDrawerFragmentMain mNavigationDrawerFragment;
 	private CharSequence mTitle;
 
+	private static final String Tag = "MyLog";
+MyFileClass file = new MyFileClass();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {//активити админа
 		super.onCreate(savedInstanceState);
+		file.writeFile( "MainActivity   onCreate");
 		if (getIntent().getBooleanExtra("finish", false))
 			finish();
 		setContentView(R.layout.activity_main);
@@ -60,6 +67,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 	}
 
 	public void onSectionAttached(int number) {
+		file.writeFile( "MainActivity   onSectionAttached");
 		switch (number) {
 		// case 1:
 		// CustomDialog1 cd = new CustomDialog1(this);
@@ -83,9 +91,15 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 			Intent i = Intent.createChooser(getContentIntent, "Выберите файл для загрузки");
 			startActivityForResult(i, FILE_SELECT_CODE);
 			break;
-		case 6:
+		case 6: {
+			if(isOnline())
 			showDialog(LOAD_DIALOG);
-			break;
+			else
+			{
+				Toast.makeText(getApplicationContext(), "Нет доступа к интернету!!!",
+						Toast.LENGTH_SHORT).show();
+			}
+			break;}
 		case 7:
 			Intent intent1 = new Intent(this, LoginActivity.class);
 			intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -98,6 +112,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		file.writeFile( "MainActivity   onActivityResult");
 		if (requestCode == FILE_SELECT_CODE && resultCode == -1) {
 			Uri uri = data.getData();
 			String path = FileUtils.getPath(this, uri);
@@ -108,7 +123,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
-
+		file.writeFile( "MainActivity   Dialog");
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 
@@ -123,10 +138,11 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 					if (group != null && !group.isEmpty()) {
 						Exporter exporter = new Exporter(getApplicationContext(), group);
 						if (exporter.export()) {
-							Toast.makeText(getApplicationContext(), "Импортировано в файл" + group + ".xls",
+							Toast.makeText(getApplicationContext(), "Экспотировано в файл  " + group + ".xls",
 									Toast.LENGTH_SHORT).show();
 						} else {
-							Toast.makeText(getApplicationContext(), "Ошибка экспорта", Toast.LENGTH_SHORT).show();
+							Toast.makeText(getApplicationContext(), "Ошибка экспорта," +
+									" группа не существует либо не производилась проверка посещаемости.", Toast.LENGTH_SHORT).show();
 						}
 						dialog.dismiss();
 					} else {
@@ -159,22 +175,35 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 					DbUtils dbUtils = new DbUtils(MainActivity.this);
 					String shedule = editText.getText().toString().trim();
 					if (shedule != null && !shedule.isEmpty()) {
-						if (!dbUtils.checkSchedule(shedule)) {
+						boolean flag = false;
+						if (dbUtils.checkSchedule(shedule)) {
+							flag = true;
+							dbUtils.delete_schetual_group(shedule);
+						}
 							Loader loader = new Loader(MainActivity.this);
 							loader.execute(editText.getText().toString().trim());
 							dialog.dismiss();
 							try {
 								if (loader.get()) {
-									Toast.makeText(MainActivity.this, "Расписание загружено", Toast.LENGTH_SHORT)
+									if(flag)
+										Toast.makeText(MainActivity.this, "Расписание обновлено для группы " + shedule , Toast.LENGTH_SHORT)
+												.show();
+									else
+									Toast.makeText(MainActivity.this, "Расписание загружено для группы " + shedule, Toast.LENGTH_SHORT)
+											.show();
+								}
+								else
+								{
+									Toast.makeText(MainActivity.this, "Ошибка ввода номера группы", Toast.LENGTH_SHORT)
 											.show();
 								}
 							} catch (Exception e) {
 								// TODO
 								e.printStackTrace();
 							}
-						} else {
-							Toast.makeText(MainActivity.this, "Группа была ранее загружена", Toast.LENGTH_SHORT).show();
-						}
+						//} else {
+						//	Toast.makeText(MainActivity.this, "Группа была ранее загружена", Toast.LENGTH_SHORT).show();
+					//	}
 					} else {
 						Toast.makeText(MainActivity.this, "Пустое поле", Toast.LENGTH_SHORT).show();
 					}
@@ -206,12 +235,14 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		file.writeFile( "MainActivity   onCreateOptionsMenu");
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		file.writeFile( "MainActivity   onOptionsItemSelected");
 		switch (item.getTitle().toString()) {
 		case "changePass":
 			Intent intent = new Intent(this, ChangePassActivity.class);
@@ -226,16 +257,29 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	public void onNavigationDrawerItemSelected(int position) {
+		file.writeFile( "MainActivity   onNavigationDrawerItemSelected");
 		FragmentManager fragmentManager = getFragmentManager();
 		fragmentManager.beginTransaction().replace(R.id.container1, PlaceholderFragment.newInstance(position + 1))
 				.commit();
 
 	}
 
+	public  boolean isOnline()
+	{
+		String cs = Context.CONNECTIVITY_SERVICE;
+		ConnectivityManager cm = (ConnectivityManager)
+				getSystemService(cs);
+		if (cm.getActiveNetworkInfo() == null)
+			return false;
+		 else
+			return  true;
+	}
+
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
 	public static class PlaceholderFragment extends Fragment {
+
 		/**
 		 * The fragment argument representing the section number for this fragment.
 		 */
@@ -245,6 +289,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 		 * Returns a new instance of this fragment for the given section number.
 		 */
 		public static PlaceholderFragment newInstance(int sectionNumber) {
+
 			PlaceholderFragment fragment = new PlaceholderFragment();
 			Bundle args = new Bundle();
 			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
@@ -257,12 +302,14 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
 			View rootView = inflater.inflate(R.layout.fragment_main1, container, false);
 			return rootView;
 		}
 
 		@Override
 		public void onAttach(Activity activity) {
+
 			super.onAttach(activity);
 			((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
 		}

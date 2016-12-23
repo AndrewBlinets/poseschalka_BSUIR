@@ -1,6 +1,7 @@
 package com.urban.basicsample;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +13,15 @@ public class NavigationDrawerFragmentMain extends NavigationDrawerFragment {
 
 	private boolean access = true;
 
+	private static final String Tag = "MyLog";
+MyFileClass file = new MyFileClass();
 	public NavigationDrawerFragmentMain() {
 
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		file.writeFile("NavigationDrawerFragmentMain   onCreate");
 		String[] sections;
 		if (access) {
 			sections = new String[] { 

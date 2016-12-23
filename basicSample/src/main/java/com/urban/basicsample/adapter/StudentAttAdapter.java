@@ -2,6 +2,7 @@ package com.urban.basicsample.adapter;
 
 import java.util.ArrayList;
 
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.R;
 import com.urban.basicsample.model.Attendance;
 import com.urban.basicsample.model.Lesson;
@@ -9,6 +10,7 @@ import com.urban.basicsample.model.Student;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +23,12 @@ public class StudentAttAdapter extends BaseAdapter {
 	LayoutInflater lInflater;
 	ArrayList<Attendance> objects;
 
+	private static final String Tag = "MyLog";
+	public MyFileClass fileClass =  new MyFileClass();
+
+
 	public StudentAttAdapter(Context context, ArrayList<Attendance> attendances) {
+		fileClass.writeFile( this.getClass().getName() + "   StudentAttAdapter  ");
 		ctx = context;
 		objects = attendances;
 		lInflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -44,6 +51,7 @@ public class StudentAttAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		fileClass.writeFile( this.getClass().getName() + "   getView");
 		View view = convertView;
 		if (view == null) {
 			view = lInflater.inflate(R.layout.list_item3, parent, false);

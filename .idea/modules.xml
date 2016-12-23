@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BasicSample.iml" filepath="$PROJECT_DIR$/BasicSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/aFileChooser/aFileChooser.iml" filepath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
       <module fileurl="file://$PROJECT_DIR$/basicSample/basicSample.iml" filepath="$PROJECT_DIR$/basicSample/basicSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poseschalka_BSUIR.iml" filepath="$PROJECT_DIR$/poseschalka_BSUIR.iml" />
     </modules>
   </component>
 </project>

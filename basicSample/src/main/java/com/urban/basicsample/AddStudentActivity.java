@@ -69,9 +69,12 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 
 	private static final Pattern NAME_REGEXP = Pattern.compile("^[\\w, ][\\w,\\- ]*\\w$");
 	private AtomicBoolean isNewRun;
-	
+
+	private static final String Tag = "MyLog";
+	MyFileClass file = new MyFileClass();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		file.writeFile("AddStudentActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_student);
 
@@ -96,6 +99,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	}
 
 	public void initialize() {
+		file.writeFile( "AddStudentActivity   initialize");
 		if (initializePtapi()) {
 			Context applContext = getApplicationContext();
 			PendingIntent mPermissionIntent;
@@ -116,6 +120,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	}
 
 	private boolean initializePtapi() {
+		file.writeFile( "AddStudentActivity   initializePtapi");
 		// Load PTAPI library
 		Context aContext = getApplicationContext();
 		mPtGlobal = new PtGlobal(aContext);
@@ -138,6 +143,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 
 	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
+			file.writeFile( "AddStudentActivity   BroadcastReceiver");
 			String action = intent.getAction();
 			if (ACTION_USB_PERMISSION.equals(action)) {
 				synchronized (this) {
@@ -155,6 +161,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	};
 
 	private void openPtapiSession() {
+		file.writeFile( "AddStudentActivity   openPtapiSession");
 		try {
 			// Try to open session
 			openPtapiSessionInternal();
@@ -167,6 +174,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	}
 
 	private void openPtapiSessionInternal() throws PtException {
+		file.writeFile( "AddStudentActivity   openPtapiSessionInternal");
 		// Try to open device
 		try {
 			mConn = (PtConnectionAdvancedI) mPtGlobal.open("USB");
@@ -179,6 +187,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onResume() {
+		file.writeFile( "AddStudentActivity   onResume");
 		// TODO Auto-generated method stub
 		super.onResume();
 		// InitApi init = new InitApi(getApplicationContext());
@@ -188,8 +197,10 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		file.writeFile( "AddStudentActivity   onClick");
 		switch (v.getId()) {
 		case R.id.btnAdd:
+			file.writeFile( "AddStudentActivity   onClick    add");
 			String firstName = fN.getText().toString().trim();
 			String lastName = lN.getText().toString().trim();
 			String group = etGroup.getText().toString().trim();
@@ -303,16 +314,19 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	}
 
 	public void dislayMessage(String text) {
+		file.writeFile( "AddStudentActivity  dislayMessage");
 		mHandler.sendMessage(mHandler.obtainMessage(0, 0, 0, text));
 	}
 
 	private Handler mHandler = new Handler() {
 		public void handleMessage(Message aMsg) {
+			file.writeFile( "AddStudentActivity   mHandler");
 			((TextView) findViewById(R.id.EnrollmentTextView)).setText((String) aMsg.obj);
 		}
 	};
 
 	private int insertStIntoDb(String firstName, String lastName, String group, int sGroup, PtInputBir template) {
+		file.writeFile( "AddStudentActivity   insertStIntoDb");
 		DBHelper helper = new DBHelper(getApplicationContext());
 		SQLiteDatabase database = helper.getWritableDatabase();
 
@@ -360,6 +374,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 
 
 	private boolean checkLecturer(String group) {
+		file.writeFile( "AddStudentActivity   checkLecturer");
 		DBHelper helper = new DBHelper(getApplicationContext());
 		SQLiteDatabase database = helper.getWritableDatabase();
 
@@ -375,6 +390,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	}
 
 	private void closeSession() {
+		file.writeFile( "AddStudentActivity   closeSession");
 		if (mConn != null) {
 			try {
 				mConn.close();
@@ -386,6 +402,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	}
 
 	private void terminatePtapi() {
+		file.writeFile( "AddStudentActivity   terminatePtapi");
 		try {
 			if (mPtGlobal != null) {
 				mPtGlobal.terminate();

@@ -9,6 +9,7 @@ import com.urban.basicsample.adapter.LessonAdapter;
 import com.urban.basicsample.dao.DBHelper;
 import com.urban.basicsample.model.CustomDialog1;
 import com.urban.basicsample.model.Lesson;
+import com.urban.basicsample.model.Schedule;
 import com.urban.basicsample.util.Exporter;
 import com.urban.basicsample.util.Importer;
 
@@ -41,7 +42,10 @@ import android.widget.Toast;
 
 public class ListActivity extends Activity implements NavigationDrawerFragmentMain.NavigationDrawerCallbacks {
 
+	private static final String Tag = "MyLog";
+
 	private ArrayList<Lesson> lessons = null;
+	private ArrayList<Schedule> schedules = null;
 	private LessonAdapter lAdapter;
 	private static final int DIALOG = 1;
 	private static final int LIST_DIALOG = 2;
@@ -54,6 +58,7 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		Log.i(Tag, "ListActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		
 		Intent startIntent = getIntent();
@@ -98,12 +103,14 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		Log.i(Tag, "ListActivity   onCreateOptionsMenu");
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.list, menu);
 		return true;
 	}
 
 	public void onSectionAttached(int number) {
+		Log.i(Tag, "ListActivity   onSectionAttached");
 		switch (number) {
 		case 1:
 			CustomDialog1 cd = new CustomDialog1(this);
@@ -143,6 +150,7 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		Log.i(Tag, "ListActivity   onActivityResult");
 		if (requestCode == FILE_SELECT_CODE && resultCode == -1) {
 			Uri uri = data.getData();
 			String path = FileUtils.getPath(this, uri);
@@ -153,7 +161,7 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
-
+		Log.i(Tag, "ListActivity   onCreateDialog");
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 
@@ -244,6 +252,8 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 
 	@Override
 	public void onNavigationDrawerItemSelected(int position) {
+
+		Log.i(Tag, "ListActivity   onNavigationDrawerItemSelected");
 		onSectionAttached(position + 1);
 	}
 }

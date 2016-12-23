@@ -6,7 +6,9 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,6 +16,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.urban.basicsample.util.PassEncrypter;
+
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class LoginActivity extends Activity implements OnClickListener/*,
 		NavigationDrawerFragment.NavigationDrawerCallbacks*/ {
@@ -29,14 +40,22 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	private NavigationDrawerFragment mNavigationDrawerFragment;
 	private CharSequence mTitle;
 
+	private static final String Tag = "MyLog";
+	public MyFileClass fileClass =  new MyFileClass();;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	// стартовое активити
 	{
+
+
 		super.onCreate(savedInstanceState);
 		if (getIntent().getBooleanExtra("finish", false))
 			finish();
 		setContentView(R.layout.fragment_main);
+
+
+		fileClass.writeFile_M(this.getLocalClassName() + "   onCreate\n");
 
 		//mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(
 		//		R.id.navigation_drawer);
@@ -77,6 +96,8 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
+		Log.i(Tag, "LoginActivity   onCreateDialog");
+		fileClass.writeFile(this.getLocalClassName() + "   onCreateDialog\n");
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 		switch (id) {
@@ -134,7 +155,8 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	protected void onPrepareDialog(int id, Dialog dialog) {
 		// TODO Auto-generated method stub
 		super.onPrepareDialog(id, dialog);
-
+		Log.i(Tag, "LoginActivity   onPrepareDialog");
+		fileClass.writeFile(this.getLocalClassName() + "   onPrepareDialog\n");
 		Builder builder = new Builder(this);
 
 		// Button btnOk = (Button) findViewById(R.id.bPassAdminOk);
@@ -145,6 +167,8 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	// @SuppressWarnings("deprecation")
 	@Override
 	public void onClick(View v) {
+		Log.i(Tag, "LoginActivity   onClick");
+		fileClass.writeFile(this.getLocalClassName() + "   onClick\n");
 		switch (v.getId()) {
 		case R.id.b_admin:
 			showDialog(DIALOG);
@@ -202,5 +226,4 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 			((LoginActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
 		}
 	}*/
-
 }

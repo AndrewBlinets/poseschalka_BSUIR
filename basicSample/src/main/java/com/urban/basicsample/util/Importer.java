@@ -21,17 +21,21 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.dao.DBHelper;
 
 public class Importer {
 
 	private Context mContext;
 
+	MyFileClass file = new MyFileClass();
+
 	public Importer(Context context) {
 		mContext = context;
 	}
 
 	public boolean importFile(String path) {
+		file.writeFile("Importer    importFile   " + path);
 		try {
 			File file = new File(path);
 			String group = file.getName().replaceAll(".xls", "");
@@ -135,6 +139,7 @@ public class Importer {
 	}
 
 	private void writeToDb(HashMap<String, String> weeks, String startTime, String endTime, String day, String group) {
+		file.writeFile("Importer    writeToDb   " + day + "    " + group);
 		DBHelper dbHeper = new DBHelper(mContext);
 		SQLiteDatabase db = dbHeper.getReadableDatabase();
 

@@ -24,6 +24,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.dao.DBHelper;
 import com.urban.basicsample.model.Schedule;
 
@@ -45,12 +46,20 @@ public class Parser {
 	private Context mContext;
 	private Thread thread = null;
 
+
+	public MyFileClass fileClass =  new MyFileClass();
+
+
+
+
 	public Parser(Context context) {
+		fileClass.writeFile("Parser      Parser");
 		mContext = context;
 
 	}
 
 	public void loadScheduleForGroup(final String group) {
+		fileClass.writeFile("Parser      loadScheduleForGroup");
 		if (thread == null) {
 			thread = new Thread(new Runnable() {
 				@Override
@@ -63,6 +72,7 @@ public class Parser {
 	}
 
 	public boolean loadScheduleForGroupInternal(String group) {
+		fileClass.writeFile("Parser       loadScheduleForGroupInternal");
 		String groupId = getGroupId(group);
 		if (groupId == null) {
 			return false;
@@ -86,9 +96,18 @@ public class Parser {
 	}
 
 	private String getGroupId(String group) {
+		fileClass.writeFile("Parser      getGroupId   " + group);
 		Document document = loadXmlDocumentFromUrl(GROUP_ID_URL);
 
-		Element root = document.getDocumentElement();
+		Element root = null;
+
+		try {
+			root = document.getDocumentElement();
+		}
+		catch (NullPointerException e)
+		{
+
+		}
 		NodeList rows = root.getElementsByTagName("studentGroup");
 
 		for (int i = 0; i < rows.getLength(); i++) {
@@ -101,6 +120,7 @@ public class Parser {
 	}
 
 	private Document loadXmlDocumentFromUrl(String stringUrl) {
+		fileClass.writeFile("Parser      loadXmlDocumentFromUrl    " + stringUrl );
 		Document document = null;
 		InputStream is = null;
 		try {
@@ -131,6 +151,8 @@ public class Parser {
 	}
 
 	private Schedule parseScheduleDocument(Document document, String group) {
+
+		fileClass.writeFile("Parser      parseScheduleDocument    " + group );
 		Schedule schedule = null;
 
 		Element root = document.getDocumentElement();
@@ -209,6 +231,9 @@ public class Parser {
 	}
 
 	private boolean insertScheduleIntoDatabase(Schedule schedule) {
+
+		fileClass.writeFile("Parser      insertScheduleIntoDatabase    " + schedule.getDay()
+		+ "   " +  schedule.getSubject() + "   " + schedule.getStudentGroup());
 
 	    StringTokenizer stk = new StringTokenizer(schedule.getLessonTime(),"-");
 	    String []ar = new String[stk.countTokens()];

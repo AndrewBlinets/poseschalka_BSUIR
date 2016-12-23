@@ -73,9 +73,11 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	private String day;
 	private String subject;
 	private int numSubgroup;
-	private int part;
+	private int part = 1;
 	private int lessonId;
-	
+
+	private static final String Tag = "MyLog";
+MyFileClass file = new MyFileClass();
 	private AtomicBoolean isTreadStarted = new AtomicBoolean(false);
 
 	
@@ -85,6 +87,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		file.writeFile( "ScanActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_scan);
 		Intent intent = getIntent();
@@ -94,6 +97,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onResume() {
+		file.writeFile( "ScanActivity   onResume");
 		initialize();
 		if (!isTreadStarted.get()) {
 			init();
@@ -103,6 +107,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	
 	@Override
 	protected void onStop() {
+		file.writeFile( "ScanActivity   onStop");
 		if (mRunningOp != null) {
 			mRunningOp.interrupt();
 		}
@@ -112,6 +117,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	public void initialize() {
+		file.writeFile( "ScanActivity   initialize");
 		if (initializePtapi()) {
 			Context applContext = getApplicationContext();
 			PendingIntent mPermissionIntent;
@@ -133,6 +139,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	private boolean initializePtapi() {
 		// Load PTAPI library
+		file.writeFile( "ScanActivity   initializePtapi");
 		Context aContext = getApplicationContext();
 		mPtGlobal = new PtGlobal(aContext);
 
@@ -154,6 +161,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
+			file.writeFile( "ScanActivity   mUsbReceiver");
 			String action = intent.getAction();
 			if (ACTION_USB_PERMISSION.equals(action)) {
 				synchronized (this) {
@@ -171,6 +179,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	};
 
 	private void openPtapiSession() {
+		file.writeFile( "ScanActivity   openPtapiSession");
 		try {
 			// Try to open session
 			openPtapiSessionInternal();
@@ -183,6 +192,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void openPtapiSessionInternal() throws PtException {
+		file.writeFile( "ScanActivity   openPtapiSessionInternal");
 		// Try to open device
 		try {
 			mConn = (PtConnectionAdvancedI) mPtGlobal.open("USB");
@@ -193,6 +203,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void init() {
+		file.writeFile( "ScanActivity   init");
 		synchronized (mCond) {
 			isTreadStarted.set(true);
 			mRunningOp = new OpVerifyNew(mConn, 3) {
@@ -242,6 +253,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 
 	private void verifyStudent(PtInputBir template) {
+		file.writeFile( "ScanActivity   verifyStudent");
 		boolean flag = false;
 		SQLiteDatabase database = null;
 		try {
@@ -322,6 +334,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void addStudent(PtInputBir template) {
+		file.writeFile( "ScanActivity   addStudent");
 		if (template != null) {
 			Object o = template;
 			ByteArrayOutputStream bos = null;
@@ -343,6 +356,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void writeToDb(int studentId) {
+		file.writeFile( "ScanActivity   writeToDb   " + studentId);
 		SQLiteDatabase database = null;
 		try {
 			DBHelper helper = new DBHelper(getApplicationContext());
@@ -358,7 +372,10 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				cv.put("LessonId", lessonId);
 				cv.put("StudentId", studentId);
 				if (part == 1) {
-					cv.put("Attendance1", 1);
+					{
+						cv.put("Attendance2", 1);
+						cv.put("Attendance1", 1);
+					}
 				} else {
 					cv.put("Attendance2", 1);
 				}
@@ -390,6 +407,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void identifyClass() {
+		file.writeFile( "ScanActivity   identifyClass");
 		Date date = new Date();
 		int hour = date.getHours();
 		int min = date.getMinutes();
@@ -482,6 +500,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void writeLessonToDb() {
+		file.writeFile( "ScanActivity   writeLessonToDb");
 		Date d = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 		String date = format.format(d);
@@ -518,6 +537,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	protected Dialog onCreateDialog(int id) {
+		file.writeFile( "ScanActivity   onCreateDialog");
 		AlertDialog.Builder adb = new AlertDialog.Builder(this);
 		switch (id) {
 		case REPEAT_OR_ADD:
@@ -549,7 +569,10 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			break;
 		default:
 			// ?????????
+			if(subject != null)
 			adb.setTitle(subject + ", гр: " + mGroup);
+			else
+			adb.setTitle( "В данный момент занятий нету, гр: " + mGroup);
 			// ?????????
 			adb.setMessage(firstName + " " + lastName);
 			// ??????
@@ -605,17 +628,20 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	public void onBackPressed() {
+		file.writeFile( "ScanActivity   onBackPressed");
 		Toast.makeText(getApplicationContext(), "Таким образом выйти невозможно", Toast.LENGTH_SHORT).show();
 	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		file.writeFile( "ScanActivity   onCreateOptionsMenu");
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.scan, menu);
 		return true;
 	}
 
 	public void displayMessage(String text) {
+		file.writeFile( "ScanActivity   displayMessage");
 		switch (text) {
 		case "REPEAT_OR_ADD":
 			mHandler.sendMessage(mHandler.obtainMessage(0, REPEAT_OR_ADD, 0, text));
@@ -637,9 +663,11 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private Handler mHandler = new Handler() {
+
 		int i = 101;
 
 		public void handleMessage(Message aMsg) {
+			file.writeFile( "ScanActivity  mHandler  handleMessage");
 			switch (aMsg.arg1) {
 			case dialogShow:
 				showDialog(i++);
@@ -665,6 +693,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onDestroy() {
+		file.writeFile( "ScanActivity   onDestroy");
 		// Cancel running operation
 		synchronized (mCond) {
 			while (mRunningOp != null) {
@@ -686,6 +715,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		file.writeFile( "ScanActivity   onActivityResult");
 		if (requestCode == 1 && resultCode == RESULT_OK) {
 			int id = data.getIntExtra("id", -1);
 			mGroup = data.getStringExtra("group");
@@ -721,6 +751,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void closeSession() {
+		file.writeFile( "ScanActivity   closeSession");
 		if (mConn != null) {
 			try {
 				mConn.close();
@@ -732,6 +763,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void terminatePtapi() {
+		file.writeFile( "ScanActivity   terminatePtapi");
 		try {
 			if (mPtGlobal != null) {
 				mPtGlobal.terminate();
@@ -744,6 +776,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	public void onClick(View v) {
+		file.writeFile( "ScanActivity   onClick");
 		switch (v.getId()) {
 		case R.id.s_exit:
 			showDialog(PASS_DIALOG);

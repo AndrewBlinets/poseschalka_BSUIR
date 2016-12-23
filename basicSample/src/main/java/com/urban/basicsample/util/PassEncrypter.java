@@ -3,6 +3,7 @@ package com.urban.basicsample.util;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.dao.DBHelper;
 import com.urban.basicsample.model.Attendance;
 
@@ -13,7 +14,10 @@ import android.widget.Toast;
 
 public class PassEncrypter {
 
+	public static MyFileClass fileClass =  new MyFileClass();
+
 	public static String encrypt(String pass) {
+		fileClass.writeFile("PassEncrypter      encrypt  " + pass);
 		try {
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			byte[] bytes = md.digest(pass.getBytes("UTF-8"));
@@ -25,6 +29,7 @@ public class PassEncrypter {
 	}
 
 	public static boolean verifyAdminPass(Context context, String pass) {
+		fileClass.writeFile("PassEncrypter      verifyAdminPass  " + pass);
 		String dbPass = null;
 		DBHelper helper = new DBHelper(context);
 		SQLiteDatabase db = helper.getReadableDatabase();
@@ -50,6 +55,7 @@ public class PassEncrypter {
 	}
 
 	private static String getString(byte[] bytes) {
+		fileClass.writeFile("PassEncrypter      verifyAdminPass  " + bytes);
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < bytes.length; i++) {
 			byte b = bytes[i];

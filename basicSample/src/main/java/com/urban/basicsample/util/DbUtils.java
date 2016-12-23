@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.dao.DBHelper;
 
 public class DbUtils {
@@ -13,9 +14,11 @@ public class DbUtils {
 	public DbUtils(Context context) {
 		this.context = context;
 	}
-	
-	public boolean checkSchedule(String group) {
 
+	MyFileClass file =  new MyFileClass();
+
+	public boolean checkSchedule(String group) {
+		file.writeFile("DbUtils      checkSchedule   " + group);
 		SQLiteDatabase database = null;
 		try {
 			DBHelper helper = new DBHelper(context);
@@ -33,6 +36,20 @@ public class DbUtils {
 				database.close();
 		}
 
+	}
+
+	public void delete_schetual_group(String group)
+	{
+		file.writeFile("DbUtils      checkSchedule   " + group);
+		SQLiteDatabase database = null;
+		try {
+			DBHelper helper = new DBHelper(context);
+			database = helper.getWritableDatabase();
+			database.delete("Schedule","StudentGroup = " + group, null);
+		} finally {
+			if (database != null)
+				database.close();
+		}
 	}
 
 }

@@ -14,6 +14,7 @@ import com.digitalpersona.android.ptapi.struct.PtBir;
 import com.digitalpersona.android.ptapi.struct.PtGuiSampleImage;
 import com.digitalpersona.android.ptapi.struct.PtInputBir;
 import com.digitalpersona.android.ptapi.struct.PtSessionCfgV5;
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.model.Constants;
 
 public abstract class OpVerifyNew extends Thread {
@@ -23,14 +24,19 @@ public abstract class OpVerifyNew extends Thread {
 	private static short SESSION_CFG_VERSION = 5;
 	private int count;
 
+	MyFileClass file = new MyFileClass();
+
 	public OpVerifyNew(PtConnectionI conn, int c) {
 		super("VerifyAllThread");
+
+		file.writeFile("OpVerifyNew    OpVerifyNew");
 		mConn = conn;
 		count = c;
 	}
 
 	@Override
 	public void run() {
+		file.writeFile("OpVerifyNew    run");
 		PtInputBir template = null;
 		try {
 
@@ -50,7 +56,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private int sleepThenVerify() throws PtException {
-
+		file.writeFile("OpVerifyNew    sleepThenVerify");
 		IntegerArg wakeupCause = new IntegerArg();
 		IntegerArg GuiMessage = new IntegerArg();
 
@@ -90,7 +96,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private int verify() throws PtException {
-
+		file.writeFile("OpVerifyNew    verify");
 		PtGuiStateCallback guiCallback = new PtGuiStateCallback() {
 			public byte guiStateCallbackInvoke(int guiState, int message, byte progress, PtGuiSampleImage sampleBuffer,
 					byte[] data) throws PtException {
@@ -122,7 +128,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private PtInputBir enroll() throws PtException {
-
+		file.writeFile("OpVerifyNew    enroll");
 		PtGuiStateCallback guiCallback = new PtGuiStateCallback() {
 			public byte guiStateCallbackInvoke(int guiState, int message, byte progress, PtGuiSampleImage sampleBuffer,
 					byte[] data) throws PtException {
@@ -157,6 +163,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private static PtInputBir MakeInputBirFromBir(PtBir aBir) {
+
 		if (aBir.data != null) {
 			PtInputBir aInputBir = new PtInputBir();
 			aInputBir.form = PtConstants.PT_FULLBIR_INPUT;
@@ -168,6 +175,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private void modifyEnrollmentType(int c) throws PtException {
+		file.writeFile("OpVerifyNew    modifyEnrollmentType   " + c);
 		try {
 			PtSessionCfgV5 sessionCfg = (PtSessionCfgV5) mConn.getSessionCfgEx(SESSION_CFG_VERSION);
 			sessionCfg.enrollMinTemplates = (byte) 3;

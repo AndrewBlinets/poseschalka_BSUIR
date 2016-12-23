@@ -13,6 +13,7 @@ import com.digitalpersona.android.ptapi.struct.PtInfo;
 import com.digitalpersona.android.ptapi.struct.PtSessionCfgV5;
 import com.digitalpersona.android.ptapi.usb.PtUsbHost;
 import com.urban.basicsample.AddStudentActivity;
+import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.R;
 
 import android.app.Activity;
@@ -43,6 +44,8 @@ public class SampleActivity extends Activity
     private Thread mRunningOp = null;
     private final Object mCond = new Object();
 
+    MyFileClass file = new MyFileClass();
+
     public PtGlobal getPtGlobal(){
     	return mPtGlobal;
     }
@@ -53,6 +56,7 @@ public class SampleActivity extends Activity
 	@Override
     public void onCreate(Bundle savedInstanceState) 
     {
+        file.writeFile("SampleActivity   onCreate");
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main);
@@ -88,6 +92,7 @@ public class SampleActivity extends Activity
 
 	
 	public void initialize() {
+        file.writeFile("SampleActivity   initialize");
 		if(initializePtapi())
         {
         	Context applContext = getApplicationContext();
@@ -116,7 +121,7 @@ public class SampleActivity extends Activity
     /** Close PTAPI session. */
     @Override
     protected void onDestroy()
-    {       
+    {       file.writeFile("SampleActivity   onDestroy");
         // Cancel running operation
         synchronized(mCond)
         {
@@ -144,6 +149,7 @@ public class SampleActivity extends Activity
     
     private void registerButtonListenners()
     {
+        file.writeFile("SampleActivity   registerButtonListenners");
         setEnrollButtonListener(R.id.ButtonLeftThumb,  FingerId.LEFT_THUMB);
         setEnrollButtonListener(R.id.ButtonLeftIndex,  FingerId.LEFT_INDEX);
         setEnrollButtonListener(R.id.ButtonLeftMiddle, FingerId.LEFT_MIDDLE);
@@ -173,6 +179,7 @@ public class SampleActivity extends Activity
      */
     private void setEnrollButtonListener(final int buttonId, final int fingerId)
     {
+        file.writeFile("SampleActivity   setEnrollButtonListener");
     	Button aButton = (Button)findViewById(buttonId);
     	aButton.setVisibility(Button.VISIBLE);
     	OnClickListener aListener = new View.OnClickListener() 
@@ -214,6 +221,7 @@ public class SampleActivity extends Activity
      */
     private void setIdentifyButtonListener()
     {
+        file.writeFile("SampleActivity   setIdentifyButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonVerifyAll);
     	aButton.setVisibility(Button.VISIBLE);
         OnClickListener aListener = new View.OnClickListener()
@@ -254,6 +262,7 @@ public class SampleActivity extends Activity
      */
     private OpNavigate createNavigationOperationHelper(OpNavigateSettings aSettings)
     {
+        file.writeFile("SampleActivity   createNavigationOperationHelper");
     	OpNavigate aOperation = new OpNavigate(mConn, aSettings) 
         {
             @Override
@@ -280,6 +289,7 @@ public class SampleActivity extends Activity
      */
     private void setNavigateRawButtonListener()
     {
+        file.writeFile("SampleActivity   setNavigateRawButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonNavigateRaw);
     	//disable navigation for area sensors
     	if((mSensorInfo.sensorType & PtConstants.PT_SENSORBIT_STRIP_SENSOR) == 0)
@@ -310,6 +320,7 @@ public class SampleActivity extends Activity
      */
     private void setNavigateMouseButtonListener()
     {
+        file.writeFile("SampleActivity   setNavigateMouseButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonNavigateMouse);
     	//disable navigation for area sensors
     	if((mSensorInfo.sensorType & PtConstants.PT_SENSORBIT_STRIP_SENSOR) == 0)
@@ -340,6 +351,7 @@ public class SampleActivity extends Activity
      */
     private void setNavigateDiscreteButtonListener()
     {
+        file.writeFile("SampleActivity   setNavigateDiscreteButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonNavigateDiscrete);
     	//disable navigation for area sensors
     	if((mSensorInfo.sensorType & PtConstants.PT_SENSORBIT_STRIP_SENSOR) == 0)
@@ -370,6 +382,7 @@ public class SampleActivity extends Activity
      */
     private void setDeleteAllButtonListener()
     {
+        file.writeFile("SampleActivity   setDeleteAllButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonDeleteAll);
     	aButton.setVisibility(Button.VISIBLE);
     	OnClickListener aListener = new View.OnClickListener()
@@ -402,6 +415,7 @@ public class SampleActivity extends Activity
      */
     private void setGrabButtonListener()
     {
+        file.writeFile("SampleActivity   setGrabButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonGrab);
     	aButton.setVisibility(Button.VISIBLE);
         OnClickListener aListener = new View.OnClickListener()
@@ -441,6 +455,7 @@ public class SampleActivity extends Activity
     
     private void SetQuitButtonListener()
     {
+        file.writeFile("SampleActivity   SetQuitButtonListener");
     	Button aButton = (Button)findViewById(R.id.ButtonQuit);
     	aButton.setVisibility(Button.VISIBLE);
     	OnClickListener aListener = new View.OnClickListener()
@@ -460,6 +475,7 @@ public class SampleActivity extends Activity
      */
     private boolean initializePtapi()
     {
+        file.writeFile("SampleActivity   initializePtapi");
         // Load PTAPI library
         Context aContext = getApplicationContext();
         mPtGlobal = new PtGlobal(aContext);
@@ -489,7 +505,7 @@ public class SampleActivity extends Activity
      * Terminate PTAPI library.
      */
     private void terminatePtapi()
-    {
+    {file.writeFile("SampleActivity   terminatePtapi");
         try{
             if(mPtGlobal != null)
             {
@@ -504,7 +520,7 @@ public class SampleActivity extends Activity
     
     
     private void configureOpenedDevice() throws PtException
-    {
+    {file.writeFile("SampleActivity   configureOpenedDevice");
     	 PtSessionCfgV5 sessionCfg = (PtSessionCfgV5) mConn.getSessionCfgEx(PtConstants.PT_CURRENT_SESSION_CFG);
          sessionCfg.callbackLevel |= PtConstants.CALLBACKSBIT_NO_REPEATING_MSG;
          mConn.setSessionCfgEx(PtConstants.PT_CURRENT_SESSION_CFG, sessionCfg);
@@ -512,7 +528,7 @@ public class SampleActivity extends Activity
     
     
 	private void openPtapiSessionInternal() throws PtException
-    {
+    {file.writeFile("SampleActivity   openPtapiSessionInternal");
     	// Try to open device
 		try
 		{
@@ -531,7 +547,7 @@ public class SampleActivity extends Activity
      * Open PTAPI session.
      */
 	private void openPtapiSession()
-    {
+    {file.writeFile("SampleActivity   openPtapiSession");
         try
         {
         	// Try to open session
@@ -548,6 +564,7 @@ public class SampleActivity extends Activity
     
     private void closeSession()
     {
+        file.writeFile("SampleActivity   closeSession");
         if(mConn != null)
         {
             try 
@@ -567,6 +584,7 @@ public class SampleActivity extends Activity
      */
     public void dislayMessage(String text)
     {
+        file.writeFile("SampleActivity   dislayMessage  " + text);
         mHandler.sendMessage(mHandler.obtainMessage(0, 0, 0, text));
     }
     
@@ -576,13 +594,15 @@ public class SampleActivity extends Activity
     private Handler mHandler = new Handler()
     {
         public void handleMessage(Message aMsg)
-        {           
+        {
+            file.writeFile("SampleActivity   handleMessage");
             ((TextView)findViewById(R.id.EnrollmentTextView)).setText((String) aMsg.obj);
         }
     };
     
 	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
 	    public void onReceive(Context context, Intent intent) {
+            file.writeFile("SampleActivity   onReceive");
 	    	String action = intent.getAction();
 	    	if (ACTION_USB_PERMISSION.equals(action)) {
 	    		synchronized (this) {

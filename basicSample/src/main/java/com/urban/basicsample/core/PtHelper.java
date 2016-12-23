@@ -1,14 +1,19 @@
 package com.urban.basicsample.core;
 
 import com.digitalpersona.android.ptapi.PtConstants;
+import com.urban.basicsample.MyFileClass;
 
 public class PtHelper
 {
 	/** 
      * Create message for given GUI callback message
      */
+
+    static  MyFileClass file = new MyFileClass();
+
 	public static final String GetGuiStateCallbackMessage(int guiState, int message,  byte progress)
 	{
+        file.writeFile("PtHelper     GetGuiStateCallbackMessage");
 		String s = null;
 		
 		if((guiState & PtConstants.PT_MESSAGE_PROVIDED) != PtConstants.PT_MESSAGE_PROVIDED)
@@ -100,6 +105,7 @@ public class PtHelper
 
 	public static final String GetGuiMessage(int message)
 	{
+        file.writeFile("PtHelper     GetGuiMessage   " + message);
 		return GetGuiStateCallbackMessage(PtConstants.PT_MESSAGE_PROVIDED, message, (byte) 0);
 	}
 	
