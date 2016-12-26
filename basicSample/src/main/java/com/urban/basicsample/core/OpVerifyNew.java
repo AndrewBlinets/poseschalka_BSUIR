@@ -46,6 +46,11 @@ public abstract class OpVerifyNew extends Thread {
 		} catch (PtException e) {
 			onDisplayMessage("Verification failed - " + e.getMessage());
 		}
+		catch (NullPointerException e)
+		{
+			onDisplayMessage("Модуль не подключен -  ПОДКЛЮЧИТЕ МОДУЛЬ!!!\n" +
+					"Connect module!!! Please!" );
+		}
 		if (template != null) {
 			onFinished(template);
 		} else {
@@ -183,6 +188,11 @@ public abstract class OpVerifyNew extends Thread {
 			mConn.setSessionCfgEx(SESSION_CFG_VERSION, sessionCfg);
 		} catch (PtException e) {
 			onDisplayMessage("Unable to set session cfg - " + e.getMessage());
+			throw e;
+		}
+		catch (NullPointerException e)
+		{
+			onDisplayMessage("Модуль не подключен - " + e.getMessage());
 			throw e;
 		}
 	}

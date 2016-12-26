@@ -31,15 +31,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="170f341f-3e54-495d-9a20-7ab23beda22a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/StudentAttListActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/StudentAttListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$2.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$3.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew$2.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew$3.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" afterPath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" afterPath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/basicSample.iml" afterPath="$PROJECT_DIR$/basicSample/basicSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" />
     </list>
     <ignored path="BasicSample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,31 +119,19 @@
       <file leaf-file-name="AddStudentActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="218" column="93" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="93" />
+            <state relative-caret-position="135">
+              <caret line="238" column="93" selection-start-line="238" selection-start-column="20" selection-end-line="238" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentAttListActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java">
+      <file leaf-file-name="OpVerifyNew.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+            <state relative-caret-position="-363">
+              <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentAttAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/adapter/StudentAttAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="e#1105#1106#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -2486,16 +2477,16 @@
         <option value="$PROJECT_DIR$/basicSample/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentListActivity.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java" />
-        <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Loader.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/PtHelper.java" />
-        <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java" />
+        <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" />
+        <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" />
       </list>
     </option>
   </component>
@@ -3363,7 +3354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482791567506</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="если студент есть в базе, но не посещал занятие, при просмотре посещаемости по фамилии не падает">
+      <created>1482793116404</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1482793116404</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3386,10 +3384,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5030534" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47269624" sideWeight="0.4914712" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32764506" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32764506" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3469,7 +3467,8 @@
     <MESSAGE value="изменил многое, перед изменением комичу" />
     <MESSAGE value="проебался запишу, что помню:&#10;имя и фамилия в экселе махнул&#10;вместо 0 ставится жирная Н&#10;процент пропусков&#10;обновления расписания&#10;если нету нета сообщения&#10;заглавные буквы в фамилиях и именах&#10;если 2 пары то и считывает как 2 пары" />
     <MESSAGE value="в экселе если 2 пары 2 пары отображается посещение норм, в алфавитном порядке" />
-    <option name="LAST_COMMIT_MESSAGE" value="в экселе если 2 пары 2 пары отображается посещение норм, в алфавитном порядке" />
+    <MESSAGE value="если студент есть в базе, но не посещал занятие, при просмотре посещаемости по фамилии не падает" />
+    <option name="LAST_COMMIT_MESSAGE" value="если студент есть в базе, но не посещал занятие, при просмотре посещаемости по фамилии не падает" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3560,37 +3559,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java</url>
-          <line>411</line>
+          <line>431</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java</url>
-          <line>399</line>
+          <line>419</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java</url>
-          <line>383</line>
+          <line>403</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java</url>
-          <line>335</line>
+          <line>355</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java</url>
-          <line>329</line>
+          <line>349</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java</url>
-          <line>323</line>
+          <line>343</line>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
@@ -3980,31 +3979,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java</url>
-          <line>59</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java</url>
-          <line>99</line>
+          <line>104</line>
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java</url>
-          <line>131</line>
+          <line>136</line>
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java</url>
-          <line>166</line>
+          <line>171</line>
           <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java</url>
-          <line>178</line>
+          <line>183</line>
           <properties />
           <option name="timeStamp" value="99" />
         </line-breakpoint>
@@ -4975,14 +4974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/PtHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
@@ -5099,9 +5090,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/adapter/StudentAttAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="-82">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#1105#1106#0" expanded="true" />
@@ -5111,16 +5110,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="218" column="93" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="93" />
+        <state relative-caret-position="135">
+          <caret line="238" column="93" selection-start-line="238" selection-start-column="20" selection-end-line="238" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java">
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="-363">
+          <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
           <folding />
         </state>
       </provider>
