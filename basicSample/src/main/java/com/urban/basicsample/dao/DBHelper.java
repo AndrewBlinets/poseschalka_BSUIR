@@ -38,16 +38,16 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String INSERT_INTO = "insert into Students select _id,"
             + "FirstName, LastName, GroupId, SubGroup, Scan from Students_backup;";
 
-    MyFileClass file = new MyFileClass();
+   // MyFileClass file = new MyFileClass();
 
     public DBHelper(Context context) {
         super(context, "myDB", null, DB_VERSION);
-        file.writeFile("DBHelper   construktor");
+      //  file.writeFile("DBHelper   construktor");
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        file.writeFile("DBHelper   onCreate");
+       // file.writeFile("DBHelper   onCreate");
        // Log.i(Tag, Class.class + M)
         db.execSQL(CREATE_TABLE_ST);
         db.execSQL(CREATE_TABLE_L);
@@ -65,7 +65,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        file.writeFile("DBHelper   onUpgrade");
+       // file.writeFile("DBHelper   onUpgrade");
         ContentValues cv;
         switch (oldVersion) {
             case 1:

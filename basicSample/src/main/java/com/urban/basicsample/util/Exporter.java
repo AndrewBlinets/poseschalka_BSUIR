@@ -11,6 +11,7 @@ import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -147,7 +148,12 @@ public class Exporter {
                 // Cell newCell = newRow.createCell(dates.get(date));
                 Cell newCell = rows.get(name).createCell(dates.get(date));
                 newCell.setCellValue(att);
-
+               /* CellStyle style = wb.createCellStyle();
+                Font font = wb.createFont();
+                font.setBold(true);
+                style.setFont(font);
+                newCell.setCellStyle(style);
+                */
             } while (cursor.moveToNext());
 
 
@@ -220,7 +226,12 @@ public class Exporter {
         for (Integer cell : dates.values()) {
             for (Map.Entry<String, Integer> name : names.entrySet()) {
                 Cell nullCell = rows.get(name.getKey()).createCell(cell);
-                nullCell.setCellValue("0");
+                nullCell.setCellValue("н");
+                CellStyle style = wb.createCellStyle();
+                Font font = wb.createFont();
+                font.setBold(true);
+                style.setFont(font);
+                nullCell.setCellStyle(style);
             }
         }
 

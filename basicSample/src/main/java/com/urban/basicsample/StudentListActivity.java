@@ -71,7 +71,7 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					Intent intent = new Intent(StudentListActivity.this, StudentAttListActivity.class);
-					intent.putExtra("id", id);
+					intent.putExtra("id", id+"");
 					startActivity(intent);
 				}
 			});

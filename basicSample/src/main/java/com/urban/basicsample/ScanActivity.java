@@ -28,6 +28,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -76,18 +77,20 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	private int part = 1;
 	private int lessonId;
 
+	private int count_repeats = 0;
+
 	private static final String Tag = "MyLog";
-MyFileClass file = new MyFileClass();
+	MyFileClass file = new MyFileClass();
 	private AtomicBoolean isTreadStarted = new AtomicBoolean(false);
 
-	
+
 	private static final String ACTION_USB_PERMISSION = "com.digitalpersona.java.ptapi.dpfpddusbhost.USB_PERMISSION";
 
 	private final Object mCond = new Object();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		file.writeFile( "ScanActivity   onCreate");
+		//file.writeFile( "ScanActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_scan);
 		Intent intent = getIntent();
@@ -97,17 +100,17 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	protected void onResume() {
-		file.writeFile( "ScanActivity   onResume");
+		//file.writeFile( "ScanActivity   onResume");
 		initialize();
 		if (!isTreadStarted.get()) {
 			init();
 		}
 		super.onResume();
 	}
-	
+
 	@Override
 	protected void onStop() {
-		file.writeFile( "ScanActivity   onStop");
+		//file.writeFile( "ScanActivity   onStop");
 		if (mRunningOp != null) {
 			mRunningOp.interrupt();
 		}
@@ -117,7 +120,7 @@ MyFileClass file = new MyFileClass();
 	}
 
 	public void initialize() {
-		file.writeFile( "ScanActivity   initialize");
+	//	file.writeFile( "ScanActivity   initialize");
 		if (initializePtapi()) {
 			Context applContext = getApplicationContext();
 			PendingIntent mPermissionIntent;
@@ -131,7 +134,7 @@ MyFileClass file = new MyFileClass();
 					openPtapiSession();
 				}
 			} catch (PtException e) {
-				displayMessage("Error during device opening - " + e.getMessage());
+				displayMessage("Error during device opening ScanActivity   initialize - " + e.getMessage());
 			}
 
 		}
@@ -139,7 +142,7 @@ MyFileClass file = new MyFileClass();
 
 	private boolean initializePtapi() {
 		// Load PTAPI library
-		file.writeFile( "ScanActivity   initializePtapi");
+		//file.writeFile( "ScanActivity   initializePtapi");
 		Context aContext = getApplicationContext();
 		mPtGlobal = new PtGlobal(aContext);
 
@@ -149,7 +152,7 @@ MyFileClass file = new MyFileClass();
 			return true;
 		} catch (java.lang.UnsatisfiedLinkError ule) {
 			// Library wasn't loaded properly during PtGlobal object construction
-			displayMessage("libjniPtapi.so not loaded");
+			displayMessage("libjniPtapi.so not loaded   ScanActivity   initializePtapi");
 			mPtGlobal = null;
 			return false;
 
@@ -161,7 +164,7 @@ MyFileClass file = new MyFileClass();
 
 	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
-			file.writeFile( "ScanActivity   mUsbReceiver");
+			//file.writeFile( "ScanActivity   mUsbReceiver");
 			String action = intent.getAction();
 			if (ACTION_USB_PERMISSION.equals(action)) {
 				synchronized (this) {
@@ -179,7 +182,7 @@ MyFileClass file = new MyFileClass();
 	};
 
 	private void openPtapiSession() {
-		file.writeFile( "ScanActivity   openPtapiSession");
+		//file.writeFile( "ScanActivity   openPtapiSession");
 		try {
 			// Try to open session
 			openPtapiSessionInternal();
@@ -187,12 +190,12 @@ MyFileClass file = new MyFileClass();
 			// Device successfully opened
 			return;
 		} catch (PtException e) {
-			displayMessage("Error during device opening - " + e.getMessage());
+			displayMessage("Error during device opening  ScanActivity   openPtapiSession -  " + e.getMessage());
 		}
 	}
 
 	private void openPtapiSessionInternal() throws PtException {
-		file.writeFile( "ScanActivity   openPtapiSessionInternal");
+		//file.writeFile( "ScanActivity   openPtapiSessionInternal");
 		// Try to open device
 		try {
 			mConn = (PtConnectionAdvancedI) mPtGlobal.open("USB");
@@ -203,7 +206,7 @@ MyFileClass file = new MyFileClass();
 	}
 
 	private void init() {
-		file.writeFile( "ScanActivity   init");
+		//file.writeFile( "ScanActivity   init");
 		synchronized (mCond) {
 			isTreadStarted.set(true);
 			mRunningOp = new OpVerifyNew(mConn, 3) {
@@ -236,7 +239,7 @@ MyFileClass file = new MyFileClass();
 						closeSession();
 						/*
 						 * try {
-						 * 
+						 *
 						 * Constants.mConn.close(); Constants.mConn = null; Constants.mPtGlobal = null; } catch
 						 * (PtException e) { // TODO Auto-generated catch block e.printStackTrace(); }
 						 */
@@ -414,30 +417,31 @@ MyFileClass file = new MyFileClass();
 		int intDay = date.getDay();
 
 		switch (intDay) {
-		case 0:
-			day = "Воскресенье";
-			break;
-		case 1:
-			day = "Понедельник";
-			break;
-		case 2:
-			day = "Вторник";
-			break;
-		case 3:
-			day = "Среда";
-			break;
-		case 4:
-			day = "Четверг";
-			break;
-		case 5:
-			day = "Пятница";
-			break;
-		case 6:
-			day = "Суббота";
-			break;
+			case 0:
+				day = "Воскресенье";
+				break;
+			case 1:
+				day = "Понедельник";
+				break;
+			case 2:
+				day = "Вторник";
+				break;
+			case 3:
+				day = "Среда";
+				break;
+			case 4:
+				day = "Четверг";
+				break;
+			case 5:
+				day = "Пятница";
+				break;
+			case 6:
+				day = "Суббота";
+				break;
 		}
-
+		file.writeFile( "ScanActivity   identifyClass 123");
 		SQLiteDatabase database = null;
+		String namesub = " ";
 		try {
 			DBHelper helper = new DBHelper(getApplicationContext());
 			database = helper.getWritableDatabase();
@@ -452,6 +456,10 @@ MyFileClass file = new MyFileClass();
 						int subgroup = c.getInt(c.getColumnIndex("NumSubgroup"));
 						if ((weekNumber.charAt(0) == '0' || weekNumber.indexOf(String.valueOf(week)) != -1)
 								&& (subgroup == 0 || subgroup == numSubgroup)) {
+
+
+
+
 							String timeStart = c.getString(c.getColumnIndex("LessonTimeStart"));
 							String timeEnd = c.getString(c.getColumnIndex("LessonTimeEnd"));
 
@@ -472,6 +480,11 @@ MyFileClass file = new MyFileClass();
 									part = 2;
 								}
 								subject = c.getString(c.getColumnIndex("Subject"));
+								if(namesub.equals(c.getString(c.getColumnIndex("Subject"))))
+								{
+									file.writeFile( "ScanActivity   identifyClass совпали повторы 2");
+									count_repeats++;
+								}
 								// Toast.makeText(getApplicationContext(), subject, 1000).show();
 								/*
 								 * ((TextView) findViewById(R.id.stv1)).setText(mGroup); ((TextView)
@@ -483,6 +496,19 @@ MyFileClass file = new MyFileClass();
 								writeLessonToDb();
 
 								break;
+							}
+							else
+							{
+								if(namesub.equals(c.getString(c.getColumnIndex("Subject"))))
+								{
+									count_repeats++;
+									file.writeFile( "ScanActivity   identifyClass  совпали повторы 1");
+								}
+								else {
+									count_repeats = 0;
+									namesub = c.getString(c.getColumnIndex("Subject"));
+									file.writeFile( "ScanActivity   identifyClass не совпали повторы");
+								}
 							}
 						}
 
@@ -513,11 +539,24 @@ MyFileClass file = new MyFileClass();
 
 			String[] selectionArgs = new String[] { date, subject };
 			Cursor c = database.query("Lessons", null, "Date = ? AND Subject = ?", selectionArgs, null, null, null);
-			if (c.getCount() != 0) {
+			if (c.getCount() != 0 && c.getCount() == count_repeats + 1) {
+				file.writeFile( "ScanActivity   writeLessonToDb   " + c.getCount() + "  " + count_repeats);
 				if (c.moveToFirst()) {
-					lessonId = c.getInt(c.getColumnIndex("_id"));
+					int Index = c.getColumnIndex("_id");
+					if (c.getCount() == 1) {
+						lessonId = c.getInt(Index);
+						file.writeFile("итоговый 1  id = " + lessonId);
+					} else {
+						do {
+							lessonId = c.getInt(Index);
+							file.writeFile("итоговый 2  id = " + lessonId);
+						}
+						while (c.moveToNext());
+					}
 				}
+
 			} else {
+				file.writeFile( "ScanActivity   writeLessonToDb создаем новый");
 				database.beginTransaction();
 
 				ContentValues cv = new ContentValues();
@@ -526,10 +565,11 @@ MyFileClass file = new MyFileClass();
 				cv.put("Subject", subject);
 
 				lessonId = (int) database.insert("Lessons", null, cv);
-
+				file.writeFile( "ScanActivity   writeLessonToDb new id = " + lessonId);
 				database.setTransactionSuccessful();
 				database.endTransaction();
 			}
+
 
 		} finally {
 			database.close();
@@ -537,51 +577,51 @@ MyFileClass file = new MyFileClass();
 	}
 
 	protected Dialog onCreateDialog(int id) {
-		file.writeFile( "ScanActivity   onCreateDialog");
+		//file.writeFile( "ScanActivity   onCreateDialog");
 		AlertDialog.Builder adb = new AlertDialog.Builder(this);
 		switch (id) {
-		case REPEAT_OR_ADD:
-			adb.setTitle("Студент не найден");
-			adb.setMessage("Повторить?");
-			adb.setIcon(android.R.drawable.ic_dialog_info);
-			adb.setPositiveButton("Повторить", myClickListenerNew);
-			adb.setNegativeButton("Добавить", myClickListenerNew);
-			break;
-		case PASS_DIALOG:
-			final EditText editText = new EditText(this);
-			editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-			DialogInterface.OnClickListener onClickListener = new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					String nPass = editText.getText().toString();
-					// Toast.makeText(LoginActivity.this, "Input was: "+nPass, 1000).show();
-					if (PassEncrypter.verifyAdminPass(getApplicationContext(), nPass)) {
-						finish();
-					} else {
-						editText.setText("");
-						Toast.makeText(getApplicationContext(), "Неверный пароль", Toast.LENGTH_SHORT).show();
+			case REPEAT_OR_ADD:
+				adb.setTitle("Студент не найден");
+				adb.setMessage("Повторить?");
+				adb.setIcon(android.R.drawable.ic_dialog_info);
+				adb.setPositiveButton("Повторить", myClickListenerNew);
+				adb.setNegativeButton("Добавить", myClickListenerNew);
+				break;
+			case PASS_DIALOG:
+				final EditText editText = new EditText(this);
+				editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+				DialogInterface.OnClickListener onClickListener = new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						String nPass = editText.getText().toString();
+						// Toast.makeText(LoginActivity.this, "Input was: "+nPass, 1000).show();
+						if (PassEncrypter.verifyAdminPass(getApplicationContext(), nPass)) {
+							finish();
+						} else {
+							editText.setText("");
+							Toast.makeText(getApplicationContext(), "Неверный пароль", Toast.LENGTH_SHORT).show();
+						}
 					}
-				}
-			};
-		
-			adb.setTitle("Авторизация").setMessage("Введите пароль:")
-					.setPositiveButton("Ок", onClickListener).setView(editText).create();
-			break;
-		default:
-			// ?????????
-			if(subject != null)
-			adb.setTitle(subject + ", гр: " + mGroup);
-			else
-			adb.setTitle( "В данный момент занятий нету, гр: " + mGroup);
-			// ?????????
-			adb.setMessage(firstName + " " + lastName);
-			// ??????
-			adb.setIcon(android.R.drawable.ic_dialog_info);
-			// ?????? ?????????????? ??????
-			adb.setPositiveButton("Ok", myClickListener);
-			// ?????? ?????????????? ??????
-			// adb.setNegativeButton("?????????", myClickListener);
-			break;
+				};
+
+				adb.setTitle("Авторизация").setMessage("Введите пароль:")
+						.setPositiveButton("Ок", onClickListener).setView(editText).create();
+				break;
+			default:
+				// ?????????
+				if(subject != null)
+					adb.setTitle(subject + ", гр: " + mGroup);
+				else
+					adb.setTitle( "В данный момент занятий нету, гр: " + mGroup);
+				// ?????????
+				adb.setMessage(firstName + " " + lastName);
+				// ??????
+				adb.setIcon(android.R.drawable.ic_dialog_info);
+				// ?????? ?????????????? ??????
+				adb.setPositiveButton("Ok", myClickListener);
+				// ?????? ?????????????? ??????
+				// adb.setNegativeButton("?????????", myClickListener);
+				break;
 		}
 		adb.setCancelable(false);
 		// ??????? ??????
@@ -593,17 +633,17 @@ MyFileClass file = new MyFileClass();
 	OnClickListener myClickListener = new OnClickListener() {
 		public void onClick(DialogInterface dialog, int which) {
 			switch (which) {
-			// ????????????? ??????
-			case Dialog.BUTTON_POSITIVE:
-				init();
-				dialog.dismiss();
-				break;
-			// ?????????? ??????
-			case Dialog.BUTTON_NEGATIVE:
-				closeSession();
-				terminatePtapi();
-				finish();
-				break;
+				// ????????????? ??????
+				case Dialog.BUTTON_POSITIVE:
+					init();
+					dialog.dismiss();
+					break;
+				// ?????????? ??????
+				case Dialog.BUTTON_NEGATIVE:
+					closeSession();
+					terminatePtapi();
+					finish();
+					break;
 
 			}
 		}
@@ -612,15 +652,15 @@ MyFileClass file = new MyFileClass();
 	OnClickListener myClickListenerNew = new OnClickListener() {
 		public void onClick(DialogInterface dialog, int which) {
 			switch (which) {
-			// ????????????? ??????
-			case Dialog.BUTTON_POSITIVE:
-				init();
-				dialog.dismiss();
-				break;
-			// ?????????? ??????
-			case Dialog.BUTTON_NEGATIVE:
-				addStudent(mTemplate);
-				break;
+				// ????????????? ??????
+				case Dialog.BUTTON_POSITIVE:
+					init();
+					dialog.dismiss();
+					break;
+				// ?????????? ??????
+				case Dialog.BUTTON_NEGATIVE:
+					addStudent(mTemplate);
+					break;
 
 			}
 		}
@@ -628,33 +668,33 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	public void onBackPressed() {
-		file.writeFile( "ScanActivity   onBackPressed");
+	//	file.writeFile( "ScanActivity   onBackPressed");
 		Toast.makeText(getApplicationContext(), "Таким образом выйти невозможно", Toast.LENGTH_SHORT).show();
 	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		file.writeFile( "ScanActivity   onCreateOptionsMenu");
+		//file.writeFile( "ScanActivity   onCreateOptionsMenu");
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.scan, menu);
 		return true;
 	}
 
 	public void displayMessage(String text) {
-		file.writeFile( "ScanActivity   displayMessage");
+		//file.writeFile( "ScanActivity   displayMessage");
 		switch (text) {
-		case "REPEAT_OR_ADD":
-			mHandler.sendMessage(mHandler.obtainMessage(0, REPEAT_OR_ADD, 0, text));
-			break;
-		case "DIALOG":
-			mHandler.sendMessage(mHandler.obtainMessage(0, dialogShow, 0, text));
-			break;
-		case "UPDATE_TV":
-			mHandler.sendMessage(mHandler.obtainMessage(0, tvUpdate, 0, text));
-			break;
-		default:
-			mHandler.sendMessage(mHandler.obtainMessage(0, 0, 0, text));
-			break;
+			case "REPEAT_OR_ADD":
+				mHandler.sendMessage(mHandler.obtainMessage(0, REPEAT_OR_ADD, 0, text));
+				break;
+			case "DIALOG":
+				mHandler.sendMessage(mHandler.obtainMessage(0, dialogShow, 0, text));
+				break;
+			case "UPDATE_TV":
+				mHandler.sendMessage(mHandler.obtainMessage(0, tvUpdate, 0, text));
+				break;
+			default:
+				mHandler.sendMessage(mHandler.obtainMessage(0, 0, 0, text));
+				break;
 		}
 		/*
 		 * if (text.equalsIgnoreCase("DIALOG")) { mHandler.sendMessage(mHandler.obtainMessage(0, dialogShow, 0, text));
@@ -667,22 +707,22 @@ MyFileClass file = new MyFileClass();
 		int i = 101;
 
 		public void handleMessage(Message aMsg) {
-			file.writeFile( "ScanActivity  mHandler  handleMessage");
+			//file.writeFile( "ScanActivity  mHandler  handleMessage");
 			switch (aMsg.arg1) {
-			case dialogShow:
-				showDialog(i++);
-				break;
-			case REPEAT_OR_ADD:
-				showDialog(REPEAT_OR_ADD);
-				break;
-			case tvUpdate:
-				((TextView) findViewById(R.id.stv1)).setText(mGroup);
-				((TextView) findViewById(R.id.stv2)).setText(subject);
-				((TextView) findViewById(R.id.stv3)).setText("Часть: " + part);
-				break;
-			default:
-				((TextView) findViewById(R.id.EnrollmentTextView1)).setText((String) aMsg.obj);
-				break;
+				case dialogShow:
+					showDialog(i++);
+					break;
+				case REPEAT_OR_ADD:
+					showDialog(REPEAT_OR_ADD);
+					break;
+				case tvUpdate:
+					((TextView) findViewById(R.id.stv1)).setText(mGroup);
+					((TextView) findViewById(R.id.stv2)).setText(subject);
+					((TextView) findViewById(R.id.stv3)).setText("Часть: " + part);
+					break;
+				default:
+					((TextView) findViewById(R.id.EnrollmentTextView1)).setText((String) aMsg.obj);
+					break;
 			}
 			/*
 			 * if (aMsg.arg1 == dialogShow) { showDialog(i++); } else { ((TextView)
@@ -693,7 +733,7 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	protected void onDestroy() {
-		file.writeFile( "ScanActivity   onDestroy");
+		//file.writeFile( "ScanActivity   onDestroy");
 		// Cancel running operation
 		synchronized (mCond) {
 			while (mRunningOp != null) {
@@ -723,6 +763,11 @@ MyFileClass file = new MyFileClass();
 			lastName = data.getStringExtra("lastName");
 			if (id != -1) {
 				if (!dbUtils.checkSchedule(mGroup)) {
+					if(!isOnline()){
+						Toast.makeText(getApplicationContext(), "Нет доступа к интернету!!!",
+								Toast.LENGTH_SHORT).show();
+						return;
+					}
 					Loader loader = new Loader(ScanActivity.this);
 					loader.execute(mGroup);
 					/*
@@ -751,7 +796,7 @@ MyFileClass file = new MyFileClass();
 	}
 
 	private void closeSession() {
-		file.writeFile( "ScanActivity   closeSession");
+		//file.writeFile( "ScanActivity   closeSession");
 		if (mConn != null) {
 			try {
 				mConn.close();
@@ -763,7 +808,7 @@ MyFileClass file = new MyFileClass();
 	}
 
 	private void terminatePtapi() {
-		file.writeFile( "ScanActivity   terminatePtapi");
+		//file.writeFile( "ScanActivity   terminatePtapi");
 		try {
 			if (mPtGlobal != null) {
 				mPtGlobal.terminate();
@@ -776,14 +821,25 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	public void onClick(View v) {
-		file.writeFile( "ScanActivity   onClick");
+	//	file.writeFile( "ScanActivity   onClick");
 		switch (v.getId()) {
-		case R.id.s_exit:
-			showDialog(PASS_DIALOG);
-			break;
-		default:
-			break;
+			case R.id.s_exit:
+				showDialog(PASS_DIALOG);
+				break;
+			default:
+				break;
 		}
+	}
+
+	public  boolean isOnline()
+	{
+		String cs = Context.CONNECTIVITY_SERVICE;
+		ConnectivityManager cm = (ConnectivityManager)
+				getSystemService(cs);
+		if (cm.getActiveNetworkInfo() == null)
+			return false;
+		else
+			return  true;
 	}
 
 }

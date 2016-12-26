@@ -29,14 +29,14 @@ public abstract class OpVerifyNew extends Thread {
 	public OpVerifyNew(PtConnectionI conn, int c) {
 		super("VerifyAllThread");
 
-		file.writeFile("OpVerifyNew    OpVerifyNew");
+		//file.writeFile("OpVerifyNew    OpVerifyNew");
 		mConn = conn;
 		count = c;
 	}
 
 	@Override
 	public void run() {
-		file.writeFile("OpVerifyNew    run");
+	//	file.writeFile("OpVerifyNew    run");
 		PtInputBir template = null;
 		try {
 
@@ -56,7 +56,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private int sleepThenVerify() throws PtException {
-		file.writeFile("OpVerifyNew    sleepThenVerify");
+		//file.writeFile("OpVerifyNew    sleepThenVerify");
 		IntegerArg wakeupCause = new IntegerArg();
 		IntegerArg GuiMessage = new IntegerArg();
 
@@ -96,7 +96,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private int verify() throws PtException {
-		file.writeFile("OpVerifyNew    verify");
+	//	file.writeFile("OpVerifyNew    verify");
 		PtGuiStateCallback guiCallback = new PtGuiStateCallback() {
 			public byte guiStateCallbackInvoke(int guiState, int message, byte progress, PtGuiSampleImage sampleBuffer,
 					byte[] data) throws PtException {
@@ -128,7 +128,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private PtInputBir enroll() throws PtException {
-		file.writeFile("OpVerifyNew    enroll");
+		//file.writeFile("OpVerifyNew    enroll");
 		PtGuiStateCallback guiCallback = new PtGuiStateCallback() {
 			public byte guiStateCallbackInvoke(int guiState, int message, byte progress, PtGuiSampleImage sampleBuffer,
 					byte[] data) throws PtException {
@@ -175,7 +175,7 @@ public abstract class OpVerifyNew extends Thread {
 	}
 
 	private void modifyEnrollmentType(int c) throws PtException {
-		file.writeFile("OpVerifyNew    modifyEnrollmentType   " + c);
+	//	file.writeFile("OpVerifyNew    modifyEnrollmentType   " + c);
 		try {
 			PtSessionCfgV5 sessionCfg = (PtSessionCfgV5) mConn.getSessionCfgEx(SESSION_CFG_VERSION);
 			sessionCfg.enrollMinTemplates = (byte) 3;

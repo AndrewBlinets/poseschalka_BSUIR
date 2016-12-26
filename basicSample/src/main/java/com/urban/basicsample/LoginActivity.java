@@ -3,6 +3,7 @@ package com.urban.basicsample;
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,7 +55,7 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 			finish();
 		setContentView(R.layout.fragment_main);
 
-
+		fileClass.qwe(getApplicationContext());
 		fileClass.writeFile_M(this.getLocalClassName() + "   onCreate\n");
 
 		//mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(

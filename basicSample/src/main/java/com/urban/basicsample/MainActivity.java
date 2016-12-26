@@ -217,6 +217,10 @@ MyFileClass file = new MyFileClass();
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					String lastName = editText.getText().toString().trim();
+					//lastName.substring(0, 1).toUpperCase();
+					String dop_str = lastName.substring(0, 1).toUpperCase();
+					dop_str += lastName.substring(1);
+					lastName = dop_str;
 					Intent intent = new Intent(getApplicationContext(), StudentListActivity.class);
 					intent.putExtra("lastName", lastName);
 					startActivity(intent);

@@ -169,7 +169,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 			// Device successfully opened
 			return;
 		} catch (PtException e) {
-			dislayMessage("Error during device opening - " + e.getMessage());
+			dislayMessage("Error during device opening 1 - " + e.getMessage());
 		}
 	}
 
@@ -202,7 +202,13 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 		case R.id.btnAdd:
 			file.writeFile( "AddStudentActivity   onClick    add");
 			String firstName = fN.getText().toString().trim();
+			String dop_str = firstName.substring(0, 1).toUpperCase();
+			dop_str += firstName.substring(1);
+			firstName = dop_str;
 			String lastName = lN.getText().toString().trim();
+			dop_str = lastName.substring(0, 1).toUpperCase();
+			dop_str += lastName.substring(1);
+			lastName = dop_str;
 			String group = etGroup.getText().toString().trim();
 			String subGroupStr = subGroup.getText().toString().trim();
 			if (!firstName.isEmpty() && !lastName.isEmpty() && !group.isEmpty() && !subGroupStr.isEmpty()

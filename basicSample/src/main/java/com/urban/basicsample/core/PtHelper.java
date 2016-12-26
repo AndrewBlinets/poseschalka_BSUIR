@@ -13,7 +13,7 @@ public class PtHelper
 
 	public static final String GetGuiStateCallbackMessage(int guiState, int message,  byte progress)
 	{
-        file.writeFile("PtHelper     GetGuiStateCallbackMessage");
+     //   file.writeFile("PtHelper     GetGuiStateCallbackMessage");
 		String s = null;
 		
 		if((guiState & PtConstants.PT_MESSAGE_PROVIDED) != PtConstants.PT_MESSAGE_PROVIDED)
@@ -105,7 +105,7 @@ public class PtHelper
 
 	public static final String GetGuiMessage(int message)
 	{
-        file.writeFile("PtHelper     GetGuiMessage   " + message);
+     //   file.writeFile("PtHelper     GetGuiMessage   " + message);
 		return GetGuiStateCallbackMessage(PtConstants.PT_MESSAGE_PROVIDED, message, (byte) 0);
 	}
 	

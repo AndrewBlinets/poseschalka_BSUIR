@@ -34,7 +34,7 @@ public class StudentAttListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_student_att_list);
 		Intent startIntent = getIntent();
-		int id = startIntent.getIntExtra("id", 1);
+		int id = Integer.parseInt(startIntent.getStringExtra("id"));//.getExtra("id");
 		getStudentAtt(id);
 		
 		sAdapter = new StudentAttAdapter(this, attendances);
