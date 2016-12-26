@@ -30,27 +30,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Mylog" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="170f341f-3e54-495d-9a20-7ab23beda22a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$2.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$3.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/AddStudentActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/MainActivity$4.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/MainActivity$PlaceholderFragment.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/MainActivity$PlaceholderFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/MainActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$1.class" />
+    <list default="true" id="170f341f-3e54-495d-9a20-7ab23beda22a" name="Default" comment="проебался запишу, что помню:&#10;имя и фамилия в экселе махнул&#10;вместо 0 ставится жирная Н&#10;процент пропусков&#10;обновления расписания&#10;если нету нета сообщения&#10;заглавные буквы в фамилиях и именах&#10;если 2 пары то и считывает как 2 пары">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$2.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$3.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$4.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$5.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$6.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/StudentAttListActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/StudentAttListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/StudentListActivity$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/StudentListActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/OpVerifyNew.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/PtHelper.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/PtHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/dao/DBHelper.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/dao/DBHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/util/Exporter.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/util/Exporter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" />
@@ -58,16 +39,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" afterPath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" afterPath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentListActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/PtHelper.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/PtHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/basicSample.iml" afterPath="$PROJECT_DIR$/basicSample/basicSample.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
@@ -106,18 +79,8 @@
       <file leaf-file-name="MyFileClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScanActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="543" column="38" selection-start-line="543" selection-start-column="38" selection-end-line="543" selection-end-column="38" />
+            <state relative-caret-position="290">
+              <caret line="92" column="38" selection-start-line="85" selection-start-column="12" selection-end-line="92" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -126,28 +89,28 @@
       <file leaf-file-name="Exporter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="134" column="35" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="35" />
+            <state relative-caret-position="208">
+              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java">
+      <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/NavigationDrawerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+            <state relative-caret-position="327">
+              <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java">
+      <file leaf-file-name="AddStudentActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" column="55" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="55" />
+            <state relative-caret-position="190">
+              <caret line="207" column="61" selection-start-line="207" selection-start-column="61" selection-end-line="207" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -2502,8 +2465,8 @@
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpVerifyNew.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java" />
-        <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java" />
         <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" />
+        <option value="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java" />
       </list>
     </option>
   </component>
@@ -2538,8 +2501,83 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jniLibs" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basicsample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BasicSample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2861,82 +2899,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BasicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BasicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BasicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jniLibs" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BasicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basicsample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BasicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BasicSample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3357,7 +3320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482454316149</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="проебался запишу, что помню:&#10;имя и фамилия в экселе махнул&#10;вместо 0 ставится жирная Н&#10;процент пропусков&#10;обновления расписания&#10;если нету нета сообщения&#10;заглавные буквы в фамилиях и именах&#10;если 2 пары то и считывает как 2 пары">
+      <created>1482716835599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1482716835599</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3371,7 +3341,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -3382,8 +3352,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5030534" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47269624" sideWeight="0.4914712" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32764506" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3395,8 +3365,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33617747" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3461,7 +3431,8 @@
     <MESSAGE value="change BSUIR API" />
     <MESSAGE value="промежуточное" />
     <MESSAGE value="изменил многое, перед изменением комичу" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменил многое, перед изменением комичу" />
+    <MESSAGE value="проебался запишу, что помню:&#10;имя и фамилия в экселе махнул&#10;вместо 0 ставится жирная Н&#10;процент пропусков&#10;обновления расписания&#10;если нету нета сообщения&#10;заглавные буквы в фамилиях и именах&#10;если 2 пары то и считывает как 2 пары" />
+    <option name="LAST_COMMIT_MESSAGE" value="проебался запишу, что помню:&#10;имя и фамилия в экселе махнул&#10;вместо 0 ставится жирная Н&#10;процент пропусков&#10;обновления расписания&#10;если нету нета сообщения&#10;заглавные буквы в фамилиях и именах&#10;если 2 пары то и считывает как 2 пары" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4552,71 +4523,35 @@
           <properties />
           <option name="timeStamp" value="279" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>102</line>
+          <line>114</line>
           <properties />
           <option name="timeStamp" value="284" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>287</line>
+          <line>397</line>
           <properties />
           <option name="timeStamp" value="285" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>241</line>
-          <properties />
-          <option name="timeStamp" value="286" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>225</line>
-          <properties />
-          <option name="timeStamp" value="287" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>206</line>
+          <line>277</line>
           <properties />
           <option name="timeStamp" value="288" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>176</line>
+          <line>247</line>
           <properties />
           <option name="timeStamp" value="289" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="290" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>265</line>
+          <line>373</line>
           <properties />
           <option name="timeStamp" value="291" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/NavigationDrawerFragment.java</url>
-          <line>232</line>
-          <properties />
-          <option name="timeStamp" value="295" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="300" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>157</line>
-          <properties />
-          <option name="timeStamp" value="303" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ListActivity.java</url>
@@ -4636,9 +4571,9 @@
           <properties />
           <option name="timeStamp" value="309" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
-          <line>110</line>
+          <line>122</line>
           <properties />
           <option name="timeStamp" value="314" />
         </line-breakpoint>
@@ -4647,12 +4582,6 @@
           <line>126</line>
           <properties />
           <option name="timeStamp" value="317" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java</url>
-          <line>136</line>
-          <properties />
-          <option name="timeStamp" value="318" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java</url>
@@ -4708,6 +4637,18 @@
           <properties />
           <option name="timeStamp" value="329" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
+          <line>165</line>
+          <properties />
+          <option name="timeStamp" value="342" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java</url>
+          <line>156</line>
+          <properties />
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/core/OpNavigateSettings.java</url>
           <line>153</line>
@@ -4721,7 +4662,7 @@
           <option name="timeStamp" value="189" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="334" />
+      <option name="time" value="349" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -4826,17 +4767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/model/CustomDialog1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-          <folding>
-            <element signature="e#1910#1911#0" expanded="false" />
-            <element signature="e#1930#1931#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/model/Lesson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -4906,14 +4836,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://F:/SDK/sources/android-19/java/util/concurrent/atomic/AtomicBoolean.java">
@@ -4969,13 +4899,13 @@
         <state relative-caret-position="-212">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1754#1755#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#969#970#0" expanded="false" />
+            <element signature="e#1004#1005#0" expanded="false" />
+            <element signature="e#1098#1099#0" expanded="false" />
+            <element signature="e#1754#1755#0" expanded="false" />
+            <element signature="e#1790#1791#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4985,22 +4915,14 @@
         <state relative-caret-position="-212">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#2296#2297#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="false" />
+            <element signature="e#1156#1157#0" expanded="false" />
+            <element signature="e#1191#1192#0" expanded="false" />
+            <element signature="e#1242#1243#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#2296#2297#0" expanded="false" />
+            <element signature="e#2335#2336#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5016,14 +4938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="402" column="19" selection-start-line="402" selection-start-column="19" selection-end-line="402" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/NavigationDrawerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3023">
-          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5058,61 +4972,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="207" column="61" selection-start-line="207" selection-start-column="61" selection-end-line="207" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="56" column="55" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5132,18 +4998,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java">
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="134" column="35" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="35" />
+        <state relative-caret-position="68">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/model/CustomDialog1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
+        <state relative-caret-position="813">
           <caret line="543" column="38" selection-start-line="543" selection-start-column="38" selection-end-line="543" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2631">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentAttListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="56" column="55" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/StudentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/MyFileClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="92" column="38" selection-start-line="85" selection-start-column="12" selection-end-line="92" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/util/Exporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/NavigationDrawerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/AddStudentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="207" column="61" selection-start-line="207" selection-start-column="61" selection-end-line="207" selection-end-column="61" />
           <folding />
         </state>
       </provider>

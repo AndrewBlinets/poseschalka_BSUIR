@@ -16,8 +16,17 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="4f63355e13142704ca1555913a7f663a6255b7cb">
+        sha1="7a71fb6234491cbee9b8bf84e3725b254e24a3cf">
         <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\instant-run_cb3c5dc202e498d70a3902f8a5ed40debeefac7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\support-v4-19.1.0_913f247cd967826839560ba783e6a968db3cb5d3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -25,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="82c19cfafd34fc4b5ecc9fcfc30fa30fc6e56e65">
+        sha1="528bc91609e3a68df1b2ac9e267e70fec190348b">
         <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\instant-run-bootstrap_0e80ce3c052f1f0de799adc1dc102834e806fe03.jar" />
     </item>
     <item
@@ -36,15 +45,6 @@
         revision="23.0.2"
         sha1="9757bac7089f0d5089b9873ef4cc1608fb1a9488">
         <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\androidtfm_2de2208b0706cf7d420f614c75a6959e3c69c27e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\support-v4-19.1.0_913f247cd967826839560ba783e6a968db3cb5d3.jar" />
     </item>
     <item
         is-multidex="false"
