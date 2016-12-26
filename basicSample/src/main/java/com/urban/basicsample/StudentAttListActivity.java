@@ -20,11 +20,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 
 public class StudentAttListActivity extends Activity {
 
 	private ArrayList<Attendance> attendances;
 	private StudentAttAdapter sAdapter;
+	private boolean flag = false;
 
 	private static final String Tag = "MyLog";
 	MyFileClass file = new MyFileClass();
@@ -36,10 +38,17 @@ public class StudentAttListActivity extends Activity {
 		Intent startIntent = getIntent();
 		int id = Integer.parseInt(startIntent.getStringExtra("id"));//.getExtra("id");
 		getStudentAtt(id);
-		
-		sAdapter = new StudentAttAdapter(this, attendances);
-		ListView listView = (ListView) findViewById(R.id.lvAttStudent);
-		listView.setAdapter(sAdapter);		
+
+		if(flag)
+		{
+			sAdapter = new StudentAttAdapter(this, attendances);
+			ListView listView = (ListView) findViewById(R.id.lvAttStudent);
+			listView.setAdapter(sAdapter);
+		}
+		else
+		{
+			Toast.makeText(getApplicationContext(), "Данный студент не был отмечан на занятиях!!!", Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	private void getStudentAtt(int id) {
@@ -53,7 +62,7 @@ public class StudentAttListActivity extends Activity {
 
 		if (c.moveToFirst()) {
 			attendances = new ArrayList<>();
-
+			flag = true;
 			int sunjectColIndex = c.getColumnIndex("Subject");
 			int dateColIndex = c.getColumnIndex("Date");
 			int att1ColIndex = c.getColumnIndex("Attendance1");
