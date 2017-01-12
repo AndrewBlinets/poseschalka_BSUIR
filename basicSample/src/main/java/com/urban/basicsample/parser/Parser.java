@@ -175,7 +175,7 @@ public class Parser {
 				schedule.setStudentGroup(elem.getElementsByTagName("studentGroup").item(0).getTextContent());
 				schedule.setNumSubgroup(Integer.parseInt(elem.getElementsByTagName("numSubgroup").item(0)
 						.getTextContent()));
-				schedule.setSubject(elem.getElementsByTagName("subject").item(0).getTextContent());
+				schedule.setSubject(elem.getElementsByTagName("subject").item(0).getTextContent()+"_"+elem.getElementsByTagName("lessonType").item(0).getTextContent());
 
 				NodeList weeks = elem.getElementsByTagName("weekNumber");
 				for (int k = 0; k < weeks.getLength(); k++) {
