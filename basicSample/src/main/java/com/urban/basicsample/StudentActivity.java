@@ -21,6 +21,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 public class StudentActivity extends Activity implements OnClickListener {
 
 	private final int SCAN_DIALOG = 1;
@@ -55,8 +57,13 @@ MyFileClass file = new MyFileClass();
 		Builder builder = new Builder(this);
 		switch (id) {
 		case SCAN_DIALOG:
-			CustomDialog1 cd = new CustomDialog1(this);
-			cd.show();
+			//CustomDialog1 cd = new CustomDialog1(this);
+			//cd.show();
+			int week = getNumberstudyweek();
+			Intent intent = new Intent(this, ScanActivity.class);
+			intent.putExtra("week", week);
+			this.startActivity(intent);
+
 			break;
 		case LIST_DIALOG:
 			final EditText editText1 = new EditText(this);
@@ -83,5 +90,30 @@ MyFileClass file = new MyFileClass();
 			break;
 		}
 		return dialog;
+	}
+
+
+	private int getNumberstudyweek()
+	{
+		Calendar c = Calendar.getInstance();
+		int  now_number_week = c.get(Calendar.WEEK_OF_YEAR);
+		c.set(c.get(Calendar.YEAR),8,1);
+		int week_1_semtember = c.get(Calendar.WEEK_OF_YEAR);
+		if(now_number_week > week_1_semtember)// if the date from September 1 to December 31
+		return (now_number_week - week_1_semtember) % 4 + 1;
+		else
+		{
+			c.set(c.get(Calendar.YEAR) - 1,8,1);
+			week_1_semtember = c.get(Calendar.WEEK_OF_YEAR);
+			int day = 31;
+			int col_week_in_year = 1;
+			do {
+				c.set(c.get(Calendar.YEAR) - 1,11,day);
+				col_week_in_year = c.get(Calendar.WEEK_OF_YEAR);
+				day--;
+			}
+			while (col_week_in_year == 1);
+			return (now_number_week + col_week_in_year - week_1_semtember) % 4 + 1;
+		}
 	}
 }

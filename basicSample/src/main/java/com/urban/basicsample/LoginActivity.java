@@ -24,6 +24,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -55,9 +56,19 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 			finish();
 		setContentView(R.layout.fragment_main);
 
-		fileClass.qwe(getApplicationContext());
+		//fileClass.qwe(getApplicationContext());
 		fileClass.writeFile_M(this.getLocalClassName() + "   onCreate\n");
-
+		Calendar c = Calendar.getInstance();
+		int  aq = c.get(Calendar.WEEK_OF_YEAR);
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		int mounth = c.get(Calendar.MONTH);
+		int year = c.get(Calendar.YEAR);
+		fileClass.writeFile_M("week - " + aq + " day - " + day +
+		" month - " + mounth + " year - " + year);
+		/*Date date = new Date();
+		int a = date.getDate();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+		fileClass.writeFile(dateFormat.format(new Date()));*/
 		//mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(
 		//		R.id.navigation_drawer);
 		//mTitle = getTitle();

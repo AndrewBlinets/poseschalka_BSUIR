@@ -12,21 +12,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="ac092ec287be1eee13973b308a2d6870b37f0f3c">
-        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\instant-run_cb3c5dc202e498d70a3902f8a5ed40debeefac7c.jar" />
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\support-v4-19.1.0_913f247cd967826839560ba783e6a968db3cb5d3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\exploded-aar\poseschalka_BSUIR\aFileChooser\unspecified\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="1339c5c0b9e5893db4ffb7608cb9b33efaf6556c">
-        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\instant-run-bootstrap_0e80ce3c052f1f0de799adc1dc102834e806fe03.jar" />
+        sha1="52501c3a737b5e50b5a623dbb7f16d9b714453c0">
+        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\poseschalka_BSUIR-aFileChooser-unspecified_58852aef9745c099a537031caa2538a70e4e0671.jar" />
     </item>
     <item
         is-multidex="false"
@@ -36,15 +36,6 @@
         revision="23.0.2"
         sha1="9757bac7089f0d5089b9873ef4cc1608fb1a9488">
         <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\androidtfm_2de2208b0706cf7d420f614c75a6959e3c69c27e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\support-v4-19.1.0_913f247cd967826839560ba783e6a968db3cb5d3.jar" />
     </item>
     <item
         is-multidex="false"

@@ -95,6 +95,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 		setContentView(R.layout.activity_scan);
 		Intent intent = getIntent();
 		week = intent.getIntExtra("week", 0);
+		((TextView) findViewById(R.id.stv2)).setText(week + " учебная неделя" );
 		dbUtils = new DbUtils(getApplicationContext());
 	}
 
@@ -134,7 +135,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					openPtapiSession();
 				}
 			} catch (PtException e) {
-				displayMessage("Error during device opening ScanActivity   initialize - " + e.getMessage());
+				displayMessage("Error during device opening ScanActivity   initialize - " + e.getMessage());//pri otkl
 			}
 
 		}
@@ -526,53 +527,55 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void writeLessonToDb() {
-		file.writeFile( "ScanActivity   writeLessonToDb");
-		Date d = new Date();
-		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-		String date = format.format(d);
+		if(subject != null) {
+			file.writeFile("ScanActivity   writeLessonToDb");
+			Date d = new Date();
+			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+			String date = format.format(d);
 
-		SQLiteDatabase database = null;
+			SQLiteDatabase database = null;
 
-		try {
-			DBHelper helper = new DBHelper(getApplicationContext());
-			database = helper.getWritableDatabase();
+			try {
+				DBHelper helper = new DBHelper(getApplicationContext());
+				database = helper.getWritableDatabase();
 
-			String[] selectionArgs = new String[] { date, subject };
-			Cursor c = database.query("Lessons", null, "Date = ? AND Subject = ?", selectionArgs, null, null, null);
-			if (c.getCount() != 0 && c.getCount() == count_repeats + 1) {
-				file.writeFile( "ScanActivity   writeLessonToDb   " + c.getCount() + "  " + count_repeats);
-				if (c.moveToFirst()) {
-					int Index = c.getColumnIndex("_id");
-					if (c.getCount() == 1) {
-						lessonId = c.getInt(Index);
-						file.writeFile("итоговый 1  id = " + lessonId);
-					} else {
-						do {
+				String[] selectionArgs = new String[]{date, subject};
+				Cursor c = database.query("Lessons", null, "Date = ? AND Subject = ?", selectionArgs, null, null, null);
+				if (c.getCount() != 0 && c.getCount() == count_repeats + 1) {
+					file.writeFile("ScanActivity   writeLessonToDb   " + c.getCount() + "  " + count_repeats);
+					if (c.moveToFirst()) {
+						int Index = c.getColumnIndex("_id");
+						if (c.getCount() == 1) {
 							lessonId = c.getInt(Index);
-							file.writeFile("итоговый 2  id = " + lessonId);
+							file.writeFile("итоговый 1  id = " + lessonId);
+						} else {
+							do {
+								lessonId = c.getInt(Index);
+								file.writeFile("итоговый 2  id = " + lessonId);
+							}
+							while (c.moveToNext());
 						}
-						while (c.moveToNext());
 					}
+
+				} else {
+					file.writeFile("ScanActivity   writeLessonToDb создаем новый");
+					database.beginTransaction();
+
+					ContentValues cv = new ContentValues();
+					cv.put("Date", date);
+					cv.put("GroupId", mGroup);
+					cv.put("Subject", subject);
+
+					lessonId = (int) database.insert("Lessons", null, cv);
+					file.writeFile("ScanActivity   writeLessonToDb new id = " + lessonId);
+					database.setTransactionSuccessful();
+					database.endTransaction();
 				}
 
-			} else {
-				file.writeFile( "ScanActivity   writeLessonToDb создаем новый");
-				database.beginTransaction();
 
-				ContentValues cv = new ContentValues();
-				cv.put("Date", date);
-				cv.put("GroupId", mGroup);
-				cv.put("Subject", subject);
-
-				lessonId = (int) database.insert("Lessons", null, cv);
-				file.writeFile( "ScanActivity   writeLessonToDb new id = " + lessonId);
-				database.setTransactionSuccessful();
-				database.endTransaction();
+			} finally {
+				database.close();
 			}
-
-
-		} finally {
-			database.close();
 		}
 	}
 
@@ -717,7 +720,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					break;
 				case tvUpdate:
 					((TextView) findViewById(R.id.stv1)).setText(mGroup);
-					((TextView) findViewById(R.id.stv2)).setText(subject);
+					((TextView) findViewById(R.id.stv2)).setText(subject + " " + week + " учебная неделя");
 					((TextView) findViewById(R.id.stv3)).setText("Часть: " + part);
 					break;
 				default:

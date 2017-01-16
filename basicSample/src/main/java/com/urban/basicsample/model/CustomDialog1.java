@@ -17,6 +17,9 @@ import com.urban.basicsample.R;
 import com.urban.basicsample.ScanActivity;
 import com.urban.basicsample.parser.Parser;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class CustomDialog1 implements OnClickListener {
 
 	private Button dialogButton;
@@ -31,6 +34,7 @@ public class CustomDialog1 implements OnClickListener {
 
 	public CustomDialog1(Activity activity) {
 		this.activity = activity;
+		getDayOfWeek();
 		init();
 	}
 
@@ -113,6 +117,43 @@ public class CustomDialog1 implements OnClickListener {
 			super.onPreExecute();
 		}
 
+	}
+
+	public static int getDayOfWeek() {
+
+		int  aq = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+
+
+		Calendar c = Calendar.getInstance();
+		Date date = new Date();
+		int a = date.getDay();
+		int a1 = date.getMonth();
+		int a2 = date.getYear();
+		//c.set(Calendar.YEAR, date.getYear());
+		//c.set(Calendar.MONTH, date.getMonth());
+		//c.set(Calendar.DATE, date.getDate());
+		//c.set(date.getYear(), date.getMonth(), date.getDay());//year, month, day);
+		int dow = c.get(Calendar.WEEK_OF_YEAR);
+		 c.get(Calendar.DATE);
+		Calendar c1 = Calendar.getInstance();
+		c1.set(Calendar.YEAR, date.getMonth());
+		c1.set(Calendar.MONTH, 1);
+		c1.set(Calendar.DAY_OF_MONTH, 1);
+		int dow1 = c1.get(Calendar.WEEK_OF_YEAR);
+
+		Calendar c2 = Calendar.getInstance();
+		c2.set(Calendar.YEAR, date.getMonth());
+		c2.set(Calendar.MONTH, 0);
+		c2.set(Calendar.DAY_OF_MONTH, 1);
+		int dow2 = c2.get(Calendar.WEEK_OF_YEAR);
+
+		Calendar c3 = Calendar.getInstance();
+		c3.set(Calendar.YEAR, date.getMonth());
+		c3.set(Calendar.MONTH, 0);
+		c3.set(Calendar.DAY_OF_MONTH, 0);
+		int dow3 = c3.get(Calendar.WEEK_OF_YEAR);
+
+		return dow;
 	}
 
 }
