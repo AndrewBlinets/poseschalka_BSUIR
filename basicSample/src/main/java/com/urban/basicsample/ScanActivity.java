@@ -790,6 +790,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				 * mGroup; }
 				 */
 				identifyClass();
+				if(subject != null)
 				writeToDb(id);
 				displayMessage("DIALOG");
 				// init();

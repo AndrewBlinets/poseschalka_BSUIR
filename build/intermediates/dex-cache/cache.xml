@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e5a7a935dd58cf351d1fbfd8e1e1683fa929c064">
+        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\instant-run_cb3c5dc202e498d70a3902f8a5ed40debeefac7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="F:\SDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         optimize="true"
@@ -21,12 +30,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\exploded-aar\poseschalka_BSUIR\aFileChooser\unspecified\jars\classes.jar"
-        jumboMode="false"
+        jar="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="52501c3a737b5e50b5a623dbb7f16d9b714453c0">
-        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\poseschalka_BSUIR-aFileChooser-unspecified_58852aef9745c099a537031caa2538a70e4e0671.jar" />
+        sha1="402d2805968ad818c37ce6822fc823519fdd1b44">
+        <dex dex="F:\My_project\Android\BSUIR\poseschalka_BSUIR\basicSample\build\intermediates\pre-dexed\debug\instant-run-bootstrap_0e80ce3c052f1f0de799adc1dc102834e806fe03.jar" />
     </item>
     <item
         is-multidex="false"

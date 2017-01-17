@@ -202,33 +202,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 		case R.id.btnAdd:
 			file.writeFile( "AddStudentActivity   onClick    add");
 			String firstName = fN.getText().toString().trim();
-			String dop_str = firstName.substring(0, 1).toUpperCase();
-			dop_str += firstName.substring(1);
-			firstName = dop_str;
-			do {
-			if (firstName.indexOf(" ") == -1)
-				break;
-				else
-			{
-				dop_str = firstName.substring(0,firstName.indexOf(" ") - 1) + "_" + firstName.substring(firstName.indexOf(" "));
-				firstName = dop_str;
-			}
-			}
-			while (true);
 			String lastName = lN.getText().toString().trim();
-			dop_str = lastName.substring(0, 1).toUpperCase();
-			dop_str += lastName.substring(1);
-			lastName = dop_str;
-			do {
-				if (lastName.indexOf(" ") == -1)
-					break;
-				else
-				{
-					dop_str = lastName.substring(0,lastName.indexOf(" ") - 1) + "_" + lastName.substring(lastName.indexOf(" "));
-					lastName = dop_str;
-				}
-			}
-			while (true);
 			String group = etGroup.getText().toString().trim();
 			String subGroupStr = subGroup.getText().toString().trim();
 			if (!firstName.isEmpty() && !lastName.isEmpty() && !group.isEmpty() && !subGroupStr.isEmpty()
