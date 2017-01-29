@@ -93,6 +93,7 @@ public class MyFileClass  {
             int dateColIndex1 = c.getColumnIndex("Date");
             int GroupId = c.getColumnIndex("GroupId");
             int Subject = c.getColumnIndex("Subject");
+            int numSubject = c.getColumnIndex("SubGroup");
 
 
             do {
@@ -100,7 +101,8 @@ public class MyFileClass  {
                         c.getString(idColIndex1)+" "
                         +c.getString(dateColIndex1)+" "
                         +c.getString(GroupId)+" "
-                        +c.getString(Subject)+ "\n";
+                        +c.getString(Subject)+ " "
+                        +c.getString(numSubject)+ "\n";
             } while (c.moveToNext());
         }
 

@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
             + "FirstName text," + "LastName text," + "GroupId text," + "SubGroup integer," + "Lecturer integer," + "Scan blob" + ");";
 
     private static final String CREATE_TABLE_L = "create table Lessons (" + "_id integer primary key autoincrement,"
-            + "Date text," + "GroupId text," + "Subject text" + ");";
+            + "Date text," + "GroupId text," + "Subject text," + "SubGroup integer," + "TimeStart text," + "TimeEnd text" + ");";
 
     private static final String CREATE_TABLE_A = "create table Attendance (" + "_id integer primary key autoincrement,"
             + "LessonId integer," + "StudentId integer," + "Attendance1 integer," + "Attendance2 integer" + ");";

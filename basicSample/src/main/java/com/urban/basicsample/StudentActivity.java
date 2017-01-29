@@ -62,6 +62,7 @@ MyFileClass file = new MyFileClass();
 			int week = getNumberstudyweek();
 			Intent intent = new Intent(this, ScanActivity.class);
 			intent.putExtra("week", week);
+			//startActivityForResult(intent, 1);
 			this.startActivity(intent);
 
 			break;
@@ -116,4 +117,20 @@ MyFileClass file = new MyFileClass();
 			return (now_number_week + col_week_in_year - week_1_semtember) % 4 + 1;
 		}
 	}
+/*
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == 1 && resultCode == RESULT_OK) {
+			int id_flag = data.getIntExtra("id_flag", -1);
+			if(id_flag == 1)
+			{
+				int week = getNumberstudyweek();
+				Intent intent = new Intent(this, ScanActivity.class);
+				intent.putExtra("week", week);
+				startActivityForResult(intent, 1);
+				//this.startActivity(intent);
+			}
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}*/
 }

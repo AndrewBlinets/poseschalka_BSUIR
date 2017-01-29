@@ -67,6 +67,9 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	private PtInputBir mTemplate = null;
 	private DbUtils dbUtils = null;
 
+	private String timeStart = "";
+	private String timeEnd = "";
+
 	private String firstName;
 	private String lastName;
 	private String mGroup;
@@ -76,6 +79,8 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	private int numSubgroup;
 	private int part = 1;
 	private int lessonId;
+
+	private int subgroup;
 
 	private int count_repeats = 0;
 
@@ -90,7 +95,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		//file.writeFile( "ScanActivity   onCreate");
+		file.writeFile( "ScanActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_scan);
 		Intent intent = getIntent();
@@ -101,7 +106,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onResume() {
-		//file.writeFile( "ScanActivity   onResume");
+		file.writeFile( "ScanActivity   onResume");
 		initialize();
 		if (!isTreadStarted.get()) {
 			init();
@@ -111,7 +116,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onStop() {
-		//file.writeFile( "ScanActivity   onStop");
+		file.writeFile( "ScanActivity   onStop");
 		if (mRunningOp != null) {
 			mRunningOp.interrupt();
 		}
@@ -121,7 +126,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	public void initialize() {
-	//	file.writeFile( "ScanActivity   initialize");
+		file.writeFile( "ScanActivity   initialize");
 		if (initializePtapi()) {
 			Context applContext = getApplicationContext();
 			PendingIntent mPermissionIntent;
@@ -143,7 +148,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	private boolean initializePtapi() {
 		// Load PTAPI library
-		//file.writeFile( "ScanActivity   initializePtapi");
+		file.writeFile( "ScanActivity   initializePtapi");
 		Context aContext = getApplicationContext();
 		mPtGlobal = new PtGlobal(aContext);
 
@@ -165,7 +170,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
-			//file.writeFile( "ScanActivity   mUsbReceiver");
+			file.writeFile( "ScanActivity   mUsbReceiver");
 			String action = intent.getAction();
 			if (ACTION_USB_PERMISSION.equals(action)) {
 				synchronized (this) {
@@ -183,7 +188,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	};
 
 	private void openPtapiSession() {
-		//file.writeFile( "ScanActivity   openPtapiSession");
+		file.writeFile( "ScanActivity   openPtapiSession");
 		try {
 			// Try to open session
 			openPtapiSessionInternal();
@@ -196,7 +201,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void openPtapiSessionInternal() throws PtException {
-		//file.writeFile( "ScanActivity   openPtapiSessionInternal");
+		file.writeFile( "ScanActivity   openPtapiSessionInternal");
 		// Try to open device
 		try {
 			mConn = (PtConnectionAdvancedI) mPtGlobal.open("USB");
@@ -207,13 +212,14 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void init() {
-		//file.writeFile( "ScanActivity   init");
+		file.writeFile( "ScanActivity   init");
 		synchronized (mCond) {
 			isTreadStarted.set(true);
 			mRunningOp = new OpVerifyNew(mConn, 3) {
 				@Override
 				protected void onFinished(PtInputBir template) {
 					synchronized (mCond) {
+						file.writeFile( "ScanActivity   init onFinished");
 						mRunningOp = null;
 						displayMessage("OK");
 						verifyStudent(template);
@@ -233,6 +239,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 				@Override
 				protected void onStop() {
+					file.writeFile( "ScanActivity   init onStop");
 					synchronized (mCond) {
 
 						mRunningOp = null;
@@ -282,6 +289,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 								mGroup = c.getString(c.getColumnIndex("GroupId"));
 								numSubgroup = c.getInt(c.getColumnIndex("SubGroup"));
 								int id = c.getInt(c.getColumnIndex("_id"));
+								file.writeFile( "ScanActivity   verifyStudent id" + id);
 								if (!dbUtils.checkSchedule(mGroup)) {
 									// new Loader(getApplicationContext()).execute(mGroup).get();
 									Loader loader = new Loader(ScanActivity.this);
@@ -369,7 +377,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			String[] selectionArgs = new String[] { String.valueOf(lessonId), String.valueOf(studentId) };
 			Cursor c = database.query("Attendance", null, "LessonId = ? AND StudentId = ?", selectionArgs, null, null,
 					null);
-
+			//if(lessonId != 0)
 			if (c.getCount() == 0) {
 				database.beginTransaction();
 				ContentValues cv = new ContentValues();
@@ -416,7 +424,8 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 		int hour = date.getHours();
 		int min = date.getMinutes();
 		int intDay = date.getDay();
-
+		file.writeFile( "ScanActivity   identifyClass  дата и время " + intDay + " " +
+		hour + " " + min);
 		switch (intDay) {
 			case 0:
 				day = "Воскресенье";
@@ -451,19 +460,22 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					.query("Schedule", null, "StudentGroup = ? AND Day = ?", selectionArgs, null, null, null);
 
 			if (c != null) {
+				file.writeFile( "ScanActivity   identifyClass 1");
 				if (c.moveToFirst()) {
+					file.writeFile( "ScanActivity   identifyClass 2");
 					do {
+						file.writeFile( "ScanActivity   identifyClass 3");
 						String weekNumber = c.getString(c.getColumnIndex("WeekNumber"));
-						int subgroup = c.getInt(c.getColumnIndex("NumSubgroup"));
+						subgroup = c.getInt(c.getColumnIndex("NumSubgroup"));
+						file.writeFile( "ScanActivity   identifyClass неделя " + weekNumber + "  " + subgroup);
+						file.writeFile( "ScanActivity   identifyClass неделя real " + week + "  " + numSubgroup);
+
 						if ((weekNumber.charAt(0) == '0' || weekNumber.indexOf(String.valueOf(week)) != -1)
 								&& (subgroup == 0 || subgroup == numSubgroup)) {
-
-
-
-
-							String timeStart = c.getString(c.getColumnIndex("LessonTimeStart"));
-							String timeEnd = c.getString(c.getColumnIndex("LessonTimeEnd"));
-
+							file.writeFile( "ScanActivity   identifyClass 4");
+							timeStart = c.getString(c.getColumnIndex("LessonTimeStart"));
+							timeEnd = c.getString(c.getColumnIndex("LessonTimeEnd"));
+							file.writeFile( "ScanActivity   identifyClass  время пары " + timeStart + " " + timeEnd);
 							StringTokenizer stkS = new StringTokenizer(timeStart, ":");
 							StringTokenizer stkE = new StringTokenizer(timeEnd, ":");
 							int[] arS = new int[stkS.countTokens()];
@@ -475,17 +487,14 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 							if ((arS[0] * 60 + arS[1]) <= (hour * 60 + min)
 									&& (arE[0] * 60 + arE[1]) >= (hour * 60 + min)) {
 								// numSubgroup = c.getInt(c.getColumnIndex("NumSubgroup"));
+								file.writeFile( "ScanActivity   identifyClass 5");
 								if (((hour * 60 + min) - (arS[0] * 60 + arS[1])) <= 45) {
 									part = 1;
 								} else {
 									part = 2;
 								}
 								subject = c.getString(c.getColumnIndex("Subject"));
-								if(namesub.equals(c.getString(c.getColumnIndex("Subject"))))
-								{
-									file.writeFile( "ScanActivity   identifyClass совпали повторы 2");
-									count_repeats++;
-								}
+								file.writeFile( "ScanActivity   identifyClass " + subject);
 								// Toast.makeText(getApplicationContext(), subject, 1000).show();
 								/*
 								 * ((TextView) findViewById(R.id.stv1)).setText(mGroup); ((TextView)
@@ -497,19 +506,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 								writeLessonToDb();
 
 								break;
-							}
-							else
-							{
-								if(namesub.equals(c.getString(c.getColumnIndex("Subject"))))
-								{
-									count_repeats++;
-									file.writeFile( "ScanActivity   identifyClass  совпали повторы 1");
-								}
-								else {
-									count_repeats = 0;
-									namesub = c.getString(c.getColumnIndex("Subject"));
-									file.writeFile( "ScanActivity   identifyClass не совпали повторы");
-								}
 							}
 						}
 
@@ -527,8 +523,9 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void writeLessonToDb() {
+		file.writeFile("ScanActivity   writeLessonToDb");
 		if(subject != null) {
-			file.writeFile("ScanActivity   writeLessonToDb");
+
 			Date d = new Date();
 			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 			String date = format.format(d);
@@ -538,25 +535,31 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			try {
 				DBHelper helper = new DBHelper(getApplicationContext());
 				database = helper.getWritableDatabase();
+				file.writeFile("ScanActivity   writeLessonToDb 1");
+				file.writeFile("ScanActivity   writeLessonToDb 1" + date + " " +
+				subject + " " + timeStart + " " + timeEnd);
 
-				String[] selectionArgs = new String[]{date, subject};
-				Cursor c = database.query("Lessons", null, "Date = ? AND Subject = ?", selectionArgs, null, null, null);
-				if (c.getCount() != 0 && c.getCount() == count_repeats + 1) {
-					file.writeFile("ScanActivity   writeLessonToDb   " + c.getCount() + "  " + count_repeats);
+				String[] selectionArgs = new String[] { date, subject,
+														timeStart, timeEnd, String.valueOf(subgroup)};
+				Cursor c = null;
+				try {
+
+
+				c = database.query("Lessons", null, "Date = ? AND Subject = ? AND TimeStart = ? AND TimeEnd = ? AND SubGroup =?",
+						selectionArgs, null, null, null);
+				}
+				catch (Exception e)
+				{
+					file.writeFile("ScanActivity   writeLessonToDb exception \n" + e.getMessage());
+				}
+				file.writeFile("ScanActivity   writeLessonToDb 2");
+				if (c.getCount() != 0) {
+					file.writeFile("ScanActivity   writeLessonToDb 3");
 					if (c.moveToFirst()) {
-						int Index = c.getColumnIndex("_id");
-						if (c.getCount() == 1) {
-							lessonId = c.getInt(Index);
-							file.writeFile("итоговый 1  id = " + lessonId);
-						} else {
-							do {
-								lessonId = c.getInt(Index);
-								file.writeFile("итоговый 2  id = " + lessonId);
-							}
-							while (c.moveToNext());
-						}
+						file.writeFile("ScanActivity   writeLessonToDb 4");
+						lessonId = c.getInt(c.getColumnIndex("_id"));
+						file.writeFile("ScanActivity   writeLessonToDb id" + lessonId);
 					}
-
 				} else {
 					file.writeFile("ScanActivity   writeLessonToDb создаем новый");
 					database.beginTransaction();
@@ -565,6 +568,9 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					cv.put("Date", date);
 					cv.put("GroupId", mGroup);
 					cv.put("Subject", subject);
+					cv.put("SubGroup", subgroup);
+					cv.put("TimeStart", timeStart);
+					cv.put("TimeEnd", timeEnd);
 
 					lessonId = (int) database.insert("Lessons", null, cv);
 					file.writeFile("ScanActivity   writeLessonToDb new id = " + lessonId);
@@ -580,7 +586,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	protected Dialog onCreateDialog(int id) {
-		//file.writeFile( "ScanActivity   onCreateDialog");
+		file.writeFile( "ScanActivity   onCreateDialog");
 		AlertDialog.Builder adb = new AlertDialog.Builder(this);
 		switch (id) {
 			case REPEAT_OR_ADD:
@@ -599,6 +605,10 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 						String nPass = editText.getText().toString();
 						// Toast.makeText(LoginActivity.this, "Input was: "+nPass, 1000).show();
 						if (PassEncrypter.verifyAdminPass(getApplicationContext(), nPass)) {
+							/*Intent intent = new Intent();
+							intent.putExtra("id_flag", 0);
+							setResult(RESULT_OK, intent);
+							finish();*/
 							finish();
 						} else {
 							editText.setText("");
@@ -612,18 +622,28 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				break;
 			default:
 				// ?????????
-				if(subject != null)
-					adb.setTitle(subject + ", гр: " + mGroup);
-				else
-					adb.setTitle( "В данный момент занятий нету, гр: " + mGroup);
-				// ?????????
-				adb.setMessage(firstName + " " + lastName);
-				// ??????
-				adb.setIcon(android.R.drawable.ic_dialog_info);
-				// ?????? ?????????????? ??????
-				adb.setPositiveButton("Ok", myClickListener);
-				// ?????? ?????????????? ??????
-				// adb.setNegativeButton("?????????", myClickListener);
+				if(lastName.equals(""))
+				{
+					adb.setMessage("Данные не были введены, повторите сканирование, пожалуйста!");
+					// ??????
+					adb.setIcon(android.R.drawable.ic_dialog_info);
+					// ?????? ?????????????? ??????
+					adb.setPositiveButton("Ok", myClickListener);
+				}
+				else {
+					if (subject != null)
+						adb.setTitle(subject + ", гр: " + mGroup);
+					else
+						adb.setTitle("В данный момент занятий нету, гр: " + mGroup);
+					// ?????????
+					adb.setMessage(firstName + " " + lastName);
+					// ??????
+					adb.setIcon(android.R.drawable.ic_dialog_info);
+					// ?????? ?????????????? ??????
+					adb.setPositiveButton("Ok", myClickListener);
+					// ?????? ?????????????? ??????
+					// adb.setNegativeButton("?????????", myClickListener);
+				}
 				break;
 		}
 		adb.setCancelable(false);
@@ -657,11 +677,13 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			switch (which) {
 				// ????????????? ??????
 				case Dialog.BUTTON_POSITIVE:
+					file.writeFile( "Dialog.BUTTON_POSITIVE");
 					init();
 					dialog.dismiss();
 					break;
 				// ?????????? ??????
 				case Dialog.BUTTON_NEGATIVE:
+					file.writeFile( "Dialog.BUTTON_NEGATIVE:");
 					addStudent(mTemplate);
 					break;
 
@@ -671,20 +693,19 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	public void onBackPressed() {
-	//	file.writeFile( "ScanActivity   onBackPressed");
+		file.writeFile( "ScanActivity   onBackPressed");
 		Toast.makeText(getApplicationContext(), "Таким образом выйти невозможно", Toast.LENGTH_SHORT).show();
 	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		//file.writeFile( "ScanActivity   onCreateOptionsMenu");
+		file.writeFile( "ScanActivity   onCreateOptionsMenu");
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.scan, menu);
 		return true;
 	}
 
 	public void displayMessage(String text) {
-		//file.writeFile( "ScanActivity   displayMessage");
 		switch (text) {
 			case "REPEAT_OR_ADD":
 				mHandler.sendMessage(mHandler.obtainMessage(0, REPEAT_OR_ADD, 0, text));
@@ -724,7 +745,20 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					((TextView) findViewById(R.id.stv3)).setText("Часть: " + part);
 					break;
 				default:
-					((TextView) findViewById(R.id.EnrollmentTextView1)).setText((String) aMsg.obj);
+					String str_message = (String) aMsg.obj;
+					//String str1 = "\\(";
+					//file.writeFile( "ScanActivity  mHandler  handleMessage str1 " + str1);
+					//String str2 = "\\)";
+				//	file.writeFile( "ScanActivity  mHandler  handleMessage str2 " + str2);
+				//	String[] str = str_message.split(str1);
+				//	if(str.length > 1) {
+					/*	if (str_message.equals("-1052")) {
+							((TextView) findViewById(R.id.EnrollmentTextView1)).setText
+									("Для подключение модуля ОБНОВИТЬ");
+						}
+					else*/
+					((TextView) findViewById(R.id.EnrollmentTextView1)).setText(str_message);
+					//file.writeFile( "ScanActivity  mHandler  handleMessage default " + (String) aMsg.obj);
 					break;
 			}
 			/*
@@ -736,7 +770,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onDestroy() {
-		//file.writeFile( "ScanActivity   onDestroy");
+		file.writeFile( "ScanActivity   onDestroy");
 		// Cancel running operation
 		synchronized (mCond) {
 			while (mRunningOp != null) {
@@ -764,7 +798,8 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			mGroup = data.getStringExtra("group");
 			firstName = data.getStringExtra("firstName");
 			lastName = data.getStringExtra("lastName");
-			if (id != -1) {
+			numSubgroup = data.getIntExtra("subgroup",0);
+			if (id != -1 && !firstName.equals("")) {
 				if (!dbUtils.checkSchedule(mGroup)) {
 					if(!isOnline()){
 						Toast.makeText(getApplicationContext(), "Нет доступа к интернету!!!",
@@ -795,12 +830,15 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				displayMessage("DIALOG");
 				// init();
 			}
+			else {
+				displayMessage("DIALOG");
+			}
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 
 	private void closeSession() {
-		//file.writeFile( "ScanActivity   closeSession");
+		file.writeFile( "ScanActivity   closeSession");
 		if (mConn != null) {
 			try {
 				mConn.close();
@@ -812,24 +850,30 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void terminatePtapi() {
-		//file.writeFile( "ScanActivity   terminatePtapi");
+		file.writeFile( "ScanActivity   terminatePtapi");
 		try {
 			if (mPtGlobal != null) {
 				mPtGlobal.terminate();
 			}
 		} catch (PtException e) {
 			// ignore errors
+
 		}
 		mPtGlobal = null;
 	}
 
 	@Override
 	public void onClick(View v) {
-	//	file.writeFile( "ScanActivity   onClick");
+		file.writeFile( "ScanActivity   onClick");
 		switch (v.getId()) {
 			case R.id.s_exit:
 				showDialog(PASS_DIALOG);
 				break;
+			/*case R.id.refresh:
+				Intent i = new Intent( this , this.getClass() );
+				finish();
+				this.startActivity(i);
+				break;*/
 			default:
 				break;
 		}

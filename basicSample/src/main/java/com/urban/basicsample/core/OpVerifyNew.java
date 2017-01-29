@@ -44,7 +44,9 @@ public abstract class OpVerifyNew extends Thread {
 			template = enroll();
 
 		} catch (PtException e) {
+			file.writeFile( "OpVerifyNew extends Thread  run() " + e.getCode()+"");
 			onDisplayMessage("Verification failed - " + e.getMessage());
+			//onDisplayMessage(e.getCode()+"");
 		}
 		catch (NullPointerException e)
 		{

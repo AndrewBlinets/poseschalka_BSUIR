@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class StudentAttListActivity extends Activity {
@@ -37,10 +38,14 @@ public class StudentAttListActivity extends Activity {
 		setContentView(R.layout.activity_student_att_list);
 		Intent startIntent = getIntent();
 		int id = Integer.parseInt(startIntent.getStringExtra("id"));//.getExtra("id");
+		String lastName = startIntent.getStringExtra("lastName");
+		String firstName = startIntent.getStringExtra("firstName");
+		String group = startIntent.getStringExtra("group");
 		getStudentAtt(id);
 
 		if(flag)
 		{
+			((TextView) findViewById(R.id.textView)).setText("Студента группы " + group + " " + lastName + " " + firstName.substring(0,1) + ".");
 			sAdapter = new StudentAttAdapter(this, attendances);
 			ListView listView = (ListView) findViewById(R.id.lvAttStudent);
 			listView.setAdapter(sAdapter);

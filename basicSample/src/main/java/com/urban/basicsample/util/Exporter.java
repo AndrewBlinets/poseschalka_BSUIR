@@ -31,7 +31,9 @@ public class Exporter {
     private String mGroup;
     private int expAtt;
    // private HashMap<String, Integer> names;
-    private ArrayList<String> names;
+    private ArrayList<String> names_all_groups;
+    private ArrayList<String> names_first_half;
+    private ArrayList<String> names_second_half;
     private Workbook wb;
     private Sheet sheet;
 
@@ -62,7 +64,9 @@ public class Exporter {
             return false;
         }
         boolean success = false;
-        getNames();
+        getNames(0);
+        getNames(1);
+        getNames(2);
         wb = new HSSFWorkbook();
         Cell c = null;
         sheet = wb.createSheet(mGroup);
@@ -129,60 +133,52 @@ public class Exporter {
             c = row1.createCell(Number_col.get(i));
             c.setCellValue(dates.get(i));
         }
-
-        HashMap<String, Row> rows = new HashMap<>();
-        //for (Map.Entry<String, Integer> entry : names.entrySet()) {
-        for (int i = 0; i < names.size(); i++) {
-            rowNum++;
-            nameRow = sheet.createRow(/* entry.getValue() + */rowNum);
-            c = nameRow.createCell(0);
-            //c.setCellValue(entry.getKey().toString().split(" ")[1] + " " + entry.getKey().toString().split(" ")[0]);
-            c.setCellValue(names.get(i).split(" ")[1] + " " + names.get(i).split(" ")[0]);
-            //rows.put(entry.getKey(), nameRow);
-            rows.put(names.get(i), nameRow);
-        }
-        setNulls(rows);
-        DBHelper dbHeper = new DBHelper(mContext);
-        SQLiteDatabase db = dbHeper.getReadableDatabase();
-
-
-
-
-        /*String query = "SELECT Attendance.Attendance1, Attendance.Attendance2, Lessons._id  " +
-                "FROM Attendance, Lessons LEFT JOIN Students ON Attendance.StudentId = Students._id"
-                + " LEFT JOIN Lessons ON Attendance.LessonId = Lessons._id WHERE Students.FirstName = ? AND Lessons.Subject = ?" +
-                " AND Students.LastName = ? AND Lessons.Date = ? "+
-                " ORDER BY LastName ASC, FirstName ASC";*/
-
-        int count_col = Number_col.get(0);
-        String date_test = "";
-        for (int i = 0; i < dates.size(); i++) {
+        String [] mas = subject.split(" ");
+        if(mas.length == 1)
+        {
+            HashMap<String, Row> rows = new HashMap<>();
+            //for (Map.Entry<String, Integer> entry : names.entrySet()) {
+            for (int i = 0; i < names_all_groups.size(); i++) {
+                rowNum++;
+                nameRow = sheet.createRow(/* entry.getValue() + */rowNum);
+                c = nameRow.createCell(0);
+                //c.setCellValue(entry.getKey().toString().split(" ")[1] + " " + entry.getKey().toString().split(" ")[0]);
+                c.setCellValue(names_all_groups.get(i).split(" ")[1] + " " + names_all_groups.get(i).split(" ")[0]);
+                //rows.put(entry.getKey(), nameRow);
+                rows.put(names_all_groups.get(i), nameRow);
+            }
+            setNulls(rows, names_all_groups);
+            DBHelper dbHeper = new DBHelper(mContext);
+            SQLiteDatabase db = dbHeper.getReadableDatabase();
+            int count_col = Number_col.get(0);
+            String date_test = "";
+            for (int i = 0; i < dates.size(); i++) {
                 if(date_test.equals(dates.get(i)))
                 {
                     i++;
                 }
-            else {
+                else {
                     date_test = dates.get(i);
                     Cursor cursor = db.rawQuery(q_y, new String[]{subject, date_test, mGroup});
                     if (cursor.moveToFirst()) {
                         int idIndex = cursor.getColumnIndex("_id");
                         do {
                             String str_id = cursor.getString(idIndex);
-                            for (int j = 0; j < names.size(); j++) {
+                            for (int j = 0; j < names_all_groups.size(); j++) {
                                 String query_main = "SELECT *  " +
                                         "FROM Attendance LEFT JOIN Students ON Attendance.StudentId = Students._id"
                                         + " LEFT JOIN Lessons ON Attendance.LessonId = Lessons._id" +
                                         " WHERE Students.FirstName = ? AND Lessons._id = ?" +
                                         " AND Students.LastName = ?";
-                                String f = names.get(j).split(" ")[0];
-                                String l = names.get(j).split(" ")[1];
-                                Cursor cursor_main = db.rawQuery(query_main, new String[]{names.get(j).split(" ")[0], str_id,
-                                        names.get(j).split(" ")[1]});
+                                String f = names_all_groups.get(j).split(" ")[0];
+                                String l = names_all_groups.get(j).split(" ")[1];
+                                Cursor cursor_main = db.rawQuery(query_main, new String[]{names_all_groups.get(j).split(" ")[0], str_id,
+                                        names_all_groups.get(j).split(" ")[1]});
                                 if (cursor_main.moveToFirst()) {
                                     int att1ColIndex = cursor_main.getColumnIndex("Attendance1");
                                     int att2ColIndex = cursor_main.getColumnIndex("Attendance2");
                                     String att = cursor_main.getShort(att1ColIndex) + "/" + cursor_main.getShort(att2ColIndex);
-                                    Cell newCell = rows.get(names.get(j)).createCell(count_col);
+                                    Cell newCell = rows.get(names_all_groups.get(j)).createCell(count_col);
                                     newCell.setCellValue(att);
                                 }
                                 cursor_main.close();
@@ -192,6 +188,162 @@ public class Exporter {
                         cursor.close();
                     }
                 }
+            }
+            c = row1.createCell(Number_col.get(dates.size() - 1) + 2);
+            c.setCellValue("Посещаемость, %");
+            // for (Map.Entry<String, Integer> entry : names.entrySet()) {
+            for (int i = 0; i < names_all_groups.size(); i++) {
+                // Cell newCell = rows.get(entry.getKey()).createCell(dates.get(lastDate) + 2);
+                Cell newCell = rows.get(names_all_groups.get(i)).createCell(Number_col.get(dates.size() - 1) + 2);
+                //  float res = getAttByStudent(entry.getKey(), subject) * 100 / (dates.size()*2);//протестить
+                float res = getAttByStudent(names_all_groups.get(i), subject) * 100 / (dates.size()*2);//протестить
+                newCell.setCellValue(res);
+            }
+            db.close();
+        }
+        else
+        {
+            if(dates.size() != 0)
+        switch (mas[1])
+        {
+            case "1": {
+
+                HashMap<String, Row> rows = new HashMap<>();
+                //for (Map.Entry<String, Integer> entry : names.entrySet()) {
+                for (int i = 0; i < names_first_half.size(); i++) {
+                    rowNum++;
+                    nameRow = sheet.createRow(/* entry.getValue() + */rowNum);
+                    c = nameRow.createCell(0);
+                    //c.setCellValue(entry.getKey().toString().split(" ")[1] + " " + entry.getKey().toString().split(" ")[0]);
+                    c.setCellValue(names_first_half.get(i).split(" ")[1] + " " + names_first_half.get(i).split(" ")[0]);
+                    //rows.put(entry.getKey(), nameRow);
+                    rows.put(names_first_half.get(i), nameRow);
+                }
+                setNulls(rows, names_first_half);
+                DBHelper dbHeper = new DBHelper(mContext);
+                SQLiteDatabase db = dbHeper.getReadableDatabase();
+                int count_col = Number_col.get(0);
+                String date_test = "";
+                for (int i = 0; i < dates.size(); i++) {
+                    if(date_test.equals(dates.get(i)))
+                    {
+                        i++;
+                    }
+                    else {
+                        date_test = dates.get(i);
+                        Cursor cursor = db.rawQuery(q_y, new String[]{mas[0], date_test, mGroup});
+                        if (cursor.moveToFirst()) {
+                            int idIndex = cursor.getColumnIndex("_id");
+                            do {
+                                String str_id = cursor.getString(idIndex);
+                                for (int j = 0; j < names_first_half.size(); j++) {
+                                    String query_main = "SELECT *  " +
+                                            "FROM Attendance LEFT JOIN Students ON Attendance.StudentId = Students._id"
+                                            + " LEFT JOIN Lessons ON Attendance.LessonId = Lessons._id" +
+                                            " WHERE Students.FirstName = ? AND Lessons._id = ?" +
+                                            " AND Students.LastName = ?";
+
+                                    Cursor cursor_main = db.rawQuery(query_main,
+                                            new String[]{names_first_half.get(j).split(" ")[0], str_id,
+                                                    names_first_half.get(j).split(" ")[1]});
+                                    if (cursor_main.moveToFirst()) {
+                                        int att1ColIndex = cursor_main.getColumnIndex("Attendance1");
+                                        int att2ColIndex = cursor_main.getColumnIndex("Attendance2");
+                                        String att = cursor_main.getShort(att1ColIndex) + "/" + cursor_main.getShort(att2ColIndex);
+                                        Cell newCell = rows.get(names_first_half.get(j)).createCell(count_col);
+                                        newCell.setCellValue(att);
+                                    }
+                                    cursor_main.close();
+                                }
+                                count_col++;
+                            } while (cursor.moveToNext());
+                            cursor.close();
+                        }
+                    }
+                }
+                c = row1.createCell(Number_col.get(dates.size() - 1) + 2);
+                c.setCellValue("Посещаемость, %");
+                // for (Map.Entry<String, Integer> entry : names.entrySet()) {
+                for (int i = 0; i < names_first_half.size(); i++) {
+                    // Cell newCell = rows.get(entry.getKey()).createCell(dates.get(lastDate) + 2);
+                    Cell newCell = rows.get(names_first_half.get(i)).createCell(Number_col.get(dates.size() - 1) + 2);
+                    //  float res = getAttByStudent(entry.getKey(), subject) * 100 / (dates.size()*2);//протестить
+                    float res = getAttByStudent(names_first_half.get(i), subject) * 100 / (dates.size()*2);//протестить
+                    newCell.setCellValue(res);
+                }
+                db.close();
+                break;
+            }
+            case "2":
+            {
+                HashMap<String, Row> rows = new HashMap<>();
+                //for (Map.Entry<String, Integer> entry : names.entrySet()) {
+                for (int i = 0; i < names_second_half.size(); i++) {
+                    rowNum++;
+                    nameRow = sheet.createRow(/* entry.getValue() + */rowNum);
+                    c = nameRow.createCell(0);
+                    //c.setCellValue(entry.getKey().toString().split(" ")[1] + " " + entry.getKey().toString().split(" ")[0]);
+                    c.setCellValue(names_second_half.get(i).split(" ")[1] + " " + names_second_half.get(i).split(" ")[0]);
+                    //rows.put(entry.getKey(), nameRow);
+                    rows.put(names_second_half.get(i), nameRow);
+                }
+                setNulls(rows, names_second_half);
+                DBHelper dbHeper = new DBHelper(mContext);
+                SQLiteDatabase db = dbHeper.getReadableDatabase();
+                int count_col = Number_col.get(0);
+                String date_test = "";
+                for (int i = 0; i < dates.size(); i++) {
+                    if(date_test.equals(dates.get(i)))
+                    {
+                        i++;
+                    }
+                    else {
+                        date_test = dates.get(i);
+                        Cursor cursor = db.rawQuery(q_y, new String[]{mas[0], date_test, mGroup});
+                        if (cursor.moveToFirst()) {
+                            int idIndex = cursor.getColumnIndex("_id");
+                            do {
+                                String str_id = cursor.getString(idIndex);
+                                for (int j = 0; j < names_second_half.size(); j++) {
+                                    String query_main = "SELECT *  " +
+                                            "FROM Attendance LEFT JOIN Students ON Attendance.StudentId = Students._id"
+                                            + " LEFT JOIN Lessons ON Attendance.LessonId = Lessons._id" +
+                                            " WHERE Students.FirstName = ? AND Lessons._id = ?" +
+                                            " AND Students.LastName = ?";
+
+                                    Cursor cursor_main = db.rawQuery(query_main,
+                                            new String[]{names_second_half.get(j).split(" ")[0], str_id,
+                                                    names_second_half.get(j).split(" ")[1]});
+                                    if (cursor_main.moveToFirst()) {
+                                        int att1ColIndex = cursor_main.getColumnIndex("Attendance1");
+                                        int att2ColIndex = cursor_main.getColumnIndex("Attendance2");
+                                        String att = cursor_main.getShort(att1ColIndex) + "/" + cursor_main.getShort(att2ColIndex);
+                                        Cell newCell = rows.get(names_second_half.get(j)).createCell(count_col);
+                                        newCell.setCellValue(att);
+                                    }
+                                    cursor_main.close();
+                                }
+                                count_col++;
+                            } while (cursor.moveToNext());
+                            cursor.close();
+                        }
+                    }
+                }
+                c = row1.createCell(Number_col.get(dates.size() - 1) + 2);
+                c.setCellValue("Посещаемость, %");
+                // for (Map.Entry<String, Integer> entry : names.entrySet()) {
+                for (int i = 0; i < names_second_half.size(); i++) {
+                    // Cell newCell = rows.get(entry.getKey()).createCell(dates.get(lastDate) + 2);
+                    Cell newCell = rows.get(names_second_half.get(i)).createCell(Number_col.get(dates.size() - 1) + 2);
+                    //  float res = getAttByStudent(entry.getKey(), subject) * 100 / (dates.size()*2);//протестить
+                    float res = getAttByStudent(names_second_half.get(i), subject) * 100 / (dates.size()*2);//протестить
+                    newCell.setCellValue(res);
+                }
+                db.close();
+                break;
+            }
+
+        }
         }
 
 
@@ -199,46 +351,10 @@ public class Exporter {
 
 
 
-        /*String query = "SELECT * FROM Students LEFT JOIN Attendance ON Students._id = Attendance.StudentId"
-                + " LEFT JOIN Lessons ON Attendance.LessonId = Lessons._id WHERE Students.GroupId = ? AND Subject = ?" +
-                " ORDER BY LastName ASC, FirstName ASC";
-        Cursor cursor = db.rawQuery(query, new String[]{mGroup, subject});
-        String lastDate = null;
-        int count = 0;
-        if (cursor.moveToFirst()) {
-            int att1ColIndex = cursor.getColumnIndex("Attendance1");
-            int att2ColIndex = cursor.getColumnIndex("Attendance2");
-            int firstColIndex = cursor.getColumnIndex("FirstName");
-            int lastColIndex = cursor.getColumnIndex("LastName");
-            int dateColIndex = cursor.getColumnIndex("Date");
-            do {
-
-                String att = cursor.getShort(att1ColIndex) + "/" + cursor.getShort(att2ColIndex);
-                String date = cursor.getString(dateColIndex);
-                lastDate = date;
-                String name = cursor.getString(firstColIndex) + " " + cursor.getString(lastColIndex);
-                // Row newRow = sheet.createRow(names.get(name) + (rowNum+=2));
-                // Cell newCell = newRow.createCell(dates.get(date));
-              //  Cell newCell = rows.get(name).createCell(dates.get(date));
-                Cell newCell = rows.get(name).createCell(dates.get(date));
-                newCell.setCellValue(att);
-
-            } while (cursor.moveToNext());
-                */
 
 
-        c = row1.createCell(Number_col.get(dates.size() - 1) + 2);
-        c.setCellValue("Посещаемость, %");
-       // for (Map.Entry<String, Integer> entry : names.entrySet()) {
-        for (int i = 0; i < names.size(); i++) {
-           // Cell newCell = rows.get(entry.getKey()).createCell(dates.get(lastDate) + 2);
-            Cell newCell = rows.get(names.get(i)).createCell(Number_col.get(dates.size() - 1) + 2);
-          //  float res = getAttByStudent(entry.getKey(), subject) * 100 / (dates.size()*2);//протестить
-            float res = getAttByStudent(names.get(i), subject) * 100 / (dates.size()*2);//протестить
-            newCell.setCellValue(res);
-        }
 
-        db.close();
+
         return rowNum += 3;
     }
 
@@ -249,6 +365,7 @@ public class Exporter {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         String names[] = name.split(" ");
+        String sub[] = subject.split(" ");
         /*String query = "SELECT coalesce(Attendance.Attendance1,0) + coalesce(Attendance.Attendance2,0) AS res FROM Attendance" +
                 " LEFT JOIN Students ON Students._id = Attendance.StudentId WHERE Students.FirstName = ? " +
                 "AND Students.LastName = ?";*/
@@ -257,7 +374,7 @@ public class Exporter {
                     " LEFT JOIN Lessons ON Lessons._id = Attendance.LessonId"
                     + " WHERE Students.FirstName = ? " +
                     "AND Students.LastName = ? AND Lessons.Subject = ?";
-            Cursor c = db.rawQuery(query, new String[]{names[0], names[1],subject});
+            Cursor c = db.rawQuery(query, new String[]{names[0], names[1],sub[0]});
             if (c.moveToFirst()) {
                 int Attendance1ColIndex = c.getColumnIndex("Attendance1");
                 int Attendance2ColIndex = c.getColumnIndex("Attendance2");
@@ -292,13 +409,13 @@ public class Exporter {
         return result;
     }
 
-    private void setNulls(HashMap<String, Row> rows) {
+    private void setNulls(HashMap<String, Row> rows, ArrayList<String> mas) {
         file.writeFile("Exporter    setNulls ");
         //for (Integer cell : dates.values()) {
         for (int j = 0; j < Number_col.size(); j++) {
             //for (Map.Entry<String, Integer> name : names.entrySet()) {
-            for (int i = 0; i < names.size(); i++) {
-                Cell nullCell = rows.get(names.get(i)).createCell(Number_col.get(j));
+            for (int i = 0; i < mas.size(); i++) {
+                Cell nullCell = rows.get(mas.get(i)).createCell(Number_col.get(j));
                 nullCell.setCellValue("н");
                 CellStyle style = wb.createCellStyle();
                 Font font = wb.createFont();
@@ -339,27 +456,50 @@ public class Exporter {
     private void getDate(String subject) {
         file.writeFile("Exporter    getDate  " + subject);
 
+        String[] mas = subject.split(" ");
 
         DBHelper dbHeper = new DBHelper(mContext);
         SQLiteDatabase db = dbHeper.getReadableDatabase();
+        if(mas.length == 1) {
+            String query = "SELECT * FROM Lessons WHERE GroupId = ? AND Subject = ? ORDER BY Date ASC ";
+            Cursor c = db.rawQuery(query, new String[]{mGroup, subject});
+            Integer cell = 3;
 
-        String query = "SELECT * FROM Lessons WHERE GroupId = ? AND Subject = ? ORDER BY Date ASC ";
-        Cursor c = db.rawQuery(query, new String[]{mGroup, subject});
-        Integer cell = 3;
-
-        if (c.moveToFirst()) {
-           // dates = new HashMap<>();
-            dates = new ArrayList<>();
-            Number_col = new ArrayList<>();
-            int dateColIndex = c.getColumnIndex("Date");
-            do {
-                //dates.put(c.getString(dateColIndex), cell);
-                dates.add(c.getString(dateColIndex));
-                Number_col.add(cell);
-                cell += 1;
-            } while (c.moveToNext());
+            if (c.moveToFirst()) {
+                // dates = new HashMap<>();
+                dates = new ArrayList<>();
+                Number_col = new ArrayList<>();
+                int dateColIndex = c.getColumnIndex("Date");
+                do {
+                    //dates.put(c.getString(dateColIndex), cell);
+                    dates.add(c.getString(dateColIndex));
+                    Number_col.add(cell);
+                    cell += 1;
+                } while (c.moveToNext());
+            }
+            c.close();
         }
-        c.close();
+        else
+        {
+
+            String query = "SELECT * FROM Lessons WHERE GroupId = ? AND Subject = ? AND SubGroup = ? ORDER BY Date ASC ";
+            Cursor c = db.rawQuery(query, new String[]{mGroup, mas[0], mas[1]});
+            Integer cell = 3;
+            dates = new ArrayList<>();
+            if (c.moveToFirst()) {
+                // dates = new HashMap<>();
+
+                Number_col = new ArrayList<>();
+                int dateColIndex = c.getColumnIndex("Date");
+                do {
+                    //dates.put(c.getString(dateColIndex), cell);
+                    dates.add(c.getString(dateColIndex));
+                    Number_col.add(cell);
+                    cell += 1;
+                } while (c.moveToNext());
+            }
+            c.close();
+        }
         db.close();
        // return dates;
     }
@@ -369,27 +509,74 @@ public class Exporter {
 
 
 
-    private void getNames() {
+    private void getNames(int i) {
         file.writeFile("Exporter    getNames  ");
         DBHelper dbHeper = new DBHelper(mContext);
         SQLiteDatabase db = dbHeper.getReadableDatabase();
 
-        String query = "SELECT * FROM Students WHERE GroupId = ? ORDER BY LastName ASC, FirstName ASC";
-        Cursor c = db.rawQuery(query, new String[]{mGroup});
+        switch (i) {
+            case 0:
+            {
+                String query = "SELECT * FROM Students WHERE GroupId = ? ORDER BY LastName ASC, FirstName ASC";
+                Cursor c = db.rawQuery(query, new String[]{mGroup});
 
-        if (c.moveToFirst()) {
-            Integer row = 0;
-            //names = new HashMap<>();
-            names = new ArrayList<>();
-            int firstColIndex = c.getColumnIndex("FirstName");
-            int lastColIndex = c.getColumnIndex("LastName");
-            do {
-                //names.put(c.getString(firstColIndex) + " " + c.getString(lastColIndex), row);
-                names.add(c.getString(firstColIndex) + " " + c.getString(lastColIndex));
-                //row += 2;
-            } while (c.moveToNext());
+                if (c.moveToFirst()) {
+                    Integer row = 0;
+                    //names = new HashMap<>();
+                    names_all_groups = new ArrayList<>();
+                    int firstColIndex = c.getColumnIndex("FirstName");
+                    int lastColIndex = c.getColumnIndex("LastName");
+                    do {
+                        //names.put(c.getString(firstColIndex) + " " + c.getString(lastColIndex), row);
+                        names_all_groups.add(c.getString(firstColIndex) + " " + c.getString(lastColIndex));
+                        //row += 2;
+                    } while (c.moveToNext());
+                }
+                c.close();
+                break;
+            }
+            case 1:
+            {
+                String query = "SELECT * FROM Students WHERE GroupId = ? AND SubGroup = ? ORDER BY LastName ASC, FirstName ASC";
+                Cursor c = db.rawQuery(query, new String[]{mGroup, i + ""});
+
+                if (c.moveToFirst()) {
+                    Integer row = 0;
+                    //names = new HashMap<>();
+                    names_first_half = new ArrayList<>();
+                    int firstColIndex = c.getColumnIndex("FirstName");
+                    int lastColIndex = c.getColumnIndex("LastName");
+                    do {
+                        //names.put(c.getString(firstColIndex) + " " + c.getString(lastColIndex), row);
+                        names_first_half.add(c.getString(firstColIndex) + " " + c.getString(lastColIndex));
+                        //row += 2;
+                    } while (c.moveToNext());
+                }
+                c.close();
+                break;
+            }
+            case 2:
+            {
+                String query = "SELECT * FROM Students WHERE GroupId = ? AND SubGroup = ? ORDER BY LastName ASC, FirstName ASC";
+                Cursor c = db.rawQuery(query, new String[]{mGroup, i + ""});
+
+                if (c.moveToFirst()) {
+                    Integer row = 0;
+                    //names = new HashMap<>();
+                    names_second_half = new ArrayList<>();
+                    int firstColIndex = c.getColumnIndex("FirstName");
+                    int lastColIndex = c.getColumnIndex("LastName");
+                    do {
+                        //names.put(c.getString(firstColIndex) + " " + c.getString(lastColIndex), row);
+                        names_second_half.add(c.getString(firstColIndex) + " " + c.getString(lastColIndex));
+                        //row += 2;
+                    } while (c.moveToNext());
+                }
+                c.close();
+                break;
+            }
         }
-        c.close();
+
         db.close();
     }
 
@@ -416,7 +603,17 @@ public class Exporter {
             int subjectColIndex = c.getColumnIndex("Subject");
 
             do {
-                subjects.add(c.getString(subjectColIndex));
+                String subject = c.getString(subjectColIndex);
+                if(subject.split("_")[1].equals("ЛР"))
+                {
+                    subjects.add(subject + " 1 подгруппа");
+                    dateCell += 2;
+                    subjects.add(subject + " 2 подгруппа");
+                    dateCell += 2;
+                }
+                else {
+                    subjects.add(subject);
+                }
                 // date.put(c.getString(dateColIndex), dateCell);
                 dateCell += 2;
             } while (c.moveToNext());

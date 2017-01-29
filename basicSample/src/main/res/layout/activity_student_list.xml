@@ -5,10 +5,18 @@
     android:layout_height="match_parent"
    	tools:context="${relativePackage}.${activityClass}" >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:gravity="center_horizontal" />
+
    <ListView
         android:id="@+id/lvStudent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp">>
     </ListView>
 
     <fragment

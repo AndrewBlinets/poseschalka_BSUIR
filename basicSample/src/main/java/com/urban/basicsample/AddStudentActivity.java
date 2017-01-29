@@ -84,8 +84,10 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 		subGroup = (EditText) findViewById(R.id.subGroup);
 		bScan = (Button) findViewById(R.id.scan);
 		Button bAdd = (Button) findViewById(R.id.btnAdd);
+		Button bBack = (Button) findViewById(R.id.btnBack);
 		bScan.setOnClickListener(this);
 		bAdd.setOnClickListener(this);
+		bBack.setOnClickListener(this);
 
 		Intent intent = getIntent();
 		temp = intent.getByteArrayExtra("template");
@@ -200,9 +202,15 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 		file.writeFile( "AddStudentActivity   onClick");
 		switch (v.getId()) {
 		case R.id.btnAdd:
-			file.writeFile( "AddStudentActivity   onClick    add");
 			String firstName = fN.getText().toString().trim();
+			String dop_str = firstName.substring(0, 1).toUpperCase();
+			dop_str += firstName.substring(1);
+			firstName = dop_str;
+
 			String lastName = lN.getText().toString().trim();
+			dop_str = lastName.substring(0, 1).toUpperCase();
+			dop_str += lastName.substring(1);
+			lastName = dop_str;
 			String group = etGroup.getText().toString().trim();
 			String subGroupStr = subGroup.getText().toString().trim();
 			if (!firstName.isEmpty() && !lastName.isEmpty() && !group.isEmpty() && !subGroupStr.isEmpty()
@@ -239,6 +247,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 					intent.putExtra("group", group);
 					intent.putExtra("firstName", firstName);
 					intent.putExtra("lastName", lastName);
+					intent.putExtra("subgroup", sGroup);
 					setResult(RESULT_OK, intent);
 					finish();
 				} else {
@@ -250,6 +259,18 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 			}
 
 			break;
+
+			case R.id.btnBack:
+				file.writeFile( "AddStudentActivity   onClick R.id.btnBack");
+						Intent intent = new Intent();
+						intent.putExtra("id", 0);
+						intent.putExtra("group", "");
+						intent.putExtra("firstName", "");
+						intent.putExtra("lastName", "");
+						setResult(RESULT_OK, intent);
+						finish();
+				break;
+
 		case R.id.scan:
 			if (!isConnectionInitialized) {
 				synchronized (mCond) {
@@ -412,5 +433,11 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 		}
 		mPtGlobal = null;
 	}
+
+	@Override
+	public void onBackPressed() {
+		file.writeFile( "ScanActivity   onBackPressed");
+		Toast.makeText(getApplicationContext(), "Таким образом выйти невозможно", Toast.LENGTH_SHORT).show();
+	};
 
 }

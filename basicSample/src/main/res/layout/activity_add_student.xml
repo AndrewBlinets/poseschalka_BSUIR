@@ -77,6 +77,13 @@
         android:background="@drawable/hbutton"
         android:text="Добавить" />
 
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hbutton"
+        android:text="Назад" />
+
     <TextView
         android:id="@+id/EnrollmentTextView"
         android:layout_width="fill_parent"

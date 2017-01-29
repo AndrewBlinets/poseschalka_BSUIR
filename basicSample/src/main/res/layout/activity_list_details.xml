@@ -4,10 +4,18 @@
     android:layout_height="match_parent"
     tools:context="com.urban.basicsample.ListDetails" >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:gravity="center_horizontal" />
+
     <ListView
         android:id="@+id/lvDet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp">
     </ListView>
 
 </RelativeLayout>

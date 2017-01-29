@@ -615,8 +615,27 @@
                     "startLine": 34,
                     "startColumn": 4,
                     "startOffset": 1776,
+                    "endColumn": 58,
+                    "endOffset": 1830
+                },
+                "from": {
+                    "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 2878,
+                        "endColumn": 58,
+                        "endOffset": 2932
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1835,
                     "endColumn": 51,
-                    "endOffset": 1823
+                    "endOffset": 1882
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -631,11 +650,11 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 1828,
+                    "startOffset": 1887,
                     "endColumn": 53,
-                    "endOffset": 1877
+                    "endOffset": 1936
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -650,11 +669,11 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 1882,
+                    "startOffset": 1941,
                     "endColumn": 53,
-                    "endOffset": 1931
+                    "endOffset": 1990
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -669,11 +688,11 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 1936,
+                    "startOffset": 1995,
                     "endColumn": 49,
-                    "endOffset": 1981
+                    "endOffset": 2040
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -688,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 1986,
+                    "startOffset": 2045,
                     "endColumn": 51,
-                    "endOffset": 2033
+                    "endOffset": 2092
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -707,11 +726,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 2038,
+                    "startOffset": 2097,
                     "endColumn": 59,
-                    "endOffset": 2093
+                    "endOffset": 2152
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -726,11 +745,11 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 2098,
+                    "startOffset": 2157,
                     "endColumn": 77,
-                    "endOffset": 2171
+                    "endOffset": 2230
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values\\values.xml",
@@ -745,11 +764,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 2176,
+                    "startOffset": 2235,
                     "endColumn": 43,
-                    "endOffset": 2215
+                    "endOffset": 2274
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -764,11 +783,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 2220,
+                    "startOffset": 2279,
                     "endColumn": 51,
-                    "endOffset": 2267
+                    "endOffset": 2326
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -783,11 +802,11 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2272,
+                    "startOffset": 2331,
                     "endColumn": 74,
-                    "endOffset": 2342
+                    "endOffset": 2401
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -802,11 +821,11 @@
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2347,
+                    "startOffset": 2406,
                     "endColumn": 67,
-                    "endOffset": 2410
+                    "endOffset": 2469
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -821,11 +840,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2415,
+                    "startOffset": 2474,
                     "endColumn": 76,
-                    "endOffset": 2487
+                    "endOffset": 2546
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -840,11 +859,11 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2492,
+                    "startOffset": 2551,
                     "endColumn": 62,
-                    "endOffset": 2550
+                    "endOffset": 2609
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -859,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2555,
+                    "startOffset": 2614,
                     "endColumn": 75,
-                    "endOffset": 2626
+                    "endOffset": 2685
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -878,11 +897,11 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 2631,
+                    "startOffset": 2690,
                     "endColumn": 66,
-                    "endOffset": 2693
+                    "endOffset": 2752
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -897,11 +916,11 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 2698,
+                    "startOffset": 2757,
                     "endColumn": 60,
-                    "endOffset": 2754
+                    "endOffset": 2813
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -916,11 +935,11 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 2759,
+                    "startOffset": 2818,
                     "endColumn": 60,
-                    "endOffset": 2815
+                    "endOffset": 2874
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -935,11 +954,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 2820,
+                    "startOffset": 2879,
                     "endColumn": 58,
-                    "endOffset": 2874
+                    "endOffset": 2933
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -954,11 +973,11 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 2879,
+                    "startOffset": 2938,
                     "endColumn": 76,
-                    "endOffset": 2951
+                    "endOffset": 3010
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -973,11 +992,11 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 2956,
+                    "startOffset": 3015,
                     "endColumn": 72,
-                    "endOffset": 3024
+                    "endOffset": 3083
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -992,11 +1011,11 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 3029,
+                    "startOffset": 3088,
                     "endColumn": 53,
-                    "endOffset": 3078
+                    "endOffset": 3137
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1011,11 +1030,11 @@
             },
             {
                 "to": {
-                    "startLine": 55,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 3083,
+                    "startOffset": 3142,
                     "endColumn": 60,
-                    "endOffset": 3139
+                    "endOffset": 3198
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1030,11 +1049,11 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 3144,
+                    "startOffset": 3203,
                     "endColumn": 60,
-                    "endOffset": 3200
+                    "endOffset": 3259
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1049,11 +1068,11 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 3205,
+                    "startOffset": 3264,
                     "endColumn": 50,
-                    "endOffset": 3251
+                    "endOffset": 3310
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1068,11 +1087,11 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 3256,
+                    "startOffset": 3315,
                     "endColumn": 61,
-                    "endOffset": 3313
+                    "endOffset": 3372
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1087,11 +1106,11 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 3318,
+                    "startOffset": 3377,
                     "endColumn": 48,
-                    "endOffset": 3362
+                    "endOffset": 3421
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1106,11 +1125,11 @@
             },
             {
                 "to": {
-                    "startLine": 60,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 3367,
+                    "startOffset": 3426,
                     "endColumn": 64,
-                    "endOffset": 3427
+                    "endOffset": 3486
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1125,11 +1144,11 @@
             },
             {
                 "to": {
-                    "startLine": 61,
+                    "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 3432,
+                    "startOffset": 3491,
                     "endColumn": 64,
-                    "endOffset": 3492
+                    "endOffset": 3551
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\strings.xml",
@@ -1144,12 +1163,12 @@
             },
             {
                 "to": {
-                    "startLine": 62,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 3497,
-                    "endLine": 68,
+                    "startOffset": 3556,
+                    "endLine": 69,
                     "endColumn": 12,
-                    "endOffset": 3783
+                    "endOffset": 3842
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\styles.xml",
@@ -1165,12 +1184,12 @@
             },
             {
                 "to": {
-                    "startLine": 69,
+                    "startLine": 70,
                     "startColumn": 4,
-                    "startOffset": 3788,
-                    "endLine": 71,
+                    "startOffset": 3847,
+                    "endLine": 72,
                     "endColumn": 12,
-                    "endOffset": 3943
+                    "endOffset": 4002
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values\\styles.xml",
@@ -1186,12 +1205,12 @@
             },
             {
                 "to": {
-                    "startLine": 72,
+                    "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 3948,
-                    "endLine": 80,
+                    "startOffset": 4007,
+                    "endLine": 81,
                     "endColumn": 12,
-                    "endOffset": 4458
+                    "endOffset": 4517
                 },
                 "from": {
                     "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values\\values.xml",

@@ -38,6 +38,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ListActivity extends Activity implements NavigationDrawerFragmentMain.NavigationDrawerCallbacks {
@@ -82,7 +83,7 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 			finish();
 		} else {
 			lAdapter = new LessonAdapter(this, lessons);
-
+			((TextView) findViewById(R.id.textView)).setText("Группа № " + group);
 			// LayoutInflater inflater = (LayoutInflater) this.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
 			//
 			// View view = inflater.inflate( R.layout.fragment_main2, null );
@@ -95,6 +96,8 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 					// Toast.LENGTH_LONG).show();
 					Intent intent = new Intent(ListActivity.this, ListDetails.class);
 					intent.putExtra("id", id);
+					intent.putExtra("Date", lessons.get(position).getDate());
+					intent.putExtra("Subject", lessons.get(position).getSubject());
 					startActivity(intent);
 				}
 			});

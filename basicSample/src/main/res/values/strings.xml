@@ -49,5 +49,6 @@
     <string name="scan_button">Начать сканирование</string>
     <string name="list_button">Посещения</string>
     <string name="title_activity_change_student">Изменение студента</string>
+    <string name="refresh_scan_activity">Обновить</string>
 
 </resources>

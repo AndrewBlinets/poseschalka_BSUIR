@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ListDetails extends Activity {
 
@@ -33,8 +34,10 @@ MyFileClass file = new MyFileClass();
 		Intent startIntent = getIntent();
 		
 		id = startIntent.getLongExtra("id", 0l);
+		String subject = startIntent.getStringExtra("Subject");
+		String data = startIntent.getStringExtra("Date");
 		getData();
-		
+		((TextView) findViewById(R.id.textView)).setText("Предмет " + subject + "  Дата: " + data);
 		dAdapter = new DetailsAdapter(this, listAtt);
 		ListView lvDet = (ListView) findViewById(R.id.lvDet);
 		lvDet.setAdapter(dAdapter);

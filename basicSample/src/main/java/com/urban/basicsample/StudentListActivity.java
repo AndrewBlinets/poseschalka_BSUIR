@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ipaulpro.afilechooser.utils.FileUtils;
@@ -57,13 +58,14 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_student_list);
 		Intent startIntent = getIntent();
-		String lastName = startIntent.getStringExtra("lastName");
+		final String lastName = startIntent.getStringExtra("lastName");
 		mNavigationDrawerFragment = (NavigationDrawerFragmentMain) getFragmentManager().findFragmentById(
 				R.id.navigation_drawer3);
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer3, (DrawerLayout) findViewById(R.id.drawer_layout2));
 
 		getStudents(lastName);
 		if (students != null) {
+			((TextView) findViewById(R.id.textView)).setText("Список студентов " + lastName);
 			sAdapter = new StudentAdapter(this, students);
 			ListView listView = (ListView) findViewById(R.id.lvStudent);
 			listView.setAdapter(sAdapter);
@@ -72,6 +74,9 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					Intent intent = new Intent(StudentListActivity.this, StudentAttListActivity.class);
 					intent.putExtra("id", id+"");
+					intent.putExtra("lastName", lastName);
+					intent.putExtra("firstName", students.get(position).getFirstName());
+					intent.putExtra("group", students.get(position).getGroup());
 					startActivity(intent);
 				}
 			});
