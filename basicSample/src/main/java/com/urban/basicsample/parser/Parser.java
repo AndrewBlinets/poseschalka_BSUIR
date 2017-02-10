@@ -1,17 +1,13 @@
 package com.urban.basicsample.parser;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -24,7 +20,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.urban.basicsample.MyFileClass;
+import com.urban.basicsample.Log_file;
 import com.urban.basicsample.dao.DBHelper;
 import com.urban.basicsample.model.Schedule;
 
@@ -47,19 +43,18 @@ public class Parser {
 	private Thread thread = null;
 
 
-	public MyFileClass fileClass =  new MyFileClass();
+	public Log_file fileClass =  new Log_file();
 
 
 
 
 	public Parser(Context context) {
-		fileClass.writeFile("Parser      Parser");
+
 		mContext = context;
 
 	}
 
 	public void loadScheduleForGroup(final String group) {
-		fileClass.writeFile("Parser      loadScheduleForGroup");
 		if (thread == null) {
 			thread = new Thread(new Runnable() {
 				@Override
@@ -72,7 +67,6 @@ public class Parser {
 	}
 
 	public boolean loadScheduleForGroupInternal(String group) {
-		fileClass.writeFile("Parser       loadScheduleForGroupInternal");
 		String groupId = getGroupId(group);
 		if (groupId == null) {
 			return false;
@@ -96,7 +90,7 @@ public class Parser {
 	}
 
 	private String getGroupId(String group) {
-		fileClass.writeFile("Parser      getGroupId   " + group);
+		fileClass.writeFile(" 93 Parser      getGroupId   " + group);
 		Document document = loadXmlDocumentFromUrl(GROUP_ID_URL);
 
 		Element root = null;
@@ -120,7 +114,7 @@ public class Parser {
 	}
 
 	private Document loadXmlDocumentFromUrl(String stringUrl) {
-		fileClass.writeFile("Parser      loadXmlDocumentFromUrl    " + stringUrl );
+		fileClass.writeFile(" 117 Parser loadXmlDocumentFromUrl");
 		Document document = null;
 		InputStream is = null;
 		try {
@@ -130,14 +124,18 @@ public class Parser {
 			document = db.parse(is);
 		}
 		catch (SAXException e) {
+			fileClass.writeFile(" 127 Parser loadXmlDocumentFromUrl ошибка xml");
 			Log.i(TAG, "retrieved xml is broken", e);
 		}
 		catch (MalformedURLException e) {
 			Log.i(TAG, "bad url", e);
+			fileClass.writeFile(" 132 Parser loadXmlDocumentFromUrl bad url");
 		} catch (IOException e) {
 			Log.i(TAG, "exception occurred during the reading data from bsuir's service", e);
+			fileClass.writeFile(" 135 Parser loadXmlDocumentFromUrl exception occurred during the reading data from bsuir's service");
 		} catch (Exception e) {
 			Log.e(TAG, "xml parsing exception", e);
+			fileClass.writeFile(" 138 Parser loadXmlDocumentFromUrl xml parsing exception");
 		} finally {
 			if (is != null) {
 				try {
@@ -152,7 +150,7 @@ public class Parser {
 
 	private Schedule parseScheduleDocument(Document document, String group) {
 
-		fileClass.writeFile("Parser      parseScheduleDocument    " + group );
+		fileClass.writeFile(" 153 Parser parseScheduleDocument " + group );
 		Schedule schedule = null;
 
 		Element root = document.getDocumentElement();
@@ -232,7 +230,7 @@ public class Parser {
 
 	private boolean insertScheduleIntoDatabase(Schedule schedule) {
 
-		fileClass.writeFile("Parser      insertScheduleIntoDatabase    " + schedule.getDay()
+		fileClass.writeFile(" 233 Parser insertScheduleIntoDatabase    " + schedule.getDay()
 		+ "   " +  schedule.getSubject() + "   " + schedule.getStudentGroup());
 
 	    StringTokenizer stk = new StringTokenizer(schedule.getLessonTime(),"-");

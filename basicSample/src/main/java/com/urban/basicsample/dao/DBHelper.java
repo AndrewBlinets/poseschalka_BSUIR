@@ -1,13 +1,11 @@
 package com.urban.basicsample.dao;
 
-import com.urban.basicsample.MyFileClass;
 import com.urban.basicsample.util.PassEncrypter;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -38,7 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String INSERT_INTO = "insert into Students select _id,"
             + "FirstName, LastName, GroupId, SubGroup, Scan from Students_backup;";
 
-   // MyFileClass file = new MyFileClass();
+   // Log_file file = new Log_file();
 
     public DBHelper(Context context) {
         super(context, "myDB", null, DB_VERSION);

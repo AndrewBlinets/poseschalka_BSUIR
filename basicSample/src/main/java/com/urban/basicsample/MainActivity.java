@@ -14,6 +14,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.widget.DrawerLayout;
 import android.text.InputType;
 import android.util.Log;
@@ -34,6 +35,15 @@ import com.urban.basicsample.util.DbUtils;
 import com.urban.basicsample.util.Exporter;
 import com.urban.basicsample.util.Importer;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends Activity implements NavigationDrawerFragmentMain.NavigationDrawerCallbacks {
 
 	private Button startScan;
@@ -46,11 +56,13 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 	private CharSequence mTitle;
 
 	private static final String Tag = "MyLog";
-MyFileClass file = new MyFileClass();
+
+	private Log_file obj_log = new Log_file();
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {//активити админа
 		super.onCreate(savedInstanceState);
-		file.writeFile( "MainActivity   onCreate");
+		obj_log.writeFile( " 65  MainActivity   onCreate");
 		if (getIntent().getBooleanExtra("finish", false))
 			finish();
 		setContentView(R.layout.activity_main);
@@ -67,7 +79,7 @@ MyFileClass file = new MyFileClass();
 	}
 
 	public void onSectionAttached(int number) {
-		file.writeFile( "MainActivity   onSectionAttached");
+		obj_log.writeFile( "82 MainActivity   onSectionAttached number = " + number);
 		switch (number) {
 		// case 1:
 		// CustomDialog1 cd = new CustomDialog1(this);
@@ -96,6 +108,7 @@ MyFileClass file = new MyFileClass();
 			showDialog(LOAD_DIALOG);
 			else
 			{
+				obj_log.writeFile( "111 MainActivity   onSectionAttached нет доступа к интернету.");
 				Toast.makeText(getApplicationContext(), "Нет доступа к интернету!!!",
 						Toast.LENGTH_SHORT).show();
 			}
@@ -112,7 +125,6 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		file.writeFile( "MainActivity   onActivityResult");
 		if (requestCode == FILE_SELECT_CODE && resultCode == -1) {
 			Uri uri = data.getData();
 			String path = FileUtils.getPath(this, uri);
@@ -123,7 +135,7 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
-		file.writeFile( "MainActivity   Dialog");
+		obj_log.writeFile( "138 MainActivity   Dialog id = " + id);
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 
@@ -199,6 +211,7 @@ MyFileClass file = new MyFileClass();
 								}
 							} catch (Exception e) {
 								// TODO
+								obj_log.writeFile( "214 MainActivity   Dialog исключение " + e.getMessage());
 								e.printStackTrace();
 							}
 						//} else {
@@ -218,13 +231,18 @@ MyFileClass file = new MyFileClass();
 				public void onClick(DialogInterface dialog, int which) {
 					String lastName = editText.getText().toString().trim();
 					//lastName.substring(0, 1).toUpperCase();
-					String dop_str = lastName.substring(0, 1).toUpperCase();
-					dop_str += lastName.substring(1);
-					lastName = dop_str;
-					Intent intent = new Intent(getApplicationContext(), StudentListActivity.class);
-					intent.putExtra("lastName", lastName);
-					startActivity(intent);
-					dialog.dismiss();
+					if (lastName != null && !lastName.isEmpty()) {
+						String dop_str = lastName.substring(0, 1).toUpperCase();
+						dop_str += lastName.substring(1);
+						lastName = dop_str;
+						Intent intent = new Intent(getApplicationContext(), StudentListActivity.class);
+						intent.putExtra("lastName", lastName);
+						startActivity(intent);
+						dialog.dismiss();
+					}
+					else {
+						Toast.makeText(MainActivity.this, "Пустое поле", Toast.LENGTH_SHORT).show();
+					}
 				}
 			};
 			dialog = builder.setTitle("Введите фамилию").setPositiveButton("Ок", onClickListener2).setView(editText)
@@ -239,16 +257,15 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		file.writeFile( "MainActivity   onCreateOptionsMenu");
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		file.writeFile( "MainActivity   onOptionsItemSelected");
 		switch (item.getTitle().toString()) {
 		case "changePass":
+			obj_log.writeFile( "267 MainActivity   onOptionsItemSelected изменение пароля");
 			Intent intent = new Intent(this, ChangePassActivity.class);
 			startActivity(intent);
 			break;
@@ -261,7 +278,6 @@ MyFileClass file = new MyFileClass();
 
 	@Override
 	public void onNavigationDrawerItemSelected(int position) {
-		file.writeFile( "MainActivity   onNavigationDrawerItemSelected");
 		FragmentManager fragmentManager = getFragmentManager();
 		fragmentManager.beginTransaction().replace(R.id.container1, PlaceholderFragment.newInstance(position + 1))
 				.commit();
@@ -318,5 +334,4 @@ MyFileClass file = new MyFileClass();
 			((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
 		}
 	}
-
 }

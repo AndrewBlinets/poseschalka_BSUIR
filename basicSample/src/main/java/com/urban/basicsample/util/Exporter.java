@@ -1,14 +1,16 @@
 package com.urban.basicsample.util;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -22,7 +24,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 
-import com.urban.basicsample.MyFileClass;
+import com.urban.basicsample.Log_file;
 import com.urban.basicsample.dao.DBHelper;
 
 public class Exporter {
@@ -49,16 +51,16 @@ public class Exporter {
     private static final String q_y = "SELECT * FROM Lessons WHERE Subject = ? AND Date = ? AND GroupId = ?";
 
 
-    MyFileClass file = new MyFileClass();
+    Log_file log_file = new Log_file();
 
     public Exporter(Context context, String group) {
-        file.writeFile("Exporter    Exporter  "+ group);
+        log_file.writeFile(" 57 Exporter    Exporter  "+ group);
         mContext = context;
         mGroup = group;
     }
 
     public boolean export() {
-        file.writeFile("Exporter    export  ");
+        log_file.writeFile(" 63 Exporter    export  ");
         // check if available and not read only
         if (!isExternalStorageAvailable() || isExternalStorageReadOnly()) {
             return false;
@@ -87,6 +89,7 @@ public class Exporter {
        }
        catch (NullPointerException e)
        {
+           log_file.writeFile(" 92 Exporter    export исключение " + e.getMessage());
            success = false;
            return success;
        }
@@ -115,7 +118,7 @@ public class Exporter {
 
     private Integer writeSubject(Integer rowNum, String subject) {
 
-        file.writeFile("Exporter    writeSubject  ");
+        log_file.writeFile(" 121  Exporter    writeSubject  ");
         Row row0 = null;
         Row nameRow = null;
         Cell c = null;
@@ -345,21 +348,10 @@ public class Exporter {
 
         }
         }
-
-
-
-
-
-
-
-
-
-
         return rowNum += 3;
     }
 
     private int getAttByStudent(String name, String subject) {
-        file.writeFile("Exporter    getAttByStudent ");
         int result = 0;
         DBHelper dbHelper = new DBHelper(mContext);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -391,7 +383,6 @@ public class Exporter {
     }
 
     private int getExcAtt() {
-        file.writeFile("Exporter    getExcAtt ");
         int result = 0;
         DBHelper dbHelper = new DBHelper(mContext);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -410,7 +401,6 @@ public class Exporter {
     }
 
     private void setNulls(HashMap<String, Row> rows, ArrayList<String> mas) {
-        file.writeFile("Exporter    setNulls ");
         //for (Integer cell : dates.values()) {
         for (int j = 0; j < Number_col.size(); j++) {
             //for (Map.Entry<String, Integer> name : names.entrySet()) {
@@ -428,7 +418,7 @@ public class Exporter {
     }
 
     /* private HashMap<String, Integer> getDate(String subject) {
-        file.writeFile("Exporter    getDate  " + subject);
+        log_file.writeFile("Exporter    getDate  " + subject);
         HashMap<String, Integer> dates = null;
 
         DBHelper dbHeper = new DBHelper(mContext);
@@ -454,8 +444,6 @@ public class Exporter {
 
 
     private void getDate(String subject) {
-        file.writeFile("Exporter    getDate  " + subject);
-
         String[] mas = subject.split(" ");
 
         DBHelper dbHeper = new DBHelper(mContext);
@@ -510,7 +498,6 @@ public class Exporter {
 
 
     private void getNames(int i) {
-        file.writeFile("Exporter    getNames  ");
         DBHelper dbHeper = new DBHelper(mContext);
         SQLiteDatabase db = dbHeper.getReadableDatabase();
 
@@ -581,7 +568,6 @@ public class Exporter {
     }
 
     private LinkedList<String> getData() {
-        file.writeFile("Exporter    getData  ");
         LinkedList<String> subjects = null;
         // HashMap<String, Integer> date = null;
 
@@ -625,7 +611,6 @@ public class Exporter {
     }
 
     private boolean isExternalStorageReadOnly() {
-        file.writeFile("Exporter    isExternalStorageReadOnly  ");
         String extStorageState = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(extStorageState)) {
             return true;
@@ -634,12 +619,10 @@ public class Exporter {
     }
 
     private boolean isExternalStorageAvailable() {
-        file.writeFile("Exporter    isExternalStorageAvailable  ");
         String extStorageState = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(extStorageState)) {
             return true;
         }
         return false;
     }
-
 }

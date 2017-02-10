@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:gravity="center_horizontal" />
 
    <ListView

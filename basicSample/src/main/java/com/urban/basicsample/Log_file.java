@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -28,17 +29,45 @@ import java.util.HashMap;
  * Created by Andrew on 18.12.2016.
  */
 
-public class MyFileClass  {
+public class Log_file {
 
+    final private String FILENAME = "Log_file_bsuir.txt";
 
-    private  String FILENAME;
+    private String str_file = "";
 
-   /* @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    private SimpleDateFormat format;
+
+    public Log_file() {
+        File sdPath = Environment.getExternalStorageDirectory();
+        sdPath = new File(sdPath.getAbsolutePath() + "/" + "Attendance");
+        sdPath.mkdirs();
+        this.format = new SimpleDateFormat();
+        format.applyPattern("dd.MM.yyyy HH:mm");
+        this.str_file  = sdPath.getAbsolutePath() + "/" + FILENAME ;
     }
-*/
-    public MyFileClass() {
+
+    public void writeFile(String line) {
+        String dataTime = format.format(new Date());
+        FileWriter bw = null;
+        try {
+            bw = new FileWriter(str_file,true);
+            bw.append(" " + dataTime + "  " + line + "\n");
+            bw.flush();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+  /*  public Log_file() {
         FILENAME = Environment.getExternalStorageDirectory().toString() + "/Log_file.txt";
     }
 
@@ -169,128 +198,5 @@ public class MyFileClass  {
         db.close();
 
         db21.close();
-
-
-
-
-        StringBuilder stringBuilder = new StringBuilder();
-        try {
-            SimpleDateFormat format = new SimpleDateFormat();
-            format.applyPattern("dd.MM.yyyy HH:mm");
-            File myFile = new File(FILENAME);
-            try {
-                FileInputStream inputStream = new FileInputStream(myFile);
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String line;
-                try {
-                    while ((line = bufferedReader.readLine()) != null){
-                        stringBuilder.append(line);
-                        stringBuilder.append("\n");
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            FileOutputStream st = new FileOutputStream
-                    (FILENAME);
-
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter
-                    (st));
-            stringBuilder.append("          " + format.format(new Date()) +" " + str);
-            stringBuilder.append("\n");
-            bw.write(stringBuilder + "");
-            bw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-   public void writeFile_M(String str) {
-       StringBuilder stringBuilder = new StringBuilder();
-              try {
-            SimpleDateFormat format = new SimpleDateFormat();
-            format.applyPattern("dd.MM.yyyy HH:mm");
-
-                  File myFile = new File(FILENAME);
-                  try {
-                      FileInputStream inputStream = new FileInputStream(myFile);
-                      BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                      String line;
-                      try {
-                          while ((line = bufferedReader.readLine()) != null){
-                              stringBuilder.append(line);
-                              stringBuilder.append("\n");
-                          }
-                      } catch (IOException e) {
-                          e.printStackTrace();
-                      }
-                  } catch (FileNotFoundException e) {
-                      e.printStackTrace();
-                  }
-
-
-
-            FileOutputStream st = new FileOutputStream(FILENAME);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(st));
-                  stringBuilder.append("___________________________________________________");
-                  stringBuilder.append("\n");
-                  stringBuilder.append("\n");
-                  stringBuilder.append("___________________________________________________");
-                  stringBuilder.append("\n");
-                  stringBuilder.append("\n");
-                  stringBuilder.append("___________________________________________________");
-                  stringBuilder.append("\n");
-                  stringBuilder.append("\n");
-                  stringBuilder.append("          " + format.format(new Date()) +" " + str);
-                  stringBuilder.append("\n");
-                  bw.write(stringBuilder + "");
-            bw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void writeFile( String str) {
-        StringBuilder stringBuilder = new StringBuilder();
-        try {
-            SimpleDateFormat format = new SimpleDateFormat();
-            format.applyPattern("dd.MM.yyyy HH:mm");
-            File myFile = new File(FILENAME);
-            try {
-                FileInputStream inputStream = new FileInputStream(myFile);
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String line;
-                try {
-                    while ((line = bufferedReader.readLine()) != null){
-                        stringBuilder.append(line);
-                        stringBuilder.append("\n");
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            FileOutputStream st = new FileOutputStream
-                    (FILENAME);
-
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter
-                            (st));
-            stringBuilder.append("          " + format.format(new Date()) +" " + str);
-            stringBuilder.append("\n");
-            bw.write(stringBuilder + "");
-            bw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+        }*/
 }

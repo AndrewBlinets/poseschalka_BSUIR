@@ -1,34 +1,34 @@
 [
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\list.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_list.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\student_list.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\change_pass.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\change_pass.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_list.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\student_list.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\change_pass.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\change_pass.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\main.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list_details.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\list_details.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\scan.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\scan.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\list.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\list_details.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\list_details.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\scan.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\scan.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_att_list.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\student_att_list.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\global.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\global.xml"
     },
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\global.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\global.xml"
+        "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\menu\\student_att_list.xml",
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\menu\\student_att_list.xml"
     }
 ]

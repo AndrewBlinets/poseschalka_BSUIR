@@ -11,7 +11,6 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -32,7 +30,7 @@ public class NavigationDrawerFragment extends Fragment {
 
 
     private static final String Tag = "MyLog";
-    MyFileClass file = new MyFileClass();
+    Log_file file = new Log_file();
     /**
      * Remember the position of the selected item.
      */
@@ -67,7 +65,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        file.writeFile( "NavigationDrawerFragment   onCreate");
+        file.writeFile( "68 NavigationDrawerFragment   onCreate");
         super.onCreate(savedInstanceState);
 
         // Read in the flag indicating whether or not the user has demonstrated awareness of the
@@ -90,7 +88,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public void onActivityCreated (Bundle savedInstanceState) {
-        file.writeFile( "NavigationDrawerFragment   onActivityCreated");
+        file.writeFile( "91 NavigationDrawerFragment   onActivityCreated");
         super.onActivityCreated(savedInstanceState);
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
@@ -99,7 +97,7 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        file.writeFile( "NavigationDrawerFragment   onCreateView");
+        file.writeFile( "100 NavigationDrawerFragment   onCreateView");
         mDrawerListView = (ListView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
 
@@ -123,7 +121,7 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
     public boolean isDrawerOpen() {
-        file.writeFile( "NavigationDrawerFragment   isDrawerOpen");
+
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
 
@@ -134,7 +132,7 @@ public class NavigationDrawerFragment extends Fragment {
      * @param drawerLayout The DrawerLayout containing this fragment's UI.
      */
     public void setUp(int fragmentId, DrawerLayout drawerLayout) {
-        file.writeFile( "NavigationDrawerFragment   onCreate");
+
         mFragmentContainerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
 
@@ -204,7 +202,6 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
     protected void selectItem(int position) {
-        file.writeFile( "NavigationDrawerFragment   selectItem");
         mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
@@ -219,32 +216,30 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public void onAttach(Activity activity) {
-        file.writeFile( "NavigationDrawerFragment   onAttach");
+
         super.onAttach(activity);
         try {
             mCallbacks = (NavigationDrawerCallbacks) activity;
         } catch (ClassCastException e) {
+            file.writeFile( "NavigationDrawerFragment   onAttach исключение " + e.getMessage());
             throw new ClassCastException("Activity must implement NavigationDrawerCallbacks.");
         }
     }
 
     @Override
     public void onDetach() {
-        file.writeFile( "NavigationDrawerFragment   onDetach");
         super.onDetach();
         mCallbacks = null;
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        file.writeFile( "NavigationDrawerFragment   onSaveInstanceState");
         super.onSaveInstanceState(outState);
         outState.putInt(STATE_SELECTED_POSITION, mCurrentSelectedPosition);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        file.writeFile( "NavigationDrawerFragment   onConfigurationChanged");
         super.onConfigurationChanged(newConfig);
         // Forward the new configuration the drawer toggle component.
         mDrawerToggle.onConfigurationChanged(newConfig);
@@ -252,7 +247,6 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        file.writeFile( "NavigationDrawerFragment   onCreateOptionsMenu");
         // If the drawer is open, show the global app actions in the action bar. See also
         // showGlobalContextActionBar, which controls the top-left area of the action bar.
         if (mDrawerLayout != null && isDrawerOpen()) {
@@ -264,7 +258,6 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        file.writeFile("NavigationDrawerFragment   onOptionsItemSelected");
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
@@ -282,7 +275,6 @@ public class NavigationDrawerFragment extends Fragment {
      * 'context', rather than just what's in the current screen.
      */
     private void showGlobalContextActionBar() {
-        file.writeFile( "NavigationDrawerFragment   showGlobalContextActionBar");
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);

@@ -2,7 +2,7 @@ package com.urban.basicsample.adapter;
 
 import java.util.ArrayList;
 
-import com.urban.basicsample.MyFileClass;
+import com.urban.basicsample.Log_file;
 import com.urban.basicsample.R;
 import com.urban.basicsample.model.Lesson;
 
@@ -18,9 +18,9 @@ public class LessonAdapter extends BaseAdapter {
 	Context ctx;
 	LayoutInflater lInflater;
 	ArrayList<Lesson> objects;
-	public MyFileClass fileClass =  new MyFileClass();
+
 	public LessonAdapter(Context context, ArrayList<Lesson> lessons) {
-		fileClass.writeFile(  "LessonAdapter       LessonAdapter");
+
 		ctx = context;
 		objects = lessons;
 		lInflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -43,7 +43,7 @@ public class LessonAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		fileClass.writeFile(  "LessonAdapter       getView");
+
 		View view = convertView;
 		if (view == null) {
 			view = lInflater.inflate(R.layout.list_item1, parent, false);

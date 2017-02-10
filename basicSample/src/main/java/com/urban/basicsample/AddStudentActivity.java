@@ -27,7 +27,6 @@ import android.hardware.usb.UsbManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -42,10 +41,8 @@ import com.digitalpersona.android.ptapi.struct.PtBir;
 import com.digitalpersona.android.ptapi.struct.PtInfo;
 import com.digitalpersona.android.ptapi.struct.PtInputBir;
 import com.digitalpersona.android.ptapi.usb.PtUsbHost;
-import com.urban.basicsample.core.InitApi;
 import com.urban.basicsample.core.OpVerifyNew;
 import com.urban.basicsample.dao.DBHelper;
-import com.urban.basicsample.model.Constants;
 
 public class AddStudentActivity extends Activity implements OnClickListener {
 
@@ -71,7 +68,7 @@ public class AddStudentActivity extends Activity implements OnClickListener {
 	private AtomicBoolean isNewRun;
 
 	private static final String Tag = "MyLog";
-	MyFileClass file = new MyFileClass();
+	Log_file file = new Log_file();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		file.writeFile("AddStudentActivity   onCreate");

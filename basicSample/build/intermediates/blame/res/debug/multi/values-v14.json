@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "outputFile": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 182
                 },
                 "from": {
-                    "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

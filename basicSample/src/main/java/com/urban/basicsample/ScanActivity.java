@@ -2,6 +2,9 @@ package com.urban.basicsample;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
@@ -16,7 +19,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.PendingIntent;
-import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -30,12 +32,15 @@ import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,7 +49,6 @@ import com.digitalpersona.android.ptapi.PtConnectionAdvancedI;
 import com.digitalpersona.android.ptapi.PtException;
 import com.digitalpersona.android.ptapi.PtGlobal;
 import com.digitalpersona.android.ptapi.struct.PtBir;
-import com.digitalpersona.android.ptapi.struct.PtInfo;
 import com.digitalpersona.android.ptapi.struct.PtInputBir;
 import com.digitalpersona.android.ptapi.usb.PtUsbHost;
 import com.urban.basicsample.core.OpVerifyNew;
@@ -85,9 +89,10 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	private int count_repeats = 0;
 
 	private static final String Tag = "MyLog";
-	MyFileClass file = new MyFileClass();
+	Log_file file = new Log_file();
 	private AtomicBoolean isTreadStarted = new AtomicBoolean(false);
 
+	WebView webviewActionView;
 
 	private static final String ACTION_USB_PERMISSION = "com.digitalpersona.java.ptapi.dpfpddusbhost.USB_PERMISSION";
 
@@ -95,9 +100,29 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		file.writeFile( "ScanActivity   onCreate");
+		file.writeFile( " 103 ScanActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_scan);
+
+		/*boolean flag = true;
+		InputStream stream = null;
+		try {
+			File sdPath = Environment.getExternalStorageDirectory();
+			stream = getAssets().open(sdPath.getAbsolutePath() + "/Attendance/gif_animation.gif");
+		} catch (Exception e) {
+			e.printStackTrace();
+			flag = false;
+		}
+
+		if(flag) {
+			webviewActionView = (WebView) findViewById(R.id.imageView1);
+			webviewActionView.setWebViewClient(new MyWebViewClient());
+			webviewActionView.getSettings().setJavaScriptEnabled(true);
+
+			GifWebView view = new GifWebView(this, stream);
+			webviewActionView.addView(view);
+		}*/
+
 		Intent intent = getIntent();
 		week = intent.getIntExtra("week", 0);
 		((TextView) findViewById(R.id.stv2)).setText(week + " учебная неделя" );
@@ -106,7 +131,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onResume() {
-		file.writeFile( "ScanActivity   onResume");
 		initialize();
 		if (!isTreadStarted.get()) {
 			init();
@@ -116,7 +140,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onStop() {
-		file.writeFile( "ScanActivity   onStop");
+
 		if (mRunningOp != null) {
 			mRunningOp.interrupt();
 		}
@@ -126,7 +150,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	public void initialize() {
-		file.writeFile( "ScanActivity   initialize");
+
 		if (initializePtapi()) {
 			Context applContext = getApplicationContext();
 			PendingIntent mPermissionIntent;
@@ -140,6 +164,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					openPtapiSession();
 				}
 			} catch (PtException e) {
+				file.writeFile( " 167  ScanActivity   initialize исключение  " + "Error during device opening ScanActivity   initialize - " + e.getMessage() );
 				displayMessage("Error during device opening ScanActivity   initialize - " + e.getMessage());//pri otkl
 			}
 
@@ -148,7 +173,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	private boolean initializePtapi() {
 		// Load PTAPI library
-		file.writeFile( "ScanActivity   initializePtapi");
+
 		Context aContext = getApplicationContext();
 		mPtGlobal = new PtGlobal(aContext);
 
@@ -158,19 +183,21 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			return true;
 		} catch (java.lang.UnsatisfiedLinkError ule) {
 			// Library wasn't loaded properly during PtGlobal object construction
-			displayMessage("libjniPtapi.so not loaded   ScanActivity   initializePtapi");
+			displayMessage("libjniPtapi.so not loaded");
+			file.writeFile( " 187 ScanActivity   initializePtapi ошибка libjniPtapi.so not loaded");
 			mPtGlobal = null;
 			return false;
 
 		} catch (PtException e) {
 			displayMessage(e.getMessage());
+			file.writeFile( " 193 ScanActivity   initializePtapi исключение " + e.getMessage());
 			return false;
 		}
 	}
 
 	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
-			file.writeFile( "ScanActivity   mUsbReceiver");
+
 			String action = intent.getAction();
 			if (ACTION_USB_PERMISSION.equals(action)) {
 				synchronized (this) {
@@ -188,7 +215,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	};
 
 	private void openPtapiSession() {
-		file.writeFile( "ScanActivity   openPtapiSession");
 		try {
 			// Try to open session
 			openPtapiSessionInternal();
@@ -196,30 +222,29 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			// Device successfully opened
 			return;
 		} catch (PtException e) {
-			displayMessage("Error during device opening  ScanActivity   openPtapiSession -  " + e.getMessage());
+			file.writeFile( " 225 ScanActivity   openPtapiSession исключение  " + e.getMessage());
+			displayMessage("Error during device opening  -  " + e.getMessage());
 		}
 	}
 
 	private void openPtapiSessionInternal() throws PtException {
-		file.writeFile( "ScanActivity   openPtapiSessionInternal");
 		// Try to open device
 		try {
 			mConn = (PtConnectionAdvancedI) mPtGlobal.open("USB");
 //			mSensorInfo = mConn.info();
 		} catch (PtException e) {
+			file.writeFile( " 236 ScanActivity   openPtapiSessionInternal исключение " + e.getMessage());
 			throw e;
 		}
 	}
 
 	private void init() {
-		file.writeFile( "ScanActivity   init");
 		synchronized (mCond) {
 			isTreadStarted.set(true);
 			mRunningOp = new OpVerifyNew(mConn, 3) {
 				@Override
 				protected void onFinished(PtInputBir template) {
 					synchronized (mCond) {
-						file.writeFile( "ScanActivity   init onFinished");
 						mRunningOp = null;
 						displayMessage("OK");
 						verifyStudent(template);
@@ -239,7 +264,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 				@Override
 				protected void onStop() {
-					file.writeFile( "ScanActivity   init onStop");
 					synchronized (mCond) {
 
 						mRunningOp = null;
@@ -264,7 +288,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 
 	private void verifyStudent(PtInputBir template) {
-		file.writeFile( "ScanActivity   verifyStudent");
+		file.writeFile( " 291 ScanActivity   verifyStudent");
 		boolean flag = false;
 		SQLiteDatabase database = null;
 		try {
@@ -321,6 +345,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 							// break;
 						} catch (Exception e) {
+							file.writeFile( " 348 ScanActivity   verifyStudent исключение " + e.getMessage());
 							displayMessage("ERRORver" + e.toString());
 						}
 
@@ -337,6 +362,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			}
 
 		} catch (Exception e) {
+			file.writeFile( " 365 ScanActivity   verifyStudent исключение " + e.getMessage());
 			displayMessage(e.toString());
 		} finally {
 			if (database != null)
@@ -346,7 +372,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void addStudent(PtInputBir template) {
-		file.writeFile( "ScanActivity   addStudent");
+		file.writeFile( " 375 ScanActivity   addStudent");
 		if (template != null) {
 			Object o = template;
 			ByteArrayOutputStream bos = null;
@@ -356,6 +382,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				out.writeObject(o);
 				out.close();
 			} catch (IOException e) {
+				file.writeFile( " 385 ScanActivity   addStudent исключение " + e.getMessage());
 				displayMessage(e.toString());
 			}
 			// displayMessage("addStudent");
@@ -368,7 +395,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void writeToDb(int studentId) {
-		file.writeFile( "ScanActivity   writeToDb   " + studentId);
+		file.writeFile( " 398 ScanActivity   writeToDb  id_student " + studentId);
 		SQLiteDatabase database = null;
 		try {
 			DBHelper helper = new DBHelper(getApplicationContext());
@@ -419,13 +446,11 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void identifyClass() {
-		file.writeFile( "ScanActivity   identifyClass");
+		file.writeFile( " 449 ScanActivity   identifyClass");
 		Date date = new Date();
 		int hour = date.getHours();
 		int min = date.getMinutes();
 		int intDay = date.getDay();
-		file.writeFile( "ScanActivity   identifyClass  дата и время " + intDay + " " +
-		hour + " " + min);
 		switch (intDay) {
 			case 0:
 				day = "Воскресенье";
@@ -460,22 +485,17 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					.query("Schedule", null, "StudentGroup = ? AND Day = ?", selectionArgs, null, null, null);
 
 			if (c != null) {
-				file.writeFile( "ScanActivity   identifyClass 1");
 				if (c.moveToFirst()) {
-					file.writeFile( "ScanActivity   identifyClass 2");
 					do {
-						file.writeFile( "ScanActivity   identifyClass 3");
 						String weekNumber = c.getString(c.getColumnIndex("WeekNumber"));
 						subgroup = c.getInt(c.getColumnIndex("NumSubgroup"));
-						file.writeFile( "ScanActivity   identifyClass неделя " + weekNumber + "  " + subgroup);
-						file.writeFile( "ScanActivity   identifyClass неделя real " + week + "  " + numSubgroup);
+						file.writeFile( "492 ScanActivity   identifyClass неделя " + weekNumber + " подгруппа " + subgroup);
+						file.writeFile( "493 ScanActivity   identifyClass неделя реальная неделя " + week + " подгруппа " + numSubgroup);
 
 						if ((weekNumber.charAt(0) == '0' || weekNumber.indexOf(String.valueOf(week)) != -1)
 								&& (subgroup == 0 || subgroup == numSubgroup)) {
-							file.writeFile( "ScanActivity   identifyClass 4");
 							timeStart = c.getString(c.getColumnIndex("LessonTimeStart"));
 							timeEnd = c.getString(c.getColumnIndex("LessonTimeEnd"));
-							file.writeFile( "ScanActivity   identifyClass  время пары " + timeStart + " " + timeEnd);
 							StringTokenizer stkS = new StringTokenizer(timeStart, ":");
 							StringTokenizer stkE = new StringTokenizer(timeEnd, ":");
 							int[] arS = new int[stkS.countTokens()];
@@ -487,14 +507,13 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 							if ((arS[0] * 60 + arS[1]) <= (hour * 60 + min)
 									&& (arE[0] * 60 + arE[1]) >= (hour * 60 + min)) {
 								// numSubgroup = c.getInt(c.getColumnIndex("NumSubgroup"));
-								file.writeFile( "ScanActivity   identifyClass 5");
 								if (((hour * 60 + min) - (arS[0] * 60 + arS[1])) <= 45) {
 									part = 1;
 								} else {
 									part = 2;
 								}
 								subject = c.getString(c.getColumnIndex("Subject"));
-								file.writeFile( "ScanActivity   identifyClass " + subject);
+								file.writeFile( " 516 ScanActivity   identifyClass  предмет " + subject);
 								// Toast.makeText(getApplicationContext(), subject, 1000).show();
 								/*
 								 * ((TextView) findViewById(R.id.stv1)).setText(mGroup); ((TextView)
@@ -523,7 +542,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void writeLessonToDb() {
-		file.writeFile("ScanActivity   writeLessonToDb");
+		file.writeFile(" 545 ScanActivity   writeLessonToDb");
 		if(subject != null) {
 
 			Date d = new Date();
@@ -535,9 +554,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			try {
 				DBHelper helper = new DBHelper(getApplicationContext());
 				database = helper.getWritableDatabase();
-				file.writeFile("ScanActivity   writeLessonToDb 1");
-				file.writeFile("ScanActivity   writeLessonToDb 1" + date + " " +
-				subject + " " + timeStart + " " + timeEnd);
 
 				String[] selectionArgs = new String[] { date, subject,
 														timeStart, timeEnd, String.valueOf(subgroup)};
@@ -550,18 +566,15 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				}
 				catch (Exception e)
 				{
-					file.writeFile("ScanActivity   writeLessonToDb exception \n" + e.getMessage());
+					file.writeFile(" 569 ScanActivity   writeLessonToDb exception " + e.getMessage());
 				}
-				file.writeFile("ScanActivity   writeLessonToDb 2");
 				if (c.getCount() != 0) {
-					file.writeFile("ScanActivity   writeLessonToDb 3");
 					if (c.moveToFirst()) {
-						file.writeFile("ScanActivity   writeLessonToDb 4");
 						lessonId = c.getInt(c.getColumnIndex("_id"));
-						file.writeFile("ScanActivity   writeLessonToDb id" + lessonId);
+						file.writeFile(" 574 ScanActivity   writeLessonToDb id lesson = " + lessonId);
 					}
 				} else {
-					file.writeFile("ScanActivity   writeLessonToDb создаем новый");
+					file.writeFile(" 577 ScanActivity   writeLessonToDb создаем новый lesson ");
 					database.beginTransaction();
 
 					ContentValues cv = new ContentValues();
@@ -573,7 +586,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					cv.put("TimeEnd", timeEnd);
 
 					lessonId = (int) database.insert("Lessons", null, cv);
-					file.writeFile("ScanActivity   writeLessonToDb new id = " + lessonId);
+					file.writeFile(" 589  ScanActivity   writeLessonToDb  id нового lesson = " + lessonId);
 					database.setTransactionSuccessful();
 					database.endTransaction();
 				}
@@ -586,7 +599,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	protected Dialog onCreateDialog(int id) {
-		file.writeFile( "ScanActivity   onCreateDialog");
+		file.writeFile( " 602 ScanActivity   onCreateDialog id = " + id);
 		AlertDialog.Builder adb = new AlertDialog.Builder(this);
 		switch (id) {
 			case REPEAT_OR_ADD:
@@ -752,8 +765,9 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				//	file.writeFile( "ScanActivity  mHandler  handleMessage str2 " + str2);
 				//	String[] str = str_message.split(str1);
 				//	if(str.length > 1) {
-					/*	if (str_message.equals("-1052")) {
-							((TextView) findViewById(R.id.EnrollmentTextView1)).setText
+						if (str_message.equals("-1052"))
+							finish();
+						/*	((TextView) findViewById(R.id.EnrollmentTextView1)).setText
 									("Для подключение модуля ОБНОВИТЬ");
 						}
 					else*/
@@ -770,7 +784,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onDestroy() {
-		file.writeFile( "ScanActivity   onDestroy");
 		// Cancel running operation
 		synchronized (mCond) {
 			while (mRunningOp != null) {
@@ -792,7 +805,7 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		file.writeFile( "ScanActivity   onActivityResult");
+
 		if (requestCode == 1 && resultCode == RESULT_OK) {
 			int id = data.getIntExtra("id", -1);
 			mGroup = data.getStringExtra("group");
@@ -814,8 +827,10 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 					try {
 						loader.get();
 					} catch (InterruptedException e) {
+						file.writeFile( "830 ScanActivity   onActivityResult " + "ERROR" + e.toString());
 						displayMessage("ERROR" + e.toString());
 					} catch (ExecutionException e) {
+						file.writeFile( "833 ScanActivity   onActivityResult " + "ERROR" + e.toString());
 						displayMessage("ERROR" + e.toString());
 					}
 					// identifyClass();
@@ -838,7 +853,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void closeSession() {
-		file.writeFile( "ScanActivity   closeSession");
 		if (mConn != null) {
 			try {
 				mConn.close();
@@ -850,7 +864,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	private void terminatePtapi() {
-		file.writeFile( "ScanActivity   terminatePtapi");
 		try {
 			if (mPtGlobal != null) {
 				mPtGlobal.terminate();
@@ -864,7 +877,6 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 
 	@Override
 	public void onClick(View v) {
-		file.writeFile( "ScanActivity   onClick");
 		switch (v.getId()) {
 			case R.id.s_exit:
 				showDialog(PASS_DIALOG);
@@ -890,4 +902,10 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 			return  true;
 	}
 
+	private class MyWebViewClient extends WebViewClient {
+		public boolean shouldOverrideUrlLoading(WebView view, String url) {
+			view.loadUrl(url);
+			return true;
+		}
+	}
 }

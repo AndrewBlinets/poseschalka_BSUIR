@@ -1,8 +1,6 @@
 package com.urban.basicsample.core;
 
 
-import android.content.Context;
-
 import com.digitalpersona.android.ptapi.PtConnectionI;
 import com.digitalpersona.android.ptapi.PtConstants;
 import com.digitalpersona.android.ptapi.PtException;
@@ -14,8 +12,7 @@ import com.digitalpersona.android.ptapi.struct.PtBir;
 import com.digitalpersona.android.ptapi.struct.PtGuiSampleImage;
 import com.digitalpersona.android.ptapi.struct.PtInputBir;
 import com.digitalpersona.android.ptapi.struct.PtSessionCfgV5;
-import com.urban.basicsample.MyFileClass;
-import com.urban.basicsample.model.Constants;
+import com.urban.basicsample.Log_file;
 
 public abstract class OpVerifyNew extends Thread {
 
@@ -24,7 +21,7 @@ public abstract class OpVerifyNew extends Thread {
 	private static short SESSION_CFG_VERSION = 5;
 	private int count;
 
-	MyFileClass file = new MyFileClass();
+	Log_file file = new Log_file();
 
 	public OpVerifyNew(PtConnectionI conn, int c) {
 		super("VerifyAllThread");
@@ -44,9 +41,9 @@ public abstract class OpVerifyNew extends Thread {
 			template = enroll();
 
 		} catch (PtException e) {
-			file.writeFile( "OpVerifyNew extends Thread  run() " + e.getCode()+"");
-			onDisplayMessage("Verification failed - " + e.getMessage());
-			//onDisplayMessage(e.getCode()+"");
+			//file.writeFile( "OpVerifyNew extends Thread  run() " + e.getCode()+"");
+			//onDisplayMessage("Verification failed - " + e.getMessage());
+			onDisplayMessage(e.getCode()+"");
 		}
 		catch (NullPointerException e)
 		{

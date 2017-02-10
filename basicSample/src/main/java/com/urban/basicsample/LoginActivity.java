@@ -18,10 +18,15 @@ import android.widget.Toast;
 
 import com.urban.basicsample.util.PassEncrypter;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -43,7 +48,9 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	private CharSequence mTitle;
 
 	private static final String Tag = "MyLog";
-	public MyFileClass fileClass =  new MyFileClass();;
+
+	 public Log_file obj_log = new Log_file();
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -52,12 +59,15 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 
 
 		super.onCreate(savedInstanceState);
-		if (getIntent().getBooleanExtra("finish", false))
+		if (getIntent().getBooleanExtra("finish", false)) {
+			obj_log.writeFile(" 63 Приложение завершило работу");
 			finish();
+		}
+		else
+		{
+			obj_log.writeFile(" 68 Приложение запущенно");
+		}
 		setContentView(R.layout.fragment_main);
-
-		fileClass.qwe(getApplicationContext());
-		fileClass.writeFile_M(this.getLocalClassName() + "   onCreate\n");
 
 		//mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(
 		//		R.id.navigation_drawer);
@@ -99,11 +109,11 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		Log.i(Tag, "LoginActivity   onCreateDialog");
-		fileClass.writeFile(this.getLocalClassName() + "   onCreateDialog\n");
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 		switch (id) {
 		case DIALOG:
+			obj_log.writeFile(" 116  Ввод пароля админа");
 			final EditText editText = new EditText(this);
 			editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
@@ -119,6 +129,7 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 						editText.setText("");
 						dialog.dismiss();
 					} else {
+						obj_log.writeFile(" 132  Неверный пароль.");
 						editText.setText("");
 						Toast.makeText(getApplicationContext(), "Неверный пароль", Toast.LENGTH_SHORT).show();
 					}
@@ -158,7 +169,6 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 		// TODO Auto-generated method stub
 		super.onPrepareDialog(id, dialog);
 		Log.i(Tag, "LoginActivity   onPrepareDialog");
-		fileClass.writeFile(this.getLocalClassName() + "   onPrepareDialog\n");
 		Builder builder = new Builder(this);
 
 		// Button btnOk = (Button) findViewById(R.id.bPassAdminOk);
@@ -170,13 +180,13 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 	@Override
 	public void onClick(View v) {
 		Log.i(Tag, "LoginActivity   onClick");
-		fileClass.writeFile(this.getLocalClassName() + "   onClick\n");
 		switch (v.getId()) {
 		case R.id.b_admin:
 			showDialog(DIALOG);
 			break;
 		case R.id.b_stud:
 			//showDialog(ST_DIALOG);
+			obj_log.writeFile(" 189  Перешли на экран \" Студент\"");
 			Intent intent = new Intent(LoginActivity.this, StudentActivity.class);
 			startActivity(intent);
 			break;
@@ -228,4 +238,6 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 			((LoginActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
 		}
 	}*/
+
+
 }

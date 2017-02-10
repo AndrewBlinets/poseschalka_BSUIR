@@ -24,20 +24,22 @@ public final class R {
     public static final class drawable {
         public static final int bsuir1=0x7f020000;
         public static final int drawer_shadow=0x7f020001;
-        public static final int finger1=0x7f020002;
-        public static final int hbutton=0x7f020003;
-        public static final int hbutton_focussed=0x7f020004;
-        public static final int hbutton_normal=0x7f020005;
-        public static final int hbutton_pressed=0x7f020006;
-        public static final int header=0x7f020007;
-        public static final int ic_chooser=0x7f020008;
-        public static final int ic_drawer=0x7f020009;
-        public static final int ic_file=0x7f02000a;
-        public static final int ic_folder=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int ic_launcher_dp=0x7f02000d;
-        public static final int ic_provider=0x7f02000e;
-        public static final int icon=0x7f02000f;
+        public static final int finger=0x7f020002;
+        public static final int finger1=0x7f020003;
+        public static final int gif_animation=0x7f020004;
+        public static final int hbutton=0x7f020005;
+        public static final int hbutton_focussed=0x7f020006;
+        public static final int hbutton_normal=0x7f020007;
+        public static final int hbutton_pressed=0x7f020008;
+        public static final int header=0x7f020009;
+        public static final int ic_chooser=0x7f02000a;
+        public static final int ic_drawer=0x7f02000b;
+        public static final int ic_file=0x7f02000c;
+        public static final int ic_folder=0x7f02000d;
+        public static final int ic_launcher=0x7f02000e;
+        public static final int ic_launcher_dp=0x7f02000f;
+        public static final int ic_provider=0x7f020010;
+        public static final int icon=0x7f020011;
     }
     public static final class id {
         public static final int ButtonDeleteAll=0x7f0a0050;

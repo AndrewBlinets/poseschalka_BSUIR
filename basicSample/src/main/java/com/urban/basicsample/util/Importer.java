@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -21,21 +20,21 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
-import com.urban.basicsample.MyFileClass;
+import com.urban.basicsample.Log_file;
 import com.urban.basicsample.dao.DBHelper;
 
 public class Importer {
 
 	private Context mContext;
 
-	MyFileClass file = new MyFileClass();
+	Log_file log_file = new Log_file();
 
 	public Importer(Context context) {
 		mContext = context;
 	}
 
 	public boolean importFile(String path) {
-		file.writeFile("Importer    importFile   " + path);
+		log_file.writeFile(" 37 Importer    importFile   " + path);
 		try {
 			File file = new File(path);
 			String group = file.getName().replaceAll(".xls", "");
@@ -129,8 +128,10 @@ public class Importer {
 				}
 			}
 			Toast.makeText(mContext, "Импорт завершен", Toast.LENGTH_SHORT).show();
+			log_file.writeFile(" 131 Importer    importFile   импорт завершен успешно.");
 			return true;
 		} catch (Exception e) {
+			log_file.writeFile(" 134 Importer    importFile  исключение " + e.getMessage());
 			Toast.makeText(mContext, "Упс! Что-то не так...", Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		}
@@ -139,7 +140,7 @@ public class Importer {
 	}
 
 	private void writeToDb(HashMap<String, String> weeks, String startTime, String endTime, String day, String group) {
-		file.writeFile("Importer    writeToDb   " + day + "    " + group);
+		log_file.writeFile(" 143 Importer    writeToDb   " + day + "    " + group);
 		DBHelper dbHeper = new DBHelper(mContext);
 		SQLiteDatabase db = dbHeper.getReadableDatabase();
 

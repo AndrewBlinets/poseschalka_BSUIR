@@ -1,25 +1,16 @@
 package com.urban.basicsample;
 
-import com.urban.basicsample.model.CustomDialog1;
-
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
-import android.text.InputType;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -29,17 +20,17 @@ public class StudentActivity extends Activity implements OnClickListener {
 	private final int LIST_DIALOG = 2;
 
 	private static final String Tag = "MyLog";
-MyFileClass file = new MyFileClass();
+	Log_file file = new Log_file();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		file.writeFile( "StudentActivity   onCreate");
+		file.writeFile( " 26 StudentActivity   onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_student);
 	}
 
 	@Override
 	public void onClick(View v) {
-		file.writeFile( "StudentActivity   onClick");
+		file.writeFile( "33 StudentActivity   onClick id = " + v.getId());
 		switch (v.getId()) {
 		case R.id.scan_button:
 			showDialog(SCAN_DIALOG);
@@ -52,7 +43,7 @@ MyFileClass file = new MyFileClass();
 	
 	@Override
 	protected Dialog onCreateDialog(int id) {
-		file.writeFile( "StudentActivity   onCreateDialog");
+		file.writeFile( "46 StudentActivity   onCreateDialog id = " + id);
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 		switch (id) {
@@ -60,6 +51,7 @@ MyFileClass file = new MyFileClass();
 			//CustomDialog1 cd = new CustomDialog1(this);
 			//cd.show();
 			int week = getNumberstudyweek();
+			file.writeFile("54 StudentAttListActivity  onCreateDialog номер недели = " + week);
 			Intent intent = new Intent(this, ScanActivity.class);
 			intent.putExtra("week", week);
 			//startActivityForResult(intent, 1);

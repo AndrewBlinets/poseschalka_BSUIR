@@ -1,9 +1,14 @@
 package com.urban.basicsample;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
@@ -13,11 +18,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.widget.DrawerLayout;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -49,13 +53,14 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 
 	private static final String Tag = "MyLog";
 
-	MyFileClass file = new MyFileClass();
+	Log_file file = new Log_file();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
-		file.writeFile("StudentListActivity   onCreate");
+
 		super.onCreate(savedInstanceState);
+		file.writeFile(" 63 StudentListActivity onCreate");
 		setContentView(R.layout.activity_student_list);
 		Intent startIntent = getIntent();
 		final String lastName = startIntent.getStringExtra("lastName");
@@ -97,7 +102,7 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 	}
 
 	public void onSectionAttached(int number) {
-		file.writeFile("StudentListActivity   onSectionAttached   " + number);
+		file.writeFile(" 63 StudentListActivity onSectionAttached number = " + number);
 		switch (number) {
 		case 1:
 			CustomDialog1 cd = new CustomDialog1(this);
@@ -134,7 +139,7 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		file.writeFile( "StudentListActivity   onActivityResult");
+
 		if (requestCode == FILE_SELECT_CODE && resultCode == -1) {
 			Uri uri = data.getData();
 			String path = FileUtils.getPath(this, uri);
@@ -145,7 +150,7 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
-		file.writeFile( "StudentListActivity   onCreateDialog");
+
 		Dialog dialog = null;
 		Builder builder = new Builder(this);
 
@@ -209,7 +214,7 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 	}
 
 	private void getStudents(String lastName) {
-		file.writeFile( "StudentListActivity   getStudents   " + lastName);
+
 		DBHelper dbHeper = new DBHelper(this);
 		SQLiteDatabase db = dbHeper.getReadableDatabase();
 
@@ -250,7 +255,6 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		file.writeFile( "StudentListActivity   onCreateOptionsMenu");
 		// Inflate the menu; this adds items to the action bar if it is present.
 		//getMenuInflater().inflate(R.menu.student_list, menu);
 		return true;
@@ -259,7 +263,8 @@ public class StudentListActivity extends Activity implements NavigationDrawerFra
 
 	@Override
 	public void onNavigationDrawerItemSelected(int position) {
-		file.writeFile( "StudentListActivity   onNavigationDrawerItemSelected");
+
 		onSectionAttached(position + 1);
 	}
+
 }

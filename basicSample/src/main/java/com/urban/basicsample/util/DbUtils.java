@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.urban.basicsample.MyFileClass;
+import com.urban.basicsample.Log_file;
 import com.urban.basicsample.dao.DBHelper;
 
 public class DbUtils {
@@ -15,10 +15,10 @@ public class DbUtils {
 		this.context = context;
 	}
 
-	MyFileClass file =  new MyFileClass();
+
 
 	public boolean checkSchedule(String group) {
-		file.writeFile("DbUtils      checkSchedule   " + group);
+
 		SQLiteDatabase database = null;
 		try {
 			DBHelper helper = new DBHelper(context);
@@ -40,7 +40,7 @@ public class DbUtils {
 
 	public void delete_schetual_group(String group)
 	{
-		file.writeFile("DbUtils      checkSchedule   " + group);
+
 		SQLiteDatabase database = null;
 		try {
 			DBHelper helper = new DBHelper(context);

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ko\\values-ko.xml",
+        "outputFile": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ko\\values-ko.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
+                    "file": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 147
                 },
                 "from": {
-                    "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
+                    "file": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 205
                 },
                 "from": {
-                    "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
+                    "file": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 263
                 },
                 "from": {
-                    "file": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
+                    "file": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

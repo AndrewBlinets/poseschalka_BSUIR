@@ -1,7 +1,7 @@
 package com.urban.basicsample.core;
 
 import com.digitalpersona.android.ptapi.PtConstants;
-import com.urban.basicsample.MyFileClass;
+import com.urban.basicsample.Log_file;
 
 public class PtHelper
 {
@@ -9,7 +9,7 @@ public class PtHelper
      * Create message for given GUI callback message
      */
 
-    static  MyFileClass file = new MyFileClass();
+
 
 	public static final String GetGuiStateCallbackMessage(int guiState, int message,  byte progress)
 	{

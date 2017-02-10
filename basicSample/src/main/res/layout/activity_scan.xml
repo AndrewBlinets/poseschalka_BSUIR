@@ -29,23 +29,12 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="5"
         android:text="" />
-<!--
-
-    <Button
-        android:id="@+id/refresh"
-        android:background="@drawable/hbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="@string/refresh_scan_activity"/>
--->
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="55"
-        android:src="@drawable/finger1" />
-
+        android:src="@drawable/gif_animation" />
     <TextView
         android:id="@+id/EnrollmentTextView1"
         android:layout_width="fill_parent"
