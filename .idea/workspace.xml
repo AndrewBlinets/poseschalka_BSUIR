@@ -36,146 +36,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="170f341f-3e54-495d-9a20-7ab23beda22a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-hdpi-v4/ic_chooser.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-hdpi-v4/ic_file.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-hdpi-v4/ic_folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-hdpi-v4/ic_provider.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-mdpi-v4/ic_chooser.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-mdpi-v4/ic_file.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-mdpi-v4/ic_folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-mdpi-v4/ic_provider.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xhdpi-v4/ic_chooser.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xhdpi-v4/ic_file.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xhdpi-v4/ic_folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xhdpi-v4/ic_provider.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xxhdpi-v4/ic_chooser.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xxhdpi-v4/ic_file.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xxhdpi-v4/ic_folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/drawable-xxhdpi-v4/ic_provider.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/layout/file.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ca/values-ca.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ga/values-ga.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-v11/values-v11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values-v19/values-v19.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/release/res/xml/mimetypes.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-debug.aar" afterPath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-release.aar" afterPath="$PROJECT_DIR$/aFileChooser/build/outputs/aar/aFileChooser-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/ScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/SampleActivity$1$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/SampleActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/SampleActivity$3.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/SampleActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/SampleActivity$8$1.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/core/SampleActivity$8$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Loader.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Loader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Parser.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/parser/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/util/Exporter.class" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/classes/debug/com/urban/basicsample/util/Exporter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_chooser.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_chooser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_file.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_folder.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_provider.png" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_provider.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" afterPath="$PROJECT_DIR$/basicSample/build/outputs/apk/basicSample-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" afterPath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build.gradle" afterPath="$PROJECT_DIR$/aFileChooser/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/generated/source/r/androidTest/debug/com/ipaulpro/afilechooser/R.java" afterPath="$PROJECT_DIR$/aFileChooser/build/generated/source/r/androidTest/debug/com/ipaulpro/afilechooser/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ga.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ga.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v19.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values-v19.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/layout.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/xml.json" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/blame/res/androidTest/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/aFileChooser/build/intermediates/bundles/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/basicSample.iml" afterPath="$PROJECT_DIR$/basicSample/basicSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build.gradle" afterPath="$PROJECT_DIR$/basicSample/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/generated/source/r/debug/com/ipaulpro/afilechooser/R.java" afterPath="$PROJECT_DIR$/basicSample/build/generated/source/r/debug/com/ipaulpro/afilechooser/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ga.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ga.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v19.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values-v19.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/blame/res/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/basicSample/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/basicSample/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/Log_file.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/Log_file.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/ScanActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/dao/DBHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Loader.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Loader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java" afterPath="$PROJECT_DIR$/basicSample/src/main/java/com/urban/basicsample/parser/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
     </list>
     <ignored path="BasicSample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -3568,7 +3429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486712542226</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="баг с отображением групп при посещении лекции  &gt; 1 группой">
+      <created>1489658385949</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1489658385949</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3592,12 +3460,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37372014" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47269624" sideWeight="0.4914712" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.50852877" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24885496" sideWeight="0.49100256" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24885496" sideWeight="0.49100256" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -3656,6 +3524,24 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -3679,7 +3565,8 @@
     <MESSAGE value="test 3" />
     <MESSAGE value="учебные недели автоматом" />
     <MESSAGE value="finish + log_file + изменил картинку" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish + log_file + изменил картинку" />
+    <MESSAGE value="баг с отображением групп при посещении лекции  &gt; 1 группой" />
+    <option name="LAST_COMMIT_MESSAGE" value="баг с отображением групп при посещении лекции  &gt; 1 группой" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4966,6 +4853,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="50" column="31" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
