@@ -21,7 +21,7 @@ ADDED from F:\My_project\Android\poseschalka_BSUIR\basicSample\src\main\AndroidM
 		ADDED from F:\My_project\Android\poseschalka_BSUIR\basicSample\src\main\AndroidManifest.xml:7:19-59
 uses-sdk
 ADDED from F:\My_project\Android\poseschalka_BSUIR\basicSample\src\main\AndroidManifest.xml:9:5-44
-MERGED from [poseschalka_BSUIR:aFileChooser:unspecified] F:\My_project\Android\poseschalka_BSUIR\basicSample\build\intermediates\exploded-aar\poseschalka_BSUIR\aFileChooser\unspecified\AndroidManifest.xml:20:5-22:40
+MERGED from [poseschalka_BSUIR:aFileChooser:unspecified] F:\My_project\Android\poseschalka_BSUIR\aFileChooser\build\intermediates\bundles\default\AndroidManifest.xml:20:5-22:40
 	android:targetSdkVersion
 		INJECTED from F:\My_project\Android\poseschalka_BSUIR\basicSample\src\main\AndroidManifest.xml
 		INJECTED from F:\My_project\Android\poseschalka_BSUIR\basicSample\src\main\AndroidManifest.xml

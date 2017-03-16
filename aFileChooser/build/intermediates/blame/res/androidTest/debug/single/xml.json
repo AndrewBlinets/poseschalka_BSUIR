@@ -1,13 +1,5 @@
 [
     {
-        "merged": "F:\\My_project\\Android\\BSUIR\\BasicSample\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\mimetypes.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\BasicSample\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\xml\\mimetypes.xml"
-    },
-    {
-        "merged": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\mimetypes.xml",
-        "source": "F:\\My_project\\Android\\BSUIR\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\xml\\mimetypes.xml"
-    },
-    {
         "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\mimetypes.xml",
         "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\bundles\\debug\\res\\xml\\mimetypes.xml"
     }

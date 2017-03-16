@@ -555,13 +555,13 @@ public class ScanActivity extends Activity implements android.view.View.OnClickL
 				DBHelper helper = new DBHelper(getApplicationContext());
 				database = helper.getWritableDatabase();
 
-				String[] selectionArgs = new String[] { date, subject,
+				String[] selectionArgs = new String[] { date, mGroup, subject,
 														timeStart, timeEnd, String.valueOf(subgroup)};
 				Cursor c = null;
 				try {
 
 
-				c = database.query("Lessons", null, "Date = ? AND Subject = ? AND TimeStart = ? AND TimeEnd = ? AND SubGroup =?",
+				c = database.query("Lessons", null, "Date = ? AND GroupId = ? AND Subject = ? AND TimeStart = ? AND TimeEnd = ? AND SubGroup =?",
 						selectionArgs, null, null, null);
 				}
 				catch (Exception e)

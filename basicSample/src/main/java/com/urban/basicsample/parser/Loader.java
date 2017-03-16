@@ -35,7 +35,7 @@ public class Loader extends AsyncTask<String, String, Boolean> {
 	protected void onPostExecute(Boolean result) {
 		pDialog.dismiss();
 		if (!result.booleanValue()) {
-			Toast.makeText(context, "Ошибка при загрузке расписания", Toast.LENGTH_LONG).show();
+			Toast.makeText(context, "Ошибка при загрузке расписания (смотреть log файл).", Toast.LENGTH_LONG).show();
 			fileClass.writeFile(  " 39 Loader   Ошибка при загрузке расписания ");
 		} 
 		super.onPostExecute(result);

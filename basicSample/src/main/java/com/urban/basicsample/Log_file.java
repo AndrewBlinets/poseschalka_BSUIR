@@ -69,7 +69,7 @@ public class Log_file {
 
   /*  public Log_file() {
         FILENAME = Environment.getExternalStorageDirectory().toString() + "/Log_file.txt";
-    }
+    }*/
 
     public void qwe ( Context mContext) {
         String str = null;
@@ -198,5 +198,6 @@ public class Log_file {
         db.close();
 
         db21.close();
-        }*/
+        writeFile(str);
+        }
 }

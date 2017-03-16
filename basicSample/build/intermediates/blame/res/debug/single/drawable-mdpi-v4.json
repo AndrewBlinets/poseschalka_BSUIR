@@ -1,7 +1,7 @@
 [
     {
         "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_chooser.png",
-        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_chooser.png"
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\ic_chooser.png"
     },
     {
         "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\header.jpg",
@@ -9,14 +9,14 @@
     },
     {
         "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_provider.png",
-        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_provider.png"
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\ic_provider.png"
     },
     {
         "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_folder.png",
-        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_folder.png"
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\ic_folder.png"
     },
     {
         "merged": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_file.png",
-        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\basicSample\\build\\intermediates\\exploded-aar\\poseschalka_BSUIR\\aFileChooser\\unspecified\\res\\drawable-mdpi-v4\\ic_file.png"
+        "source": "F:\\My_project\\Android\\poseschalka_BSUIR\\aFileChooser\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\ic_file.png"
     }
 ]

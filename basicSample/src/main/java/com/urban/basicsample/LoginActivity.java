@@ -18,19 +18,7 @@ import android.widget.Toast;
 
 import com.urban.basicsample.util.PassEncrypter;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+
 
 
 public class LoginActivity extends Activity implements OnClickListener/*,
@@ -67,6 +55,7 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 		{
 			obj_log.writeFile(" 68 Приложение запущенно");
 		}
+		obj_log.qwe(getBaseContext());
 		setContentView(R.layout.fragment_main);
 
 		//mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(
@@ -187,6 +176,7 @@ public class LoginActivity extends Activity implements OnClickListener/*,
 		case R.id.b_stud:
 			//showDialog(ST_DIALOG);
 			obj_log.writeFile(" 189  Перешли на экран \" Студент\"");
+
 			Intent intent = new Intent(LoginActivity.this, StudentActivity.class);
 			startActivity(intent);
 			break;
