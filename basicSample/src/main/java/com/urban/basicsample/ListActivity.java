@@ -175,15 +175,21 @@ public class ListActivity extends Activity implements NavigationDrawerFragmentMa
 			DialogInterface.OnClickListener onClickListener = new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					String group = editText.getText().toString().trim();
-					Exporter exporter = new Exporter(getApplicationContext(), group);
-					if (exporter.export()) {
-						Toast.makeText(getApplicationContext(), "Импортировано в файл" + group + ".xls",
-								Toast.LENGTH_SHORT).show();
-					} else {
-						Toast.makeText(getApplicationContext(), "Ошибка экспорта", Toast.LENGTH_SHORT).show();
+					try {
+						String group = editText.getText().toString().trim();
+						Exporter exporter = new Exporter(getApplicationContext(), group);
+						if (exporter.export()) {
+							Toast.makeText(getApplicationContext(), "Импортировано в файл" + group + ".xls",
+									Toast.LENGTH_SHORT).show();
+						} else {
+							Toast.makeText(getApplicationContext(), "Ошибка экспорта", Toast.LENGTH_SHORT).show();
+						}
+						dialog.dismiss();
 					}
-					dialog.dismiss();
+					catch (Exception e)
+					{
+						new Log_file().writeFile("191 ListActivity exception " + e.getMessage() + "   " + e.getStackTrace());
+					}
 				}
 			};
 			dialog = builder.setTitle("Введите группу").setPositiveButton("Ок", onClickListener).setView(editText)

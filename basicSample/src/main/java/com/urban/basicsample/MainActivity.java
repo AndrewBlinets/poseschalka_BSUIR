@@ -146,19 +146,25 @@ public class MainActivity extends Activity implements NavigationDrawerFragmentMa
 			DialogInterface.OnClickListener onClickListener = new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					String group = editText.getText().toString().trim();
-					if (group != null && !group.isEmpty()) {
-						Exporter exporter = new Exporter(getApplicationContext(), group);
-						if (exporter.export()) {
-							Toast.makeText(getApplicationContext(), "Экспотировано в файл  " + group + ".xls",
-									Toast.LENGTH_SHORT).show();
+					try {
+						String group = editText.getText().toString().trim();
+						if (group != null && !group.isEmpty()) {
+							Exporter exporter = new Exporter(getApplicationContext(), group);
+							if (exporter.export()) {
+								Toast.makeText(getApplicationContext(), "Экспотировано в файл  " + group + ".xls",
+										Toast.LENGTH_SHORT).show();
+							} else {
+								Toast.makeText(getApplicationContext(), "Ошибка экспорта," +
+										" группа не существует либо не производилась проверка посещаемости.", Toast.LENGTH_SHORT).show();
+							}
+							dialog.dismiss();
 						} else {
-							Toast.makeText(getApplicationContext(), "Ошибка экспорта," +
-									" группа не существует либо не производилась проверка посещаемости.", Toast.LENGTH_SHORT).show();
+							Toast.makeText(getApplicationContext(), "Пустое поле", Toast.LENGTH_SHORT).show();
 						}
-						dialog.dismiss();
-					} else {
-						Toast.makeText(getApplicationContext(), "Пустое поле", Toast.LENGTH_SHORT).show();
+					}
+					catch (Exception e)
+					{
+						new Log_file().writeFile("167 MainActivity exception " + e.getMessage() + "   " + e.getStackTrace());
 					}
 				}
 			};

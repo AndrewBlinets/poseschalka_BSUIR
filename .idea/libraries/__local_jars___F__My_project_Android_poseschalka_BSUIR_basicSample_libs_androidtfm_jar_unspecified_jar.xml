@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="androidtfm">
+  <library name="__local_jars__:F.\My_project\Android\poseschalka_BSUIR\basicSample\libs\androidtfm.jar:unspecified@jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/basicSample/libs/androidtfm.jar!/" />
     </CLASSES>
